@@ -21,12 +21,32 @@ function runGame() {
     questionArea.classList.remove('hide');
     nextButton.classList.remove('hide');
     scoresArea.classList.remove('hide');
-
     
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionObjects = shuffledQuestions;
         
     nextQuestion();    
+}
+
+function nextQuestion() {
+    currentQuestionNumber.innerText = currentQuestionIndex + 1;
+    currentQuestionIndex++;
+    displayQuestion();
+}
+
+function displayQuestion() {
+    for (let i=0; i < currentQuestionObjects.length; i++) {
+        questionText.innerHTML = currentQuestionObjects[currentQuestionIndex].question;
+        choice1.innerHTML = currentQuestionObjects[currentQuestionIndex].a;
+        choice2.innerHTML = currentQuestionObjects[currentQuestionIndex].b; 
+        choice3.innerHTML = currentQuestionObjects[currentQuestionIndex].c; 
+        choice4.innerHTML = currentQuestionObjects[currentQuestionIndex].d; 
+        
+        choice1.onclick = checkAnswer;
+        choice2.onclick = checkAnswer;
+        choice3.onclick = checkAnswer;
+        choice4.onclick = checkAnswer;
+    }
 }
 
 const questions = [
