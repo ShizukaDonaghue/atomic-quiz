@@ -31,7 +31,17 @@ function runGame() {
 function nextQuestion() {
     currentQuestionNumber.innerText = currentQuestionIndex + 1;
     currentQuestionIndex++;
+    
     displayQuestion();
+
+    choice1.removeAttribute('disabled', 'disabled');
+    choice2.removeAttribute('disabled', 'disabled');
+    choice3.removeAttribute('disabled', 'disabled');
+    choice4.removeAttribute('disabled', 'disabled');
+    choice1.classList.add('cursor-pointer');
+    choice2.classList.add('cursor-pointer');
+    choice3.classList.add('cursor-pointer');
+    choice4.classList.add('cursor-pointer');
 }
 
 function displayQuestion() {
@@ -69,7 +79,7 @@ function checkAnswer() {
         incrementIncorrectScore(); 
     }
     
-    nextButton.addEventListener('click', displayQuestion);
+    nextButton.addEventListener('click', nextQuestion);
 }
 
 function incrementScore() {
@@ -81,7 +91,6 @@ function incrementIncorrectScore() {
     let oldScore = parseInt(document.getElementById('incorrect-answers').innerText);
     document.getElementById('incorrect-answers').innerText = ++oldScore;
 }
-
 
 
 
