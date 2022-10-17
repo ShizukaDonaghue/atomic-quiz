@@ -49,6 +49,42 @@ function displayQuestion() {
     }
 }
 
+function checkAnswer() {
+    choice1.setAttribute('disabled', 'disabled');
+    choice2.setAttribute('disabled', 'disabled');
+    choice3.setAttribute('disabled', 'disabled');
+    choice4.setAttribute('disabled', 'disabled');
+    choice1.classList.remove('cursor-pointer');
+    choice2.classList.remove('cursor-pointer');
+    choice3.classList.remove('cursor-pointer');
+    choice4.classList.remove('cursor-pointer');
+
+    let userAnswer = this.value;
+    let correctAnswer = currentQuestionObjects[currentQuestionIndex].answer;
+    if (userAnswer === correctAnswer) {
+        correctAnswers++;
+        incrementScore();    
+    } else {
+        incorrectAnswers++;
+        incrementIncorrectScore(); 
+    }
+    
+    nextButton.addEventListener('click', displayQuestion);
+}
+
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById('correct-answers').innerText);
+    document.getElementById('correct-answers').innerText = ++oldScore;
+}
+
+function incrementIncorrectScore() {
+    let oldScore = parseInt(document.getElementById('incorrect-answers').innerText);
+    document.getElementById('incorrect-answers').innerText = ++oldScore;
+}
+
+
+
+
 const questions = [
     {
         question: "The three basic components of an atom are?",
