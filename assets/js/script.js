@@ -1,4 +1,15 @@
-
+const heading = document.getElementById('heading');
+const questionArea = document.getElementById('question-area');
+const startButton = document.getElementById('start-button');
+const nextButton = document.getElementById('next-button');
+const questionText = document.getElementById('question-text');
+const scoresArea = document.getElementById('score-area');
+let currentQuestionIndex = 0;
+let currentQuestionNumber = document.getElementById('current-question-number'); 
+let currentQuestionObjects = {};
+let shuffledQuestions = '';
+let correctAnswers = 0;
+let incorrectAnswers = 0;
 
 
 const questions = [
