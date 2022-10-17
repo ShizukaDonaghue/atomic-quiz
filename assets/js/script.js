@@ -11,6 +11,23 @@ let shuffledQuestions = '';
 let correctAnswers = 0;
 let incorrectAnswers = 0;
 
+document.addEventListener('DOMContentLoaded', function() {
+    startButton.addEventListener('click', runGame);
+})
+
+function runGame() {
+    heading.classList.add('hide');
+    startButton.classList.add('hide');
+    questionArea.classList.remove('hide');
+    nextButton.classList.remove('hide');
+    scoresArea.classList.remove('hide');
+
+    
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestionObjects = shuffledQuestions;
+        
+    nextQuestion();    
+}
 
 const questions = [
     {
