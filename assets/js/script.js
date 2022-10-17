@@ -32,8 +32,6 @@ function nextQuestion() {
     currentQuestionNumber.innerText = currentQuestionIndex + 1;
     currentQuestionIndex++;
     
-    displayQuestion();
-
     choice1.removeAttribute('disabled', 'disabled');
     choice2.removeAttribute('disabled', 'disabled');
     choice3.removeAttribute('disabled', 'disabled');
@@ -42,10 +40,12 @@ function nextQuestion() {
     choice2.classList.add('cursor-pointer');
     choice3.classList.add('cursor-pointer');
     choice4.classList.add('cursor-pointer');
+
+    displayQuestion();
 }
 
 function displayQuestion() {
-    for (let i=0; i < currentQuestionObjects.length; i++) {
+    for (let question in questions) {
         questionText.innerHTML = currentQuestionObjects[currentQuestionIndex].question;
         choice1.innerHTML = currentQuestionObjects[currentQuestionIndex].a;
         choice2.innerHTML = currentQuestionObjects[currentQuestionIndex].b; 
