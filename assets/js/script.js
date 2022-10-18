@@ -1,16 +1,20 @@
+// Variables
 const heading = document.getElementById('heading');
 const questionArea = document.getElementById('question-area');
-const startButton = document.getElementById('start-button');
-const nextButton = document.getElementById('next-button');
 const questionText = document.getElementById('question-text');
 const scoresArea = document.getElementById('score-area');
-let currentQuestionIndex = 0;
+const startButton = document.getElementById('start-button');
+const nextButton = document.getElementById('next-button');
+const finishButton = document.getElementById('finish-button');
 let currentQuestionNumber = document.getElementById('current-question-number'); 
-let currentQuestionObjects = {};
+let currentQuestionSet = {};
 let shuffledQuestions = '';
+let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
 
+// Wait for the DOM to finish loading before running the game
+// Add event listerner to the start button
 document.addEventListener('DOMContentLoaded', function() {
     startButton.addEventListener('click', runGame);
 })
@@ -23,15 +27,14 @@ function runGame() {
     scoresArea.classList.remove('hide');
     
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-    currentQuestionObjects = shuffledQuestions;
+    currentQuestionSet = shuffledQuestions;
         
     nextQuestion();    
 }
 
 function nextQuestion() {
     currentQuestionNumber.innerText = currentQuestionIndex + 1;
-    currentQuestionIndex++;
-    
+        
     choice1.removeAttribute('disabled', 'disabled');
     choice2.removeAttribute('disabled', 'disabled');
     choice3.removeAttribute('disabled', 'disabled');
@@ -46,11 +49,11 @@ function nextQuestion() {
 
 function displayQuestion() {
     for (let question in questions) {
-        questionText.innerHTML = currentQuestionObjects[currentQuestionIndex].question;
-        choice1.innerHTML = currentQuestionObjects[currentQuestionIndex].a;
-        choice2.innerHTML = currentQuestionObjects[currentQuestionIndex].b; 
-        choice3.innerHTML = currentQuestionObjects[currentQuestionIndex].c; 
-        choice4.innerHTML = currentQuestionObjects[currentQuestionIndex].d; 
+        questionText.innerHTML = currentQuestionSet[currentQuestionIndex].question;
+        choice1.innerHTML = currentQuestionSet[currentQuestionIndex].a;
+        choice2.innerHTML = currentQuestionSet[currentQuestionIndex].b; 
+        choice3.innerHTML = currentQuestionSet[currentQuestionIndex].c; 
+        choice4.innerHTML = currentQuestionSet[currentQuestionIndex].d; 
         
         choice1.onclick = checkAnswer;
         choice2.onclick = checkAnswer;
@@ -70,26 +73,32 @@ function checkAnswer() {
     choice4.classList.remove('cursor-pointer');
 
     let userAnswer = this.value;
-    let correctAnswer = currentQuestionObjects[currentQuestionIndex].answer;
+    let correctAnswer = currentQuestionSet[currentQuestionIndex].answer;
     if (userAnswer === correctAnswer) {
         correctAnswers++;
         incrementScore();    
     } else {
         incorrectAnswers++;
         incrementIncorrectScore(); 
-    }
-    
-    nextButton.addEventListener('click', nextQuestion);
+    }  
+
+    if (shuffledQuestions.length  > currentQuestionIndex + 1) {
+        currentQuestionIndex++;  
+        nextButton.addEventListener('click', nextQuestion);
+    } else {
+        nextButton.classList.add('hide');
+        finishButton.classList.remove('hide');     
+    }     
 }
 
 function incrementScore() {
-    let oldScore = parseInt(document.getElementById('correct-answers').innerText);
-    document.getElementById('correct-answers').innerText = ++oldScore;
+    let previousScore = parseInt(document.getElementById('correct-answers').innerText);
+    document.getElementById('correct-answers').innerText = ++previousScore;
 }
 
 function incrementIncorrectScore() {
-    let oldScore = parseInt(document.getElementById('incorrect-answers').innerText);
-    document.getElementById('incorrect-answers').innerText = ++oldScore;
+    let previousScore = parseInt(document.getElementById('incorrect-answers').innerText);
+    document.getElementById('incorrect-answers').innerText = ++previousScore;
 }
 
 
