@@ -6,6 +6,7 @@ const scoresArea = document.getElementById('score-area');
 const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const finishButton = document.getElementById('finish-button');
+const resultArea = document.getElementById('result-area');
 let currentQuestionNumber = document.getElementById('current-question-number'); 
 let currentQuestionSet = {};
 let shuffledQuestions = '';
@@ -25,8 +26,10 @@ function runGame() {
     questionArea.classList.remove('hide');
     nextButton.classList.remove('hide');
     scoresArea.classList.remove('hide');
-    
+
+    // Shuffling an array code from https://javascript.info/task/shuffle
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+
     currentQuestionSet = shuffledQuestions;
         
     nextQuestion();    
@@ -101,7 +104,15 @@ function incrementIncorrectScore() {
     document.getElementById('incorrect-answers').innerText = ++previousScore;
 }
 
+finishButton.addEventListener('click', result);
 
+function result() {
+    questionArea.classList.add('hide');
+    scoresArea.classList.add('hide');
+    finishButton.classList.add('hide');
+    resultArea.classList.remove('hide');
+    
+}
 
 const questions = [
     {
