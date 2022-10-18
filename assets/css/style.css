@@ -5,3 +5,7 @@
 .cursor-pointer:hover {
   cursor: pointer;
 }
+
+#name-input-area {
+  display: flex;
+}

@@ -9,17 +9,35 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- link to cdnjs Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
     <!-- add favicon here -->
-    <!-- add link to cdnjs font awsome -->
+   
  
     <title>The Atomic Quiz!</title>
 </head>
 <body>
     <div id="game-area">
-        <div id="heading">
+        <div id="landing-page">
             <h1>Welcome to The Atomic Quiz!</h1> 
-            <h2>Ready to Play?</h2>
+            <p>This is a quiz to test your knowledge about atoms.</p>
+            <p>Let's see if you were paying attention in your chemistry class!</p>
+            <p>Please enter your name to proceed.</p>
             <!-- add icon here -->
+        </div>
+        
+        <div id="name-input-area">
+            <div id="name-input">
+                <form method="POST" action="javascript:void(0)">
+                    <label for="username"></label>
+                    <input type="text" id="username" placeholder="Name" maxlength="10" required>
+                </form>
+            </div>
+            <div id="question-help">
+                <i id="question-mark" class="fa-sharp fa-solid fa-question"></i>
+                <p id="input-help" class="hide">Name field accepts maximum of 10 letters.</p>
+            </div>
         </div>
 
         <div id="question-area" class="hide">
@@ -40,15 +58,15 @@
 
         <div id="result-area" class="hide">
             <h2>Results</h2>
-            <p>Correct Answers:<span id="correct-answers"> 0</span></p>
-            <p>Incorrect Answers:<span id="incorrect-answers"> 0</span></p>
+            <p>Correct Answers:<span id="correct-answers-result"> 0</span></p>
+            <p>Incorrect Answers:<span id="incorrect-answers-result"> 0</span></p>
             <p>Total Score:<span id="total-score">0</span></p>
             <button id="play-again" class="cursor-pointer">Play Again</button>
 
         </div>
 
         <div class="control-area">
-            <button id="start-button" class="cursor-pointer">Start</button>
+            <button id="start-button" type="submit" class="cursor-pointer">Start</button>
             <button id="next-button" class="cursor-pointer hide">Next</button>
             <button id="finish-button" class="cursor-pointer hide">Finish</button>
         </div>

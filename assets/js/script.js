@@ -1,8 +1,11 @@
-// Variables
-const heading = document.getElementById('heading');
+const landingPage = document.getElementById('landing-page');
+const nameInput = document.getElementById('name-input');
+const questionHelp = document.getElementById('question-help');
+const questionMark = document.getElementById('question-mark');
+const inputHelp = document.getElementById('input-help');
 const questionArea = document.getElementById('question-area');
 const questionText = document.getElementById('question-text');
-const scoresArea = document.getElementById('score-area');
+const scoreArea = document.getElementById('score-area');
 const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const finishButton = document.getElementById('finish-button');
@@ -14,18 +17,31 @@ let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
 
+questionMark.addEventListener('mouseover', displayInputHelp);
+questionMark.addEventListener('mouseleave', closeInputHelp);
+
+function displayInputHelp (){
+    inputHelp.classList.remove('hide');
+}
+
+function closeInputHelp(){
+    inputHelp.classList.add('hide')
+}
+
 // Wait for the DOM to finish loading before running the game
 // Add event listerner to the start button
 document.addEventListener('DOMContentLoaded', function() {
     startButton.addEventListener('click', runGame);
-})
+});
 
-function runGame() {
-    heading.classList.add('hide');
+function runGame(){
+    landingPage.classList.add('hide');
+    nameInput.classList.add('hide');
+    questionHelp.classList.add('hide');
     startButton.classList.add('hide');
     questionArea.classList.remove('hide');
     nextButton.classList.remove('hide');
-    scoresArea.classList.remove('hide');
+    scoreArea.classList.remove('hide');
 
     // Shuffling an array code from https://javascript.info/task/shuffle
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
@@ -35,7 +51,7 @@ function runGame() {
     nextQuestion();    
 }
 
-function nextQuestion() {
+function nextQuestion(){
     currentQuestionNumber.innerText = currentQuestionIndex + 1;
         
     choice1.removeAttribute('disabled', 'disabled');
@@ -50,7 +66,9 @@ function nextQuestion() {
     displayQuestion();
 }
 
-function displayQuestion() {
+
+//  displayQuestion function loops through questions array and display each question and possible answers
+function displayQuestion(){
     for (let question in questions) {
         questionText.innerHTML = currentQuestionSet[currentQuestionIndex].question;
         choice1.innerHTML = currentQuestionSet[currentQuestionIndex].a;
@@ -65,7 +83,7 @@ function displayQuestion() {
     }
 }
 
-function checkAnswer() {
+function checkAnswer(){
     choice1.setAttribute('disabled', 'disabled');
     choice2.setAttribute('disabled', 'disabled');
     choice3.setAttribute('disabled', 'disabled');
@@ -94,19 +112,19 @@ function checkAnswer() {
     }     
 }
 
-function incrementScore() {
+function incrementScore(){
     let previousScore = parseInt(document.getElementById('correct-answers').innerText);
     document.getElementById('correct-answers').innerText = ++previousScore;
 }
 
-function incrementIncorrectScore() {
+function incrementIncorrectScore(){
     let previousScore = parseInt(document.getElementById('incorrect-answers').innerText);
     document.getElementById('incorrect-answers').innerText = ++previousScore;
 }
 
 finishButton.addEventListener('click', result);
 
-function result() {
+function result(){
     questionArea.classList.add('hide');
     scoresArea.classList.add('hide');
     finishButton.classList.add('hide');
