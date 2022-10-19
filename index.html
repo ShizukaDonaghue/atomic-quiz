@@ -18,28 +18,30 @@
     <title>The Atomic Quiz!</title>
 </head>
 <body>
-    <div id="game-area">
-        <div id="landing-page">
+    <section id="start-section">
+        <div id="introduction-area">
             <h1>Welcome to The Atomic Quiz!</h1> 
             <p>This is a quiz to test your knowledge about atoms.</p>
             <p>Let's see if you were paying attention in your chemistry class!</p>
             <p>Please enter your name to proceed.</p>
-            <!-- add icon here -->
         </div>
         
         <div id="name-input-area">
             <div id="name-input">
-                <form method="POST" action="javascript:void(0)">
+                <form action="javascript:void(0)">
                     <label for="username"></label>
-                    <input type="text" id="username" placeholder="Name" maxlength="10" required>
+                    <input type="text" id="username" name="username" placeholder="Name" maxlength="10" required/>
+                    <button id="start-button" type="submit" class="cursor-pointer">Start</button>
                 </form>
             </div>
             <div id="question-help">
                 <i id="question-mark" class="fa-sharp fa-solid fa-question"></i>
-                <p id="input-help" class="hide">Name field accepts maximum of 10 letters.</p>
+                <p id="input-help" class="hide">Name field accepts maximum of 10 characters including spaces.</p>
             </div>
         </div>
-
+    </section>
+    
+    <section id="game-section">
         <div id="question-area" class="hide">
             <div><span id="current-question-number">1</span> of 10</div>
             <div id="question-text">Question</div>
@@ -54,23 +56,24 @@
         <div id="score-area" class="hide">
             <p>Correct Answers:<span id="correct-answers"> 0</span></p>
             <p>Incorrect Answers:<span id="incorrect-answers"> 0</span></p>
+            <p>Total Score:<span id="total-score">0</span></p>
         </div>
+    </section>
 
+    <section id="result-section">
         <div id="result-area" class="hide">
             <h2>Results</h2>
-            <p>Correct Answers:<span id="correct-answers-result"> 0</span></p>
-            <p>Incorrect Answers:<span id="incorrect-answers-result"> 0</span></p>
-            <p>Total Score:<span id="total-score">0</span></p>
+            <div id="results"></div>
+            <div id="final-score"></div>
             <button id="play-again" class="cursor-pointer">Play Again</button>
-
         </div>
 
         <div class="control-area">
-            <button id="start-button" type="submit" class="cursor-pointer">Start</button>
+            <!-- <button id="start-button" type="submit" class="cursor-pointer">Start</button> -->
             <button id="next-button" class="cursor-pointer hide">Next</button>
             <button id="finish-button" class="cursor-pointer hide">Finish</button>
         </div>
-    </div>
+    </section>
     
     <!-- JavaScript script -->
     <script src="assets/js/script.js"></script>

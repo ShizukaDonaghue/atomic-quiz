@@ -1,7 +1,8 @@
-const landingPage = document.getElementById('landing-page');
+const introductionArea = document.getElementById('introduction-area');
 const nameInput = document.getElementById('name-input');
 const questionHelp = document.getElementById('question-help');
 const questionMark = document.getElementById('question-mark');
+const username = document.getElementById('username');
 const inputHelp = document.getElementById('input-help');
 const questionArea = document.getElementById('question-area');
 const questionText = document.getElementById('question-text');
@@ -10,8 +11,14 @@ const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const finishButton = document.getElementById('finish-button');
 const resultArea = document.getElementById('result-area');
+const results = document.getElementById('results');
+const choice1 = document.getElementById('choice1');
+const choice2 = document.getElementById('choice2');
+const choice3 = document.getElementById('choice3');
+const choice4 = document.getElementById('choice4');
+let user = username.value;
 let currentQuestionNumber = document.getElementById('current-question-number'); 
-let currentQuestionSet = {};
+let currentQuestionSet = [];
 let shuffledQuestions = '';
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
@@ -25,20 +32,21 @@ function displayInputHelp (){
 }
 
 function closeInputHelp(){
-    inputHelp.classList.add('hide')
+    inputHelp.classList.add('hide');
 }
 
-// Wait for the DOM to finish loading before running the game
+// Wait for the DOM to finish loading before running the game so that all fuctions will work
 // Add event listerner to the start button
 document.addEventListener('DOMContentLoaded', function() {
-    startButton.addEventListener('click', runGame);
+    startButton.addEventListener('click', runGame); 
 });
 
+
+
 function runGame(){
-    landingPage.classList.add('hide');
+    introductionArea.classList.add('hide');
     nameInput.classList.add('hide');
     questionHelp.classList.add('hide');
-    startButton.classList.add('hide');
     questionArea.classList.remove('hide');
     nextButton.classList.remove('hide');
     scoreArea.classList.remove('hide');
@@ -69,7 +77,7 @@ function nextQuestion(){
 
 //  displayQuestion function loops through questions array and display each question and possible answers
 function displayQuestion(){
-    for (let question in questions) {
+    for (let i = 0; i < questions.length; i++) {
         questionText.innerHTML = currentQuestionSet[currentQuestionIndex].question;
         choice1.innerHTML = currentQuestionSet[currentQuestionIndex].a;
         choice2.innerHTML = currentQuestionSet[currentQuestionIndex].b; 
@@ -115,6 +123,7 @@ function checkAnswer(){
 function incrementScore(){
     let previousScore = parseInt(document.getElementById('correct-answers').innerText);
     document.getElementById('correct-answers').innerText = ++previousScore;
+    document.getElementById('total-score').innerText = correctAnswers *100; 
 }
 
 function incrementIncorrectScore(){
@@ -126,10 +135,11 @@ finishButton.addEventListener('click', result);
 
 function result(){
     questionArea.classList.add('hide');
-    scoresArea.classList.add('hide');
+    scoreArea.classList.add('hide');
     finishButton.classList.add('hide');
     resultArea.classList.remove('hide');
-    
+    results.innerText=`${user}, you answered ${correctAnswers} correctly and your total score is`;
+    document.getElementById('final-score').innerText = correctAnswers * 100;
 }
 
 const questions = [
