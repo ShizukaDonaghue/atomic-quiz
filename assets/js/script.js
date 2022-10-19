@@ -1,20 +1,13 @@
-const startSection = document.getElementById('start-section');
 const introductionArea = document.getElementById('introduction-area');
 const nameInput = document.getElementById('name-input');
 const nameInputForm = document.getElementById('name-input-form');
 const questionHelp = document.getElementById('question-help');
 const questionMark = document.getElementById('question-mark');
-const username = document.getElementById('username');
 const inputHelp = document.getElementById('input-help');
-const ruleArea = document.getElementById('rule-area');
 const rule = document.getElementById('rule');
 const ruleButton = document.getElementById('rule-button');
-const closeRuleButton = document.getElementById('close-rule-button');
 const gameSection = document.getElementById('game-section');
-const questionArea = document.getElementById('question-area');
 const questionText = document.getElementById('question-text');
-const scoreArea = document.getElementById('score-area');
-const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const finishButton = document.getElementById('finish-button');
 const resultSection = document.getElementById('result-section');
@@ -23,7 +16,6 @@ const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
 const choice3 = document.getElementById('choice3');
 const choice4 = document.getElementById('choice4');
-const playAgain = document.getElementById('play-again');
 let user = '';
 let currentQuestionNumber = document.getElementById('current-question-number'); 
 let currentQuestionSet = [];
@@ -53,7 +45,7 @@ function displayRule() {
     ruleButton.classList.add('hide');
 }
 
-closeRuleButton.addEventListener('click', closeRule);
+document.getElementById('close-rule-button').addEventListener('click', closeRule);
 
 function closeRule() {
     rule.classList.add('hide');
@@ -71,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function runGame(){
     user = document.getElementById('username').value;
-    startSection.classList.add('hide');
+    document.getElementById('start-section').classList.add('hide');
     gameSection.classList.remove('hide');
   
     // Shuffling an array code from https://javascript.info/task/shuffle
@@ -163,7 +155,7 @@ function result(){
     results.innerText=`${user}, you answered ${correctAnswers} correctly and your total score is`;
     document.getElementById('final-score').innerText = correctAnswers * 100;
 
-    playAgain.addEventListener('click', resetGame);
+    document.getElementById('play-again').addEventListener('click', resetGame);
 }
 
 function resetGame() {
