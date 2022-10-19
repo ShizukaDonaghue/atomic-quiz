@@ -1,22 +1,28 @@
+const startSection = document.getElementById('start-section');
 const introductionArea = document.getElementById('introduction-area');
 const nameInput = document.getElementById('name-input');
+const nameInputForm = document.getElementById('name-input-form');
 const questionHelp = document.getElementById('question-help');
 const questionMark = document.getElementById('question-mark');
 const username = document.getElementById('username');
 const inputHelp = document.getElementById('input-help');
+const ruleArea = document.getElementById('rule-area');
+const rule = document.getElementById('rule');
+const ruleButton = document.getElementById('rule-button');
+const closeRuleButton = document.getElementById('close-rule-button');
+const gameSection = document.getElementById('game-section');
 const questionArea = document.getElementById('question-area');
 const questionText = document.getElementById('question-text');
 const scoreArea = document.getElementById('score-area');
 const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const finishButton = document.getElementById('finish-button');
-const resultArea = document.getElementById('result-area');
+const resultSection = document.getElementById('result-section');
 const results = document.getElementById('results');
 const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
 const choice3 = document.getElementById('choice3');
 const choice4 = document.getElementById('choice4');
-const nameInputForm = document.getElementById('name-input-form');
 const playAgain = document.getElementById('play-again');
 let user = '';
 let currentQuestionNumber = document.getElementById('current-question-number'); 
@@ -29,12 +35,32 @@ let incorrectAnswers = 0;
 questionMark.addEventListener('mouseover', displayInputHelp);
 questionMark.addEventListener('mouseleave', closeInputHelp);
 
-function displayInputHelp (){
+function displayInputHelp(){
     inputHelp.classList.remove('hide');
 }
 
 function closeInputHelp(){
     inputHelp.classList.add('hide');
+}
+
+ruleButton.addEventListener('click', displayRule);
+
+function displayRule() {
+    rule.classList.remove('hide');
+    introductionArea.classList.add('hide');
+    nameInput.classList.add('hide');
+    questionHelp.classList.add('hide');
+    ruleButton.classList.add('hide');
+}
+
+closeRuleButton.addEventListener('click', closeRule);
+
+function closeRule() {
+    rule.classList.add('hide');
+    introductionArea.classList.remove('hide');
+    nameInput.classList.remove('hide');
+    questionHelp.classList.remove('hide');
+    ruleButton.classList.remove('hide');
 }
 
 // Wait for the DOM to finish loading before running the game so that all fuctions will work
@@ -43,16 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
     nameInputForm.addEventListener('submit', runGame); 
 });
 
-
 function runGame(){
     user = document.getElementById('username').value;
-    introductionArea.classList.add('hide');
-    nameInput.classList.add('hide');
-    questionHelp.classList.add('hide');
-    questionArea.classList.remove('hide');
-    nextButton.classList.remove('hide');
-    scoreArea.classList.remove('hide');
-
+    startSection.classList.add('hide');
+    gameSection.classList.remove('hide');
+  
     // Shuffling an array code from https://javascript.info/task/shuffle
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
 
@@ -136,12 +157,12 @@ function incrementIncorrectScore(){
 finishButton.addEventListener('click', result);
 
 function result(){
-    questionArea.classList.add('hide');
-    scoreArea.classList.add('hide');
-    finishButton.classList.add('hide');
-    resultArea.classList.remove('hide');
+    gameSection.classList.add('hide');
+    resultSection.classList.remove('hide');
+
     results.innerText=`${user}, you answered ${correctAnswers} correctly and your total score is`;
     document.getElementById('final-score').innerText = correctAnswers * 100;
+
     playAgain.addEventListener('click', resetGame);
 }
 
@@ -151,7 +172,9 @@ function resetGame() {
     document.getElementById('correct-answers').innerText = 0;
     document.getElementById('incorrect-answers').innerText = 0;
     document.getElementById('total-score').innerText = 0;
-    resultArea.classList.add('hide');
+    resultSection.classList.add('hide');
+    finishButton.classList.add('hide');
+    nextButton.classList.remove('hide');
 
     runGame();
 }
