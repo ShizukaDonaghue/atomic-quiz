@@ -24,6 +24,8 @@ let currentQuestionIndex = 0;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
 
+document.getElementById('username').focus();
+
 questionMark.addEventListener('mouseover', displayInputHelp);
 questionMark.addEventListener('mouseleave', closeInputHelp);
 
@@ -53,6 +55,7 @@ function closeRule() {
     nameInput.classList.remove('hide');
     questionHelp.classList.remove('hide');
     ruleButton.classList.remove('hide');
+    document.getElementById('username').focus();
 }
 
 // Wait for the DOM to finish loading before running the game so that all fuctions will work
@@ -126,7 +129,7 @@ function checkAnswer(){
         incrementIncorrectScore(); 
     }  
 
-    if (shuffledQuestions.length  > currentQuestionIndex + 1) {
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
         currentQuestionIndex++;  
         nextButton.addEventListener('click', nextQuestion);
     } else {
