@@ -16,7 +16,9 @@ const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
 const choice3 = document.getElementById('choice3');
 const choice4 = document.getElementById('choice4');
-let user = username.value;
+const nameInputForm = document.getElementById('name-input-form');
+const playAgain = document.getElementById('play-again');
+let user = '';
 let currentQuestionNumber = document.getElementById('current-question-number'); 
 let currentQuestionSet = [];
 let shuffledQuestions = '';
@@ -38,12 +40,12 @@ function closeInputHelp(){
 // Wait for the DOM to finish loading before running the game so that all fuctions will work
 // Add event listerner to the start button
 document.addEventListener('DOMContentLoaded', function() {
-    startButton.addEventListener('click', runGame); 
+    nameInputForm.addEventListener('submit', runGame); 
 });
 
 
-
 function runGame(){
+    user = document.getElementById('username').value;
     introductionArea.classList.add('hide');
     nameInput.classList.add('hide');
     questionHelp.classList.add('hide');
@@ -140,6 +142,18 @@ function result(){
     resultArea.classList.remove('hide');
     results.innerText=`${user}, you answered ${correctAnswers} correctly and your total score is`;
     document.getElementById('final-score').innerText = correctAnswers * 100;
+    playAgain.addEventListener('click', resetGame);
+}
+
+function resetGame() {
+    currentQuestionIndex = 0;
+    correctAnswers = 0;
+    document.getElementById('correct-answers').innerText = 0;
+    document.getElementById('incorrect-answers').innerText = 0;
+    document.getElementById('total-score').innerText = 0;
+    resultArea.classList.add('hide');
+
+    runGame();
 }
 
 const questions = [
