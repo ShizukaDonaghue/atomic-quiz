@@ -16,6 +16,7 @@ const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
 const choice3 = document.getElementById('choice3');
 const choice4 = document.getElementById('choice4');
+const explanationText = document.getElementById('explanation-text');
 let answerButtons = document.getElementsByClassName('answer-button');
 let user = '';
 let currentQuestionNumber = document.getElementById('current-question-number'); 
@@ -79,6 +80,7 @@ function runGame(){
 }
 
 function nextQuestion(){
+    explanationText.classList.add('hide');
     currentQuestionNumber.innerText = currentQuestionIndex + 1;
         
     choice1.removeAttribute('disabled', 'disabled');
@@ -130,11 +132,15 @@ function checkAnswer(){
     if (userAnswer === correctAnswer) {
         correctAnswers++;
         incrementScore();  
+        explanationText.classList.remove('hide');
+        document.getElementById('explanation-text').innerHTML = `<h4>Correct!</h4>` + currentQuestionSet[currentQuestionIndex].explanation;
     } else {
         incorrectAnswers++;
-        incrementIncorrectScore(); 
+        incrementIncorrectScore();
+        explanationText.classList.remove('hide');
+        document.getElementById('explanation-text').innerHTML = `<h4>Wrong!</h4>` + currentQuestionSet[currentQuestionIndex].explanation;
     } 
-    
+
     for (let i = 0; i < answerButtons.length; i++) {
         if (answerButtons[i].value === correctAnswer) {
             answerButtons[i].classList.add('correct');
@@ -142,14 +148,14 @@ function checkAnswer(){
             this.classList.add('incorrect');
         }        
     }
-
+    
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         currentQuestionIndex++;  
         nextButton.addEventListener('click', nextQuestion);
     } else {
         nextButton.classList.add('hide');
         finishButton.classList.remove('hide');     
-    }     
+    }   
 }
 
 function incrementScore(){
