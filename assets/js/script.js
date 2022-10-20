@@ -17,6 +17,7 @@ const choice2 = document.getElementById('choice2');
 const choice3 = document.getElementById('choice3');
 const choice4 = document.getElementById('choice4');
 const explanationText = document.getElementById('explanation-text');
+const finalScore = document.getElementById('final-score');
 let answerButtons = document.getElementsByClassName('answer-button');
 let user = '';
 let currentQuestionNumber = document.getElementById('current-question-number'); 
@@ -175,8 +176,21 @@ function result(){
     gameSection.classList.add('hide');
     resultSection.classList.remove('hide');
 
-    results.innerText=`${user}, you answered ${correctAnswers} correctly and your total score is`;
-    document.getElementById('final-score').innerText = correctAnswers * 100;
+    if (correctAnswers <= 3) {
+        results.innerHTML = `Looks like you slept through your chemistry class...!?</p>
+        <p>Let's try the game again to improve your knowldege, which I am sure will be very useful in your daily life!!</p>
+        <p><p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`;
+        finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
+    } else if (correctAnswers <= 6) {
+        results.innerHTML = `Not bad. Looks like you were paying some attention through your chemistry class!</p>
+        <p>Let's try the game again to improve your knowldege and become the ultimate geek that you ever dreamed of!</p>
+        <p>${user}, you answered ${correctAnswers} questions correctly and your total score is</p>`
+        finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
+    } else {
+        results.innerHTML = `<p>${user}, you are a genius! Congratulations! Be proud and let your geek flag fly high!</p>
+        <p>You answered ${correctAnswers} questions correctly and your total score is</p>`
+        finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
+    }
 
     document.getElementById('play-again').addEventListener('click', resetGame);
 }
