@@ -134,12 +134,14 @@ function checkAnswer(){
         correctAnswers++;
         incrementScore();  
         explanationText.classList.remove('hide');
-        document.getElementById('explanation-text').innerHTML = `<h4>Correct!</h4>` + currentQuestionSet[currentQuestionIndex].explanation;
+        document.getElementById('explanation-text').innerHTML = `<h4>Correct!</h4>` 
+            + currentQuestionSet[currentQuestionIndex].explanation;
     } else {
         incorrectAnswers++;
         incrementIncorrectScore();
         explanationText.classList.remove('hide');
-        document.getElementById('explanation-text').innerHTML = `<h4>Wrong!</h4>` + currentQuestionSet[currentQuestionIndex].explanation;
+        document.getElementById('explanation-text').innerHTML = `<h4>Wrong!</h4>` 
+            + currentQuestionSet[currentQuestionIndex].explanation;
     } 
 
     for (let i = 0; i < answerButtons.length; i++) {
@@ -177,18 +179,18 @@ function result(){
     resultSection.classList.remove('hide');
 
     if (correctAnswers <= 3) {
-        results.innerHTML = `Looks like you slept through your chemistry class...!?</p>
-        <p>Let's try the game again to improve your knowldege, which I am sure will be very useful in your daily life!!</p>
+        finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
+        results.innerHTML = `uh-oh! Looks like you slept through your chemistry class...!?</p>
+        <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>
         <p><p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`;
-        finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
     } else if (correctAnswers <= 6) {
-        results.innerHTML = `Not bad. Looks like you were paying some attention through your chemistry class!</p>
-        <p>Let's try the game again to improve your knowldege and become the ultimate geek that you ever dreamed of!</p>
-        <p>${user}, you answered ${correctAnswers} questions correctly and your total score is</p>`
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
+        results.innerHTML = `Not bad. Looks like you were paying some attention through your chemistry class!</p>
+        <p>Let's try the game again to improve your knowldege and unleash your inner geek!</p>
+        <p>${user}, you answered ${correctAnswers} questions correctly and your total score is</p>`;   
     } else {
-        results.innerHTML = `<p>${user}, you are a genius! Congratulations! Be proud and let your geek flag fly high!</p>
-        <p>You answered ${correctAnswers} questions correctly and your total score is</p>`
+        results.innerHTML = `<p>${user}, you must have been the teacher's pet! Congratulations! Be proud and let your geek flag fly high!</p>
+        <p>You answered ${correctAnswers} questions correctly and your total score is</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
     }
 
