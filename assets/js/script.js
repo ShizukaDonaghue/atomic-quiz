@@ -16,6 +16,7 @@ const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
 const choice3 = document.getElementById('choice3');
 const choice4 = document.getElementById('choice4');
+let answerButtons = document.getElementsByClassName('answer-button');
 let user = '';
 let currentQuestionNumber = document.getElementById('current-question-number'); 
 let currentQuestionSet = [];
@@ -89,7 +90,6 @@ function nextQuestion(){
     choice3.classList.add('cursor-pointer');
     choice4.classList.add('cursor-pointer');
 
-    let answerButtons = document.getElementsByClassName('answer-button');
     for (let i = 0; i <  answerButtons.length; i++) {
         answerButtons[i].classList.remove('correct');
         answerButtons[i].classList.remove('incorrect');
@@ -129,13 +129,19 @@ function checkAnswer(){
     let correctAnswer = currentQuestionSet[currentQuestionIndex].answer;
     if (userAnswer === correctAnswer) {
         correctAnswers++;
-        incrementScore();
-        this.classList.add('correct');     
+        incrementScore();  
     } else {
         incorrectAnswers++;
         incrementIncorrectScore(); 
-        this.classList.add('incorrect');
-    }  
+    } 
+    
+    for (let i = 0; i < answerButtons.length; i++) {
+        if (answerButtons[i].value === correctAnswer) {
+            answerButtons[i].classList.add('correct');
+        } else if (userAnswer !== correctAnswer) {
+            this.classList.add('incorrect');
+        }        
+    }
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         currentQuestionIndex++;  
