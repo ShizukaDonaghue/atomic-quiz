@@ -11,6 +11,7 @@ const questionText = document.getElementById('question-text');
 const nextButton = document.getElementById('next-button');
 const finishButton = document.getElementById('finish-button');
 const resultSection = document.getElementById('result-section');
+const resultComment = document.getElementById('result-comment');
 const results = document.getElementById('results');
 const choice1 = document.getElementById('choice1');
 const choice2 = document.getElementById('choice2');
@@ -98,6 +99,8 @@ function nextQuestion(){
         answerButtons[i].classList.remove('incorrect');
     }
 
+    nextButton.classList.add('hide');
+
     displayQuestion();
 }
 
@@ -151,6 +154,8 @@ function checkAnswer(){
             this.classList.add('incorrect');
         }        
     }
+
+    nextButton.classList.remove('hide');
     
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         currentQuestionIndex++;  
@@ -179,19 +184,19 @@ function result(){
     resultSection.classList.remove('hide');
 
     if (correctAnswers <= 3) {
+        resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
-        results.innerHTML = `uh-oh! Looks like you slept through your chemistry class...!?</p>
-        <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>
-        <p><p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`;
+        results.innerHTML = `<p>uh-oh! Looks like you slept through your chemistry class...!?</p>
+        <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>`;
     } else if (correctAnswers <= 6) {
-        finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
-        results.innerHTML = `Not bad. Looks like you were paying some attention through your chemistry class!</p>
-        <p>Let's try the game again to improve your knowldege and unleash your inner geek!</p>
-        <p>${user}, you answered ${correctAnswers} questions correctly and your total score is</p>`;   
+        resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is</p>`; 
+        finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100; 
+        results.innerHTML = `<p>Not bad. Looks like you were paying some attention through your chemistry class!</p>
+        <p>Let's try the game again to improve your knowldege and unleash your inner geek!</p>`;
     } else {
-        results.innerHTML = `<p>${user}, you must have been the teacher's pet! Congratulations! Be proud and let your geek flag fly high!</p>
-        <p>You answered ${correctAnswers} questions correctly and your total score is</p>`;
+        resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
+        results.innerHTML = `<p>You must have been the teacher's pet! Congratulations! Be proud and let your geek flag fly high!</p>`;
     }
 
     document.getElementById('play-again').addEventListener('click', resetGame);
