@@ -15,13 +15,13 @@
     <!-- add favicon here -->
    
  
-    <title>The Atomic Quiz!</title>
+    <title>Amazing Atoms!</title>
 </head>
 <body>
     <section id="start-section">
         <div id="introduction-area">
-            <h1>Welcome to The Atomic Quiz!</h1> 
-            <p>This is a quiz to test your knowledge about atoms.</p>
+            <h1>Amazing Atoms!</h1> 
+            <p>Take this quiz to test your knowledge about atoms.</p>
             <p>If you think you know everything, this is the test to try!</p>
             <p>Let's see if you were paying attention in your chemistry class...</p>
             <p>Please enter your name to proceed.</p>
@@ -31,18 +31,18 @@
             <div id="name-input">
                 <form id="name-input-form" action="javascript:void(0)">
                     <label for="username"></label>
-                    <input type="text" id="username" name="username" placeholder="Name" maxlength="10" required/>
-                    <button id="start-button" type="submit" class="cursor-pointer">Start</button>
+                    <input type="text" id="username" name="username" placeholder="Name" minlength="3" maxlength="10" required/>
+                    <button aria-label="start button" id="start-button" type="submit" class="cursor-pointer">Start</button>
                 </form>
             </div>
             <div id="question-help">
                 <span id="question-mark"><i class="fa-sharp fa-solid fa-question"></i></span>
-                <p id="input-help" class="hide">Name field accepts maximum of 10 characters including spaces.</p>
+                <p id="input-help" class="hide">Name field accepts mininum of 3 and maximum of 10 characters including spaces.</p>
             </div>
         </div>
 
         <div id="rule-area">
-            <button id="rule-button" class="cursor-pointer">Rules</button>
+            <button aria-label="rule button" id="rule-button" class="cursor-pointer">Rules</button>
             <div id="rule" class="hide">
                 <h3>Rules</h3>
                 <p>There are 10 questions related to atoms.<br>
@@ -51,7 +51,7 @@
                     You will receive 100 points for each correct answer.<br>
                     Enjoy and let your geek flag fly high!
                 </p>
-                <div id="close-rule-button" class="cursor-pointer"><i class="fa-solid fa-xmark"></i></div>
+                <div aria-label="close rule button" id="close-rule-button" class="cursor-pointer"><i class="fa-solid fa-xmark"></i></div>
         </div>
     </section>
     
@@ -60,10 +60,10 @@
             <div><span id="current-question-number">1</span> of 10</div>
             <div id="question-text">Question</div>
             <div id="answer-buttons" class="button-grid">
-                <button id="choice1" class="cursor-pointer answer-button" value="A">Answer 1</button>
-                <button id="choice2" class="cursor-pointer answer-button" value="B">Answer 2</button>
-                <button id="choice3" class="cursor-pointer answer-button" value="C">Answer 3</button>
-                <button id="choice4" class="cursor-pointer answer-button" value="D">Answer 4</button>
+                <button aria-label="answer 1" id="choice1" class="cursor-pointer answer-button" value="A">Answer 1</button>
+                <button aria-label="answer 2" id="choice2" class="cursor-pointer answer-button" value="B">Answer 2</button>
+                <button aria-label="answer 3" id="choice3" class="cursor-pointer answer-button" value="C">Answer 3</button>
+                <button aria-label="answer 4" id="choice4" class="cursor-pointer answer-button" value="D">Answer 4</button>
             </div>    
         </div>
 
@@ -76,8 +76,8 @@
         <div id="explanation-text" class="hide"></div>
 
         <div class="control-area">
-            <button id="next-button" class="cursor-pointer">Next</button>
-            <button id="finish-button" class="cursor-pointer hide">Finish</button>
+            <button aria-label="next button" id="next-button" class="cursor-pointer">Next</button>
+            <button aria-label="finish button" id="finish-button" class="cursor-pointer hide">Finish</button>
         </div>
     </section>
 
@@ -85,9 +85,9 @@
         <div id="result-area">
             <h2>Results</h2>
             <div id="result-comment"></div>
-            <div id="final-score"></div>
+            <span id="final-score"></span>
             <div id="results"></div>
-            <button id="play-again" class="cursor-pointer">Play Again</button>
+            <button aria-label="play again button" id="play-again" class="cursor-pointer">Play Again</button>
         </div>
     </section>
    
