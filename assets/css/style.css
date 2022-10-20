@@ -1,7 +1,7 @@
 /* Google Font import */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Ubuntu:wght@400;500;700&display=swap');
 
-/* * {
+* {
   margin: 0;
   padding: 0;
   border: none;
@@ -11,9 +11,9 @@
   box-sizing: border-box;
 } */
 
-/* :root {
-  --dark-grey: #01212F;
-} */
+:root {
+  --dark-blue: rgba(6, 35, 90,0.7);
+}
 
 /* double reset for font size for easier rem unit calculation and scroll-padding property to account for fixed navigation bar */
 html {
@@ -22,8 +22,17 @@ html {
 
 body {
   background: url(/assets/images/atom-background-image.jpg) no-repeat center center fixed;
+  background-size: cover;
   font-family: Ubuntu, sans-serif;
   color: #fff;
+}
+
+#start-section {
+  background-color: var(--dark-blue);
+  height: 70%;
+  width: 70%;
+  margin: auto auto;
+  text-align: center;
 }
 
 .hide {
