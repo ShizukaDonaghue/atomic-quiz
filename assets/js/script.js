@@ -89,6 +89,12 @@ function nextQuestion(){
     choice3.classList.add('cursor-pointer');
     choice4.classList.add('cursor-pointer');
 
+    let answerButtons = document.getElementsByClassName('answer-button');
+    for (let i = 0; i <  answerButtons.length; i++) {
+        answerButtons[i].classList.remove('correct');
+        answerButtons[i].classList.remove('incorrect');
+    }
+
     displayQuestion();
 }
 
@@ -123,10 +129,12 @@ function checkAnswer(){
     let correctAnswer = currentQuestionSet[currentQuestionIndex].answer;
     if (userAnswer === correctAnswer) {
         correctAnswers++;
-        incrementScore();    
+        incrementScore();
+        this.classList.add('correct');     
     } else {
         incorrectAnswers++;
         incrementIncorrectScore(); 
+        this.classList.add('incorrect');
     }  
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
