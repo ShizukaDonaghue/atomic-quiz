@@ -8,6 +8,7 @@ const rule = document.getElementById('rule');
 const ruleButton = document.getElementById('rule-button');
 const gameSection = document.getElementById('game-section');
 const questionText = document.getElementById('question-text');
+const startButton = document.getElementById('start-button');
 const nextButton = document.getElementById('next-button');
 const finishButton = document.getElementById('finish-button');
 const resultSection = document.getElementById('result-section');
@@ -35,10 +36,14 @@ questionMark.addEventListener('mouseleave', closeInputHelp);
 
 function displayInputHelp(){
     inputHelp.classList.remove('hide');
+    startButton.classList.add('hide');
+    ruleButton.classList.add('hide');    
 }
 
 function closeInputHelp(){
     inputHelp.classList.add('hide');
+    startButton.classList.remove('hide');
+    ruleButton.classList.remove('hide'); 
 }
 
 ruleButton.addEventListener('click', displayRule);
@@ -63,7 +68,7 @@ function closeRule() {
 }
 
 // Wait for the DOM to finish loading before running the game so that all fuctions will work
-// Add event listerner to the start button
+// Add event listerner to the start button in the form element
 document.addEventListener('DOMContentLoaded', function() {
     nameInputForm.addEventListener('submit', runGame); 
 });

@@ -1,6 +1,7 @@
 /* Google Font import */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Ubuntu:wght@400;500;700&display=swap');
 
+/* global styling */
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +10,10 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-} */
+} 
 
 :root {
-  --dark-blue: rgba(6, 35, 90,0.7);
+  --font-family: Ubuntu, sans-serif;
 }
 
 /* double reset for font size for easier rem unit calculation and scroll-padding property to account for fixed navigation bar */
@@ -21,30 +22,73 @@ html {
 }
 
 body {
-  background: url(/assets/images/atom-background-image.jpg) no-repeat center center fixed;
-  background-size: cover;
-  font-family: Ubuntu, sans-serif;
-  color: #fff;
-}
-
-#start-section {
-  background-color: var(--dark-blue);
-  height: 70%;
-  width: 70%;
-  margin: auto auto;
+  background: url(/assets/images/atom-background-image.jpg) center center / cover no-repeat fixed;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font-family);
+  color: #0B2C58;
   text-align: center;
 }
 
 .hide {
-    display: none;
-  }
-  
+  display: none;
+}
+
 .cursor-pointer:hover {
   cursor: pointer;
 }
 
-#name-input-area {
-  display: flex;
+#start-section {
+  background: rgba(229, 247, 255, 0.7);
+  position: absolute;
+  width: 32rem;
+  height: 50rem;
+  padding: 5rem 1.5rem;
+  left: 50%;
+  top: 50%;
+  margin: -25rem 0 0 -16rem;
+  border-radius: 2rem;
+}
+
+h1 {
+  margin-bottom: 3rem;
+  font-size: 350%;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.button {
+  font-family: var(--font-family);
+  width: 6rem;
+  height: 3rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-weight: 500;
+}
+
+#username {
+  height: 3rem;
+  width: 20rem;
+  font-family: var(--font-family);
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#question-mark {
+  font-size: 1.5rem;
+  top: 37.2rem;
+  right:3.8rem;
+  position: absolute;
+}
+
+#input-help {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  z-index: 5;
 }
 
 .correct {
