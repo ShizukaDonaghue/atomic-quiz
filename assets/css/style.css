@@ -17,7 +17,7 @@
   --dark-blue: #0B2C58;
   --pale-blue: #E5F7FF;
   --pale-blue-opacity: rgba(229, 247, 255, 0.7);
-  --blue-green: #038E9D;
+  --blue-green: #71C2E4;
 }
 
 /* double reset for font size for easier rem unit calculation and scroll-padding property to account for fixed navigation bar */
@@ -82,7 +82,7 @@ p {
 }
 
 .button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 100ms linear;
   background: var(--blue-green);
   color: var(--dark-blue);
@@ -118,12 +118,14 @@ p {
   position: absolute;
   top: 42.3rem;
   left: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #rule-button {
   position: absolute;
   top: 42.3rem;
   right: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .correct {
