@@ -14,6 +14,8 @@
 
 :root {
   --font-family: Ubuntu, sans-serif;
+  --dark-blue: #0B2C58;
+  --blue-green: #038E9D;
 }
 
 /* double reset for font size for easier rem unit calculation and scroll-padding property to account for fixed navigation bar */
@@ -27,7 +29,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: var(--font-family);
-  color: #0B2C58;
+  color: var(--dark-blue);
   text-align: center;
 }
 
@@ -44,7 +46,7 @@ body {
   position: absolute;
   width: 32rem;
   height: 50rem;
-  padding: 5rem 1.5rem;
+  padding: 4rem 1.5rem;
   left: 50%;
   top: 50%;
   margin: -25rem 0 0 -16rem;
@@ -63,11 +65,22 @@ p {
 
 .button {
   font-family: var(--font-family);
-  width: 6rem;
-  height: 3rem;
+  width: 10rem;
+  height: 4rem;
   margin: 1rem;
   padding: 0.5rem;
   font-weight: 500;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  background: var(--dark-blue);
+  color: #fff;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  transition: 100ms linear;
+  background: var(--blue-green);
+  color: var(--dark-blue);
 }
 
 #username {
@@ -76,19 +89,35 @@ p {
   font-family: var(--font-family);
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-left: 1rem;
 }
 
 #question-mark {
   font-size: 1.5rem;
-  top: 37.2rem;
-  right:3.8rem;
   position: absolute;
+  top: 36rem;
+  right:3.9rem;
 }
 
 #input-help {
   font-family: var(--font-family);
-  font-size: 1rem;
-  z-index: 5;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 40rem;
+  right: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+#start-button {
+  position: absolute;
+  top: 40rem;
+  left: 4rem;
+}
+
+#rule-button {
+  position: absolute;
+  top: 40rem;
+  right: 4rem;
 }
 
 .correct {

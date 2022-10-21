@@ -12,9 +12,9 @@
     <!-- link to cdnjs Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 
-    <!-- add favicon here -->
-   
- 
+    <!-- link for favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    
     <title>Amazing Atoms!</title>
 </head>
 <body>
@@ -31,14 +31,14 @@
             <div id="name-input">
                 <form id="name-input-form" action="javascript:void(0)">
                     <label for="username"></label>
-                    <input type="text" id="username" name="username" placeholder="Name" minlength="3" maxlength="10" required/>
+                    <input type="text" id="username" name="username" placeholder="Name" minlength="3" maxlength="20" required/>
                     <div id="question-help">
                         <span id="question-mark"><i class="fas fa-question-circle"></i></span>
-                        <p id="input-help" class="hide">Name field accepts mininum of 3 and maximum of 10 characters including spaces.</p>
+                        <p id="input-help" class="hide">Name field accepts a mininum of 3 and a maximum of 20 characters including spaces.</p>
                     </div>
-                    <div id="start-button">
-                        <button aria-label="start button" type="submit" class="cursor-pointer button">Start</button>
-                    </div>    
+                    <!-- <div id="start-button"> -->
+                        <button aria-label="start button" id="start-button" type="submit" class="cursor-pointer button">Start</button>
+                    <!-- </div>     -->
                 </form>
             </div>
         </div>
