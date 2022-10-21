@@ -15,6 +15,8 @@
 :root {
   --font-family: Ubuntu, sans-serif;
   --dark-blue: #0B2C58;
+  --pale-blue: #E5F7FF;
+  --pale-blue-opacity: rgba(229, 247, 255, 0.7);
   --blue-green: #038E9D;
 }
 
@@ -42,25 +44,28 @@ body {
 }
 
 #start-section {
-  background: rgba(229, 247, 255, 0.7);
+  background: rgba(229, 247, 255);
   position: absolute;
   width: 32rem;
   height: 50rem;
-  padding: 4rem 1.5rem;
+  padding: 2rem 1.5rem;
   left: 50%;
   top: 50%;
   margin: -25rem 0 0 -16rem;
   border-radius: 2rem;
 }
 
-h1 {
-  margin-bottom: 3rem;
-  font-size: 350%;
+#logo {
+  margin-bottom: 2.5rem;
 }
+
+/* h1 {
+  margin-bottom: 3rem;
+} */
 
 p {
   margin-bottom: 2rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .button {
@@ -86,6 +91,7 @@ p {
 #username {
   height: 3rem;
   width: 20rem;
+  margin-top: 0.5rem;
   font-family: var(--font-family);
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -95,28 +101,28 @@ p {
 #question-mark {
   font-size: 1.5rem;
   position: absolute;
-  top: 36rem;
-  right:3.9rem;
+  top: 38rem;
+  right:4rem;
 }
 
 #input-help {
   font-family: var(--font-family);
   font-size: 1.6rem;
   position: absolute;
-  top: 40rem;
+  top: 41rem;
   right: 0.5rem;
   padding: 1rem 2rem;
 }
 
 #start-button {
   position: absolute;
-  top: 40rem;
+  top: 42.3rem;
   left: 4rem;
 }
 
 #rule-button {
   position: absolute;
-  top: 40rem;
+  top: 42.3rem;
   right: 4rem;
 }
 
