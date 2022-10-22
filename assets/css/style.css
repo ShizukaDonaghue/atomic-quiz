@@ -43,7 +43,7 @@ body {
   cursor: pointer;
 }
 
-#start-section {
+section {
   background: rgba(229, 247, 255);
   position: absolute;
   width: 32rem;
@@ -60,8 +60,8 @@ body {
 }
 
 h1 {
-  margin-bottom: 3rem;
-  font-size: 350%;
+  margin-bottom: 2rem;
+  font-size: 250%;
 }
 
 p {
@@ -116,13 +116,13 @@ p {
   padding: 1rem 2rem;
 }
 
-#rule {
-  padding-top: 5rem;
-}
+/* #rule {
+  padding-top: 0.3rem;
+} */
 
 #close-rule-button {
   font-size: 350%;
-  margin-top: 3.5rem;
+  margin-top: 2rem;
 }
 
 #green {
@@ -133,7 +133,7 @@ p {
   color: red;
 }
 
-#start-button {
+#rule-button {
   position: absolute;
   top: 42.3rem;
   left: 4rem;
@@ -141,7 +141,7 @@ p {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#rule-button {
+#start-button {
   position: absolute;
   top: 42.3rem;
   right: 4rem;
