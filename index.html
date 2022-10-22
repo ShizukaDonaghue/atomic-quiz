@@ -33,12 +33,10 @@
                     <label for="username"></label>
                     <input type="text" id="username" name="username" placeholder="Name" minlength="3" maxlength="20" required/>
                     <div id="question-help">
-                        <span id="question-mark"><i class="fas fa-question-circle"></i></span>
+                        <span id="question-mark"><i class="fa-solid fa-circle-question"></i></span>
                         <p id="input-help" class="hide">Name field accepts a mininum of 3 and a maximum of 20 characters including spaces.</p>
                     </div>
-                    <!-- <div id="start-button"> -->
-                        <button aria-label="start button" id="start-button" type="submit" class="cursor-pointer button">Start</button>
-                    <!-- </div>     -->
+                    <button aria-label="start button" id="start-button" type="submit" class="cursor-pointer button">Start</button>
                 </form>
             </div>
         </div>
@@ -47,13 +45,12 @@
             <button aria-label="rule button" id="rule-button" class="cursor-pointer button">Rules</button>
             <div id="rule" class="hide">
                 <h1>Rules</h1>
-                <p>There are 10 questions related to atoms.<br>
-                    The colour of the answer button selected will turn green if it is correct and will turn red 
-                    if it is incorrect.<br> 
-                    You will receive 100 points for each correct answer.<br>
-                    Enjoy and let your geek flag fly high!
-                </p>
-                <div aria-label="close rule button" id="close-rule-button" class="cursor-pointer"><i class="fa-solid fa-xmark"></i></div>
+                <p>There are 10 questions related to <b>atoms</b>!</p>
+                <p>The colour of the answer button selected will turn <span id="green"><b>green</b></span> if it is correct and will turn 
+                    <span id="red"><b>red</b></span> if it is incorrect.</p>
+                <p>You will receive <b>100</b> points for each <b>correct</b> answer.</p>
+                <p>Enjoy and let your geek flag fly high!</p>
+                <div aria-label="close rule button" id="close-rule-button" class="cursor-pointer"><i class="fa-solid fa-circle-xmark"></i></div>
         </div>
     </section>
     

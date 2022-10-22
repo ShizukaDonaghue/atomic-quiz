@@ -59,9 +59,10 @@ body {
   margin-bottom: 2.5rem;
 }
 
-/* h1 {
+h1 {
   margin-bottom: 3rem;
-} */
+  font-size: 350%;
+}
 
 p {
   margin-bottom: 2rem;
@@ -94,6 +95,7 @@ p {
   margin-top: 0.5rem;
   font-family: var(--font-family);
   border-radius: 0.5rem;
+  /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding-left: 1rem;
 }
@@ -114,18 +116,37 @@ p {
   padding: 1rem 2rem;
 }
 
+#rule {
+  padding-top: 5rem;
+}
+
+#close-rule-button {
+  font-size: 350%;
+  margin-top: 3.5rem;
+}
+
+#green {
+  color: green;
+}
+
+#red {
+  color: red;
+}
+
 #start-button {
   position: absolute;
   top: 42.3rem;
   left: 4rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #rule-button {
   position: absolute;
   top: 42.3rem;
   right: 4rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .correct {
