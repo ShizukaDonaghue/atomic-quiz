@@ -36,17 +36,17 @@
                         <span id="question-mark"><i class="fa-solid fa-circle-question"></i></span>
                         <p id="input-help" class="hide">Name field accepts a mininum of 3 and a maximum of 20 characters including spaces.</p>
                     </div>
-                    <button aria-label="start button" id="start-button" type="submit" class="cursor-pointer button">Start</button>
+                    <button aria-label="start button" id="start-button" type="submit" class="cursor-pointer navigation-button">Start</button>
                 </form>
             </div>
         </div>
 
         <div id="rule-area">
-            <button aria-label="rule button" id="rule-button" class="cursor-pointer button">Rules</button>
+            <button aria-label="rule button" id="rule-button" class="cursor-pointer navigation-button">Rules</button>
             <div id="rule" class="hide">
                 <img id="logo" src="assets/images/logo.jpg" alt="logo">
                 <h1>Rules</h1>
-                <p>There are 10 questions related to <b>atoms</b>!</p>
+                <p>There are 8 questions related to <b>atoms</b>!</p>
                 <p>The colour of the answer button selected will turn <span id="green"><b>green</b></span> if it is correct and will turn 
                     <span id="red"><b>red</b></span> if it is incorrect.</p>
                 <p>You will receive <b>100</b> points for each <b>correct</b> answer.</p>
@@ -57,9 +57,10 @@
     
     <section id="game-section" class="hide">
         <div id="question-area">
-            <div><span id="current-question-number">1</span> of 10</div>
+            <img id="logo-small" src="assets/images/logo-small.jpg" alt="small logo">
+            <div id="question-number">Question <span id="current-question-number">1</span> of 8</div>
             <div id="question-text">Question</div>
-            <div id="answer-buttons" class="button-grid">
+            <div id="answer-buttons" class="button-container">
                 <button aria-label="answer 1" id="choice1" class="cursor-pointer answer-button button" value="A">Answer 1</button>
                 <button aria-label="answer 2" id="choice2" class="cursor-pointer answer-button button" value="B">Answer 2</button>
                 <button aria-label="answer 3" id="choice3" class="cursor-pointer answer-button button" value="C">Answer 3</button>
@@ -67,17 +68,17 @@
             </div>    
         </div>
 
-        <div id="score-area">
-            <p>Correct Answers:<span id="correct-answers"> 0</span></p>
-            <p>Incorrect Answers:<span id="incorrect-answers"> 0</span></p>
-            <h3>Total Score:<span id="total-score">0</span></h3>
+        <div id="score-area" class="hide">
+            <p>Correct Answer:<span id="correct-answers"> 0</span></p>
+            <p>Incorrect Answer:<span id="incorrect-answers"> 0</span></p>
+            <p>Total Score:<span id="total-score">0</span></p>
         </div>
 
         <div id="explanation-text" class="hide"></div>
 
         <div class="control-area">
-            <button aria-label="next button" id="next-button" class="cursor-pointer button">Next</button>
-            <button aria-label="finish button" id="finish-button" class="cursor-pointer button hide">Finish</button>
+            <button aria-label="next button" id="next-button" class="cursor-pointer control-button">Next</button>
+            <button aria-label="finish button" id="finish-button" class="cursor-pointer control-button hide">Finish</button>
         </div>
     </section>
 

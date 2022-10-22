@@ -69,7 +69,7 @@ p {
   font-size: 1.6rem;
 }
 
-.button {
+.navigation-button {
   font-family: var(--font-family);
   width: 10rem;
   height: 4rem;
@@ -82,7 +82,7 @@ p {
   color: #fff;
 }
 
-.button:hover {
+.navigation-button:hover {
   transform: scale(1.05);
   transition: 100ms linear;
   background: var(--blue-green);
@@ -94,6 +94,7 @@ p {
   width: 20rem;
   margin-top: 0.5rem;
   font-family: var(--font-family);
+  font-size: 1.6rem;
   border-radius: 0.5rem;
   /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -116,21 +117,17 @@ p {
   padding: 1rem 2rem;
 }
 
-/* #rule {
-  padding-top: 0.3rem;
-} */
-
 #close-rule-button {
   font-size: 350%;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 #green {
-  color: green;
+  color: #00F763;
 }
 
 #red {
-  color: red;
+  color: #DA2323;
 }
 
 #rule-button {
@@ -149,6 +146,44 @@ p {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+#logo-small {
+  width: 12%;
+  height: 12%;
+}
+
+#question-number {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+#question-text {
+  font-size: 1.6rem;
+  margin: 0.5rem 0 0.5rem 0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  font-family: var(--font-family);
+  height: 4.5rem;
+  margin: 0.2rem;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  background: var(--dark-blue);
+  color: #fff;
+  /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .correct {
   background: #00F763;
   color: #01212F;
@@ -159,3 +194,29 @@ p {
   color: #fff;
 }
 
+#explanation-text p {
+  font-size: 1.5rem;
+  padding-top: 1.1rem;
+}
+
+.control-button {
+  font-family: var(--font-family);
+  width: 8rem;
+  height: 4rem;
+  margin: 1rem;
+  padding-bottom: 0.2rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  background: var(--dark-blue);
+  color: #fff;
+  position: absolute;
+  bottom: 1rem;
+  right: 11rem;
+  /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.control-button:hover {
+  background: var(--blue-green);
+  color: var(--dark-blue);
+}

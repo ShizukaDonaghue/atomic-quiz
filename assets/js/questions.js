@@ -6,9 +6,8 @@ const questions = [
         c: "Protons, neutrinos, and ions",
         d: "Protium, deuterium, and tritium",
         answer: "B",
-        explanation: `<p>Although they can be broken further into subatomic particles, the three main components of 
-        an atom are protons, neutrons, and electrons. In order to be considered an atom, there needs to be at least 
-        a single proton (which is the most common form of hydrogen).</p>`,
+        explanation: `<p>The three main components of an atom are protons, neutrons, and electrons, and in order to 
+        be considered an atom, there needs to be at least a single proton.</p>`,
     },
     {
         question: "An element is determined by the number of?",
@@ -17,8 +16,8 @@ const questions = [
         c: "Neutrons",
         d: "Protons",
         answer: "D",
-        explanation: `<p>Back in Mendeleev's time, before scientists knew about the parts of the atom, each element 
-        was recognized by its atom's atomic weight. In modern times, we identify atoms based on how many protons they 
+        explanation: `<p>Before scientists knew about the parts of the atom, each element 
+        was recognized by its atom's atomic weight. These days, we identify atoms based on how many protons they 
         contain.</p>`,
     },
     {
@@ -58,20 +57,19 @@ const questions = [
         c: "Protons and neutrons",
         d: "All particles are attracted to each other",
         answer: "B",
-        explanation: `<p>Opposites attract, at least when they have opposite electrical charges. So, protons and 
-        electrons are attracted to each other. Protons repel other protons. Electrons repel other electrons. Neutrons 
-        are neither attracted to nor repelled by other particles.</p>`,
+        explanation: `<p>Opposites attract when they have opposite electrical charges, so protons and 
+        electrons are attracted to each other. Neutrons are neither attracted to nor repelled by other particles.</p>`,
     },
     {
-        question: "The atomic number of an atom is",
+        question: "The atomic number of an atom is?",
         a: "The number of electrons",
         b: "The number of neutrons",
         c: "The number of protons",
         d: "The number of protons plus the number of neutrons",
         answer: "C",
-        explanation: `<p>The atomic number of an atom is the same as the number of protons it has. For example, 
-        hydrogen has one proton and is atomic number 1. Each helium atom has two protons, so the element is atomic 
-        number 2. Simple, right?</p>`,
+        explanation: `<p>The atomic number of an atom is the same as the number of protons it has, e.g.  
+        hydrogen has one proton and is atomic number 1. A helium atom has two protons, so the element is atomic 
+        number 2.</p>`,
     },
     {
         question: "Changing the number of neutrons of an atom changes its?",
@@ -82,27 +80,5 @@ const questions = [
         answer: "A",
         explanation: `<p>Atoms that have the same number of protons, but different numbers of neutrons from each 
         other are called isotopes of that element.</p>`,
-    },
-    {
-        question: "When you change the number of electrons on an atom, you produce a different?",
-        a: "Isotope",
-        b: "Element",
-        c: "Ion",
-        d: "Atomic mass",
-        answer: "C",
-        explanation: `<p> If you have a different number of protons and electrons in an atom, it is an ion. If there 
-        are more electrons, the ion has a net negative electrical charge and is called an anion. If there are fewer 
-        electrons than protons, the ion has a net positive electrical charge and is called a cation.</p>`,
-    },
-    {
-        question: "According to atomic theory, electrons are usually found?",
-        a: "In the atomic nucleus",
-        b: "Outside the nucleus, yet very near it because they are attracted to protons",
-        c: "Outside the nucleus -- most of an atom's volume is the electron cloud",
-        d: "Anywhere they want to be -- no particular location is more likely than any other",
-        answer: "C",
-        explanation: `<p>It's theoretically possible to find an electron anywhere, but it's most probable any given 
-        electron orbits in its electron shell. The electron shells are far away from the nucleus, sort of like how 
-        the planets orbit far from the Sun.</p>`,
     },
 ];

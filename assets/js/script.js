@@ -142,14 +142,14 @@ function checkAnswer(){
         correctAnswers++;
         incrementScore();  
         explanationText.classList.remove('hide');
-        document.getElementById('explanation-text').innerHTML = `<h4>Correct!</h4>` 
-            + currentQuestionSet[currentQuestionIndex].explanation;
+        document.getElementById('explanation-text').innerHTML =  
+            currentQuestionSet[currentQuestionIndex].explanation;
     } else {
         incorrectAnswers++;
         incrementIncorrectScore();
         explanationText.classList.remove('hide');
-        document.getElementById('explanation-text').innerHTML = `<h4>Wrong!</h4>` 
-            + currentQuestionSet[currentQuestionIndex].explanation;
+        document.getElementById('explanation-text').innerHTML =  
+            currentQuestionSet[currentQuestionIndex].explanation;
     } 
 
     for (let i = 0; i < answerButtons.length; i++) {
@@ -191,7 +191,7 @@ function result(){
     if (correctAnswers <= 3) {
         resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
-        results.innerHTML = `<p>uh-oh! Looks like you slept through your chemistry class...!?</p>
+        results.innerHTML = `<p>Oh dear... Looks like you slept through your chemistry class...!?</p>
         <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>`;
     } else if (correctAnswers <= 6) {
         resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`; 
