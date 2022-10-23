@@ -20,7 +20,7 @@
 <body>
     <section id="start-section">
         <div id="introduction-area">
-            <img id="logo" src="assets/images/logo.jpg" alt="logo">
+            <img class="logo" src="assets/images/logo.jpg" alt="logo">
             <p>Take this quiz to test your knowledge about <b>atoms</b>.</p>
             <p>If you think you know everything, this is the test to try!</p>
             <p>Let's see if you were paying attention in your <b>chemistry</b> class...</p>
@@ -34,26 +34,32 @@
                     <input type="text" id="username" name="username" placeholder="Name" minlength="3" maxlength="20" required/>
                     <div id="question-help">
                         <span id="question-mark"><i class="fa-solid fa-circle-question"></i></span>
-                        <p id="input-help" class="hide">Name field accepts a mininum of 3 and a maximum of 20 characters including spaces.</p>
+                        <p id="input-help" class="hide">
+                            Name field accepts a mininum of 3 and a maximum of 20 characters including spaces.
+                        </p>
                     </div>
-                    <button aria-label="start button" id="start-button" type="submit" class="cursor-pointer navigation-button">Start</button>
+                    <button aria-label="start button" id="start-button" type="submit" class="cursor-pointer button">Start</button>
                 </form>
             </div>
         </div>
 
         <div id="rule-area">
-            <button aria-label="rule button" id="rule-button" class="cursor-pointer navigation-button">Rules</button>
+            <button aria-label="rule button" id="rule-button" class="cursor-pointer button">Rules</button>
             <div id="rule" class="hide">
                 <a href="index.html" aria-label="Link to the start page (opens in the same tab)">
-                    <img id="logo" src="assets/images/logo.jpg" alt="logo">
+                    <img class="logo" src="assets/images/logo.jpg" alt="logo">
                 </a>
                 <h1>Rules</h1>
                 <p>There are 8 questions related to <b>atoms</b>!</p>
-                <p>The colour of the answer button selected will turn <span id="green"><b>green</b></span> if it is correct and will turn 
-                    <span id="red"><b>red</b></span> if it is incorrect.</p>
+                <p>
+                    The colour of the answer button selected will turn <span id="green"><b>green</b></span> if it is correct and 
+                    will turn <span id="red"><b>red</b></span> if it is incorrect.
+                </p>
                 <p>You will receive <b>100</b> points for each <b>correct</b> answer.</p>
                 <p>Enjoy and let your geek flag fly high!</p>
-                <div aria-label="close rule button" id="close-rule-button" class="cursor-pointer"><i class="fa-solid fa-circle-xmark"></i></div>
+                <div aria-label="close rule button" id="close-rule-button" class="cursor-pointer">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
         </div>
     </section>
     
@@ -64,11 +70,11 @@
             </a>
             <div id="question-number">Question <span id="current-question-number">1</span> of 8</div>
             <div id="question-text">Question</div>
-            <div id="answer-buttons" class="button-container">
-                <button aria-label="answer 1" id="choice1" class="cursor-pointer answer-button button" value="A">Answer 1</button>
-                <button aria-label="answer 2" id="choice2" class="cursor-pointer answer-button button" value="B">Answer 2</button>
-                <button aria-label="answer 3" id="choice3" class="cursor-pointer answer-button button" value="C">Answer 3</button>
-                <button aria-label="answer 4" id="choice4" class="cursor-pointer answer-button button" value="D">Answer 4</button>
+            <div id="answer-buttons" class="answer-button-container">
+                <button aria-label="answer 1" id="choice1" class="cursor-pointer answer-button" value="A">Answer 1</button>
+                <button aria-label="answer 2" id="choice2" class="cursor-pointer answer-button" value="B">Answer 2</button>
+                <button aria-label="answer 3" id="choice3" class="cursor-pointer answer-button" value="C">Answer 3</button>
+                <button aria-label="answer 4" id="choice4" class="cursor-pointer answer-button" value="D">Answer 4</button>
             </div>    
         </div>
 
@@ -78,7 +84,7 @@
 
         <div id="explanation-text" class="hide"></div>
 
-        <div class="control-area">
+        <div id="control-area">
             <button aria-label="next button" id="next-button" class="cursor-pointer control-button">Next</button>
             <button aria-label="finish button" id="finish-button" class="cursor-pointer control-button hide">Finish</button>
         </div>
@@ -86,11 +92,14 @@
 
     <section id="result-section" class="hide">
         <div id="result-area">
-            <h2>Results</h2>
+            <a href="index.html" aria-label="Link to the start page (opens in the same tab)">
+                <img class="logo" src="assets/images/logo.jpg" alt="logo">
+            </a>
+            <h1>Results</h1>
             <div id="result-comment"></div>
-            <span id="final-score"></span>
+            <div id="final-score"></i></div>
             <div id="results"></div>
-            <button aria-label="play again button" id="play-again" class="cursor-pointer button">Play Again</button>
+            <button aria-label="play again button" id="play-again" class="cursor-pointer play-again-button">Play Again!</button>
         </div>
     </section>
    

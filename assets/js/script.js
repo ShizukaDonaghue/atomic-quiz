@@ -180,24 +180,24 @@ function result(){
     resultSection.classList.remove('hide');
 
     if (correctAnswers <= 1) {
-        resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} question correctly and your total score is:</p>`;
+        resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> question correctly and your <b>total score</b> is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
         results.innerHTML = `<p>Oh dear... Looks like you slept through your chemistry class...!?</p>
         <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>`;
     } else if (correctAnswers <= 2) {
-        resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`;
+        resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
         results.innerHTML = `<p>Oh dear... Looks like you slept through your chemistry class...!?</p>
         <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>`;
     } else if (correctAnswers <= 5) {
-        resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`; 
+        resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`; 
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100; 
         results.innerHTML = `<p>Not bad. Looks like you were paying some attention through your chemistry class!</p>
         <p>Let's try the game again to improve your knowldege and unleash your inner geek!</p>`;
     } else {
-        resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`;
+        resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
-        results.innerHTML = `<p>You must have been the teacher's pet! Well done! Be proud and let your geek flag fly high!</p>`;
+        results.innerHTML = `<p>Great job! You must have been the teacher's pet! Be proud and let your geek flag fly high!</p>`;
     }
 
     document.getElementById('play-again').addEventListener('click', resetGame);
