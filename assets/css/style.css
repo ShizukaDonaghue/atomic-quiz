@@ -69,26 +69,6 @@ p {
   font-size: 1.6rem;
 }
 
-.navigation-button {
-  font-family: var(--font-family);
-  width: 10rem;
-  height: 4rem;
-  margin: 1rem;
-  padding: 0.5rem;
-  font-weight: 500;
-  font-size: 2rem;
-  border-radius: 0.5rem;
-  background: var(--dark-blue);
-  color: #fff;
-}
-
-.navigation-button:hover {
-  transform: scale(1.05);
-  transition: 100ms linear;
-  background: var(--blue-green);
-  color: var(--dark-blue);
-}
-
 #username {
   height: 3rem;
   width: 20rem;
@@ -124,10 +104,32 @@ p {
 
 #green {
   color: #00F763;
+  font-size: 110%;
 }
 
 #red {
   color: #DA2323;
+  font-size: 110%;
+}
+
+.navigation-button {
+  font-family: var(--font-family);
+  width: 10rem;
+  height: 4rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 2rem;
+  border-radius: 1rem;
+  background: var(--dark-blue);
+  color: #fff;
+}
+
+.navigation-button:hover {
+  transform: scale(1.05);
+  transition: 100ms linear;
+  background: var(--blue-green);
+  color: var(--dark-blue);
 }
 
 #rule-button {
@@ -177,7 +179,7 @@ p {
   margin: 0.2rem;
   padding: 0.5rem;
   font-size: 1.6rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background: var(--dark-blue);
   color: #fff;
   /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
@@ -206,7 +208,7 @@ p {
   margin: 1rem;
   padding-bottom: 0.2rem;
   font-size: 1.6rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background: var(--dark-blue);
   color: #fff;
   position: absolute;
