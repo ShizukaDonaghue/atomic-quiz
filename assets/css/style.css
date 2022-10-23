@@ -108,7 +108,7 @@ p {
 }
 
 #red {
-  color: #DA2323;
+  color: #D11111;
   font-size: 110%;
 }
 
@@ -190,13 +190,16 @@ p {
 }
 
 .incorrect {
-  background: #DA2323;
+  background: #D11111;
   color: #fff;
 }
 
 #explanation-text p {
   font-size: 1.5rem;
-  padding-top: 1.1rem;
+  height: 11rem;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
 }
 
 .control-button {
