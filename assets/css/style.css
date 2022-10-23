@@ -1,4 +1,4 @@
-/* Google Font */
+/* google font */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Ubuntu:wght@400;500;700&display=swap');
 
 /* global styling */
@@ -236,7 +236,7 @@ p {
   animation-iteration-count: infinite;
 }
 
-/* animation for final score to scale up and down the score */
+/* animation for final score to scale up and down */
 @keyframes final-score {
   from {
     transform: scale(1);
