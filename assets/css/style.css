@@ -1,4 +1,4 @@
-/* Google Font import */
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Ubuntu:wght@400;500;700&display=swap');
 
 /* global styling */
@@ -15,12 +15,10 @@
 :root {
   --font-family: Ubuntu, sans-serif;
   --dark-blue: #0B2C58;
-  --pale-blue: #E5F7FF;
-  --pale-blue-opacity: rgba(229, 247, 255, 0.7);
-  --blue-green: #71C2E4;
+  --green-blue: #71C2E4;
 }
 
-/* double reset for font size for easier rem unit calculation and scroll-padding property to account for fixed navigation bar */
+/* double reset for font size for easier rem unit calculation */
 html {
   font-size: 62.5%;
 }
@@ -35,16 +33,19 @@ body {
   text-align: center;
 }
 
+/* class "hide" used to hide and unhide elements using JavaScript */
 .hide {
   display: none;
 }
 
+/* cursor: pointer for all button elements */
 .cursor-pointer:hover {
   cursor: pointer;
 }
 
+/* basic styling for all sections */
 section {
-  background: rgba(229, 247, 255);
+  background: #E5F7FF;
   position: absolute;
   width: 32rem;
   height: 50rem;
@@ -55,6 +56,7 @@ section {
   border-radius: 2rem;
 }
 
+/* stlying for start section */
 .logo {
   margin-bottom: 2.5rem;
 }
@@ -89,7 +91,6 @@ p {
 }
 
 #input-help {
-  font-family: var(--font-family);
   font-size: 1.6rem;
   position: absolute;
   top: 41rem;
@@ -103,12 +104,12 @@ p {
 }
 
 #green {
-  color: #00C631;
+  color: #10D642;
   font-size: 110%;
 }
 
 #red {
-  color: #D11111;
+  color: #E92A2A;
   font-size: 110%;
 }
 
@@ -130,7 +131,7 @@ p {
 .button:hover {
   transform: scale(1.05);
   transition: 100ms linear;
-  background: var(--blue-green);
+  background: var(--green-blue);
   color: var(--dark-blue);
 }
 
@@ -146,6 +147,7 @@ p {
   right: 4rem;
 }
 
+/* styling for game section */
 #logo-small {
   width: 12%;
   height: 12%;
@@ -185,12 +187,12 @@ p {
 }
 
 .correct {
-  background: #00DD37;
+  background: #2AE459;
   color: #01212F;
 }
 
 .incorrect {
-  background: #D11111;
+  background: #E92A2A;
   color: #fff;
 }
 
@@ -220,10 +222,11 @@ p {
 }
 
 .control-button:hover {
-  background: var(--blue-green);
+  background: var(--green-blue);
   color: var(--dark-blue);
 }
 
+/* styling for result section */
 #final-score {
   font-size: 250%;
   font-weight: 800;
@@ -233,6 +236,7 @@ p {
   animation-iteration-count: infinite;
 }
 
+/* animation for final score to scale up and down the score */
 @keyframes final-score {
   from {
     transform: scale(1);
@@ -279,6 +283,6 @@ p {
 .play-again-button:hover {
   transform: scale(1.05);
   transition: 100ms linear;
-  background: var(--blue-green);
+  background: var(--green-blue);
   color: var(--dark-blue);
 }
