@@ -251,6 +251,11 @@ p {
   margin-bottom: 0.5rem;
 }
 
+#trophy {
+  font-size: 1.8rem;
+  margin-top: 1.8rem;
+}
+
 .play-again-button {
   font-family: var(--font-family);
   width: 12rem;
