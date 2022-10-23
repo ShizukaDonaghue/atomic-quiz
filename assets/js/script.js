@@ -27,7 +27,6 @@ let currentQuestionSet = [];
 let shuffledQuestions = '';
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
-let incorrectAnswers = 0;
 
 document.getElementById('username').focus();
 
@@ -145,8 +144,6 @@ function checkAnswer(){
         document.getElementById('explanation-text').innerHTML =  
             currentQuestionSet[currentQuestionIndex].explanation;
     } else {
-        incorrectAnswers++;
-        incrementIncorrectScore();
         explanationText.classList.remove('hide');
         document.getElementById('explanation-text').innerHTML =  
             currentQuestionSet[currentQuestionIndex].explanation;
@@ -174,12 +171,6 @@ function checkAnswer(){
 function incrementScore(){
     let previousScore = parseInt(document.getElementById('correct-answers').innerText);
     document.getElementById('correct-answers').innerText = ++previousScore;
-    document.getElementById('total-score').innerText = correctAnswers *100; 
-}
-
-function incrementIncorrectScore(){
-    let previousScore = parseInt(document.getElementById('incorrect-answers').innerText);
-    document.getElementById('incorrect-answers').innerText = ++previousScore;
 }
 
 finishButton.addEventListener('click', result);
@@ -188,12 +179,17 @@ function result(){
     gameSection.classList.add('hide');
     resultSection.classList.remove('hide');
 
-    if (correctAnswers <= 3) {
+    if (correctAnswers <= 1) {
+        resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} question correctly and your total score is:</p>`;
+        finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
+        results.innerHTML = `<p>Oh dear... Looks like you slept through your chemistry class...!?</p>
+        <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>`;
+    } else if (correctAnswers <= 2) {
         resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
         results.innerHTML = `<p>Oh dear... Looks like you slept through your chemistry class...!?</p>
         <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>`;
-    } else if (correctAnswers <= 6) {
+    } else if (correctAnswers <= 5) {
         resultComment.innerHTML = `<p>${user}, you answered ${correctAnswers} questions correctly and your total score is:</p>`; 
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100; 
         results.innerHTML = `<p>Not bad. Looks like you were paying some attention through your chemistry class!</p>
@@ -211,8 +207,6 @@ function resetGame() {
     currentQuestionIndex = 0;
     correctAnswers = 0;
     document.getElementById('correct-answers').innerText = 0;
-    document.getElementById('incorrect-answers').innerText = 0;
-    document.getElementById('total-score').innerText = 0;
     resultSection.classList.add('hide');
     finishButton.classList.add('hide');
     nextButton.classList.remove('hide');
