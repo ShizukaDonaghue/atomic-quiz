@@ -394,9 +394,9 @@ p {
   }
 
   .control-button {
-    font-size: 1.8rem;
+    font-size: 2rem;
     right: 29.5rem;
-    width: 9rem;
+    width: 11rem;
     top: 41.1rem;
   }
 
@@ -415,8 +415,9 @@ p {
 
   .play-again-button {
     top: 41.1rem;
-    right: 28rem;
-    font-size: 1.8rem;
+    right: 26rem;
+    font-size: 2rem;
+    width: 16rem;
   }
 }
 
