@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  background: url(/assets/images/atom-background-image.jpg) center center / cover no-repeat fixed;
+  background: url(../images/atom-background-image.jpg) center center / cover no-repeat fixed;
   position: relative;
   width: 100vw;
   height: 100vh;
