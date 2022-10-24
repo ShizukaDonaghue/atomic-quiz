@@ -28,8 +28,6 @@ html {
 body {
   background: url(../images/atom-background-image.jpg) center center / cover no-repeat fixed;
   position: relative;
-  /* width: 100vw;
-  height: 100vh; */
   width: 100%;
   height: 100%;
   font-family: var(--font-family);
@@ -326,15 +324,20 @@ p {
     margin-bottom: 2.5rem;
   }
 
+  #username {
+    width: 30rem;
+    padding-left: 2rem;
+  }
+
   #question-mark {
     font-size: 1.8rem;
     top: 36.5rem;
-    right: 21.4rem;
+    right: 17.6rem;
   }
 
   #input-help {
     top: 41rem;
-    left: 1.4rem;
+    left: 1rem;
   }
 
   #rule-button {
