@@ -1,8 +1,7 @@
 # Amazing Atoms
 
-Welcome to Amazing Atoms!
-This is a quiz game website, where users can test and improve their knowledge about atoms.
-Amazing Atoms is an interactive quiz that helps the user not only to test thier knowledge but also to learn as the answer will be shown and explained to the user for each question.
+Welcome to Amazing Atoms! Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms. Let's have some fun and learn about atoms!
+
 
 ## Live Website
 
