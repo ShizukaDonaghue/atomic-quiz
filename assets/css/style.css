@@ -21,13 +21,17 @@
 /* double reset for font size for easier rem unit calculation */
 html {
   font-size: 62.5%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
   background: url(../images/atom-background-image.jpg) center center / cover no-repeat fixed;
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
+  width: 100%;
+  height: 100%;
   font-family: var(--font-family);
   color: var(--dark-blue);
   text-align: center;
