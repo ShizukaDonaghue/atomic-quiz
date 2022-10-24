@@ -63,7 +63,7 @@ section {
 }
 
 h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 250%;
 }
 
@@ -109,7 +109,7 @@ p {
 /* styling for rule section */
 #close-rule-button {
   font-size: 350%;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 #green {
@@ -125,13 +125,13 @@ p {
 /* styling for rule and start buttons */
 .button {
   font-family: var(--font-family);
-  width: 10rem;
+  width: 10.5rem;
   height: 4rem;
   margin: 1rem;
   padding: 0.5rem;
   font-weight: 500;
   font-size: 2rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   background: var(--dark-blue);
   color: #fff;
   /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
@@ -147,13 +147,13 @@ p {
 
 #rule-button {
   position: absolute;
-  top: 51.2rem;
-  left: 3.7rem;
+  top: 50.5rem;
+  left: 3.65rem;
 }
 
 #start-button {
   position: absolute;
-  top: 51.2rem;
+  top: 50.5rem;
   right: 3.7rem;
 }
 
@@ -227,11 +227,11 @@ p {
   margin: 1rem;
   padding-bottom: 0.2rem;
   font-size: 1.6rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   background: var(--dark-blue);
   color: #fff;
   position: absolute;
-  bottom: 2rem;
+  bottom: 2.2rem;
   right: 11rem;
   /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -244,12 +244,13 @@ p {
 
 /* styling for result section */
 #result-area h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 #result-area p {
   padding-left: 0.6rem;
   padding-right: 0.6rem;
+  margin-bottom: 1.5rem;
   font-size: 1.8rem;
 }
 
@@ -257,7 +258,7 @@ p {
   font-size: 250%;
   font-weight: 800;
   margin-top: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   animation-name: final-score;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -271,14 +272,6 @@ p {
   to {
     transform: scale(1.5);
   }
-}
-
-#result-section h1 {
-  margin-bottom: 1.5rem;
-}
-
-#result-section p {
-  margin-bottom: 1.5rem;
 }
 
 #result-comment p {
@@ -297,11 +290,11 @@ p {
   margin: 1rem;
   padding-bottom: 0.2rem;
   font-size: 1.6rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   background: var(--dark-blue);
   color: #fff;
   position: absolute;
-  bottom: 2rem;
+  bottom: 2.2rem;
   right: 9.03rem;
   /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -314,19 +307,109 @@ p {
   color: var(--dark-blue);
 }
 
-/* media query for screen sizes of max width 320px to */
-/* @media screen and (max-width: 320px) {
+/* media query for screen sizes >= 768px to change the layout from portrait to landscape*/
+@media screen and (min-width: 768px) {
   section {
-    padding: 1rem 0.75rem;
-    
-  }
-  
-  p {
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
+    width: 70rem;
+    height: 50rem;
+    left: 50%;
+    top: 50%;
+    margin: -25rem 0 0 -35rem;
+    padding: 2rem 3rem;
   }
 
   .logo {
     margin-bottom: 2.5rem;
   }
-} */
+
+  #question-mark {
+    font-size: 1.8rem;
+    top: 36.5rem;
+    right: 21.4rem;
+  }
+
+  #input-help {
+    top: 41rem;
+    left: 1.4rem;
+  }
+
+  #rule-button {
+    top: 41.1rem;
+    left: 17rem;
+    width: 15rem;
+  }
+
+  #start-button {
+    top: 41.1rem;
+    right: 17rem;
+    width: 15rem;
+  }
+
+  #rule h1 {
+    margin-top: 0;
+  }
+
+  #logo-small {
+    width: 8.9%;
+    height: 8.9%;
+  }
+
+  #question-number {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+
+  #question-text {
+    font-size: 1.8rem;
+    margin: 1rem 0 0 0; 
+  }
+
+  #close-rule-button {
+    margin-top: 3rem;
+  }
+
+  .answer-button-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .answer-button {
+    width: 30rem;
+    height: 5.5rem;
+    margin: 1rem 1rem 0 1rem;  
+    font-size: 1.8rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  #explanation-text p {
+    padding: 1rem 1.7rem 1rem 1.7rem;
+    font-size: 1.8rem;
+  }
+
+  .control-button {
+    font-size: 1.8rem;
+    right: 29.5rem;
+    width: 9rem;
+    top: 41.1rem;
+  }
+
+  #result-area h1 {
+    margin-bottom: 1.2rem;
+  }
+
+  #results p {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  #final-score {
+    margin-bottom: 1.5rem;
+  }
+
+  .play-again-button {
+    top: 41.1rem;
+    right: 28rem;
+    font-size: 1.8rem;
+  }
+}
+
