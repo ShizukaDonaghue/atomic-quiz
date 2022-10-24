@@ -49,28 +49,24 @@ body {
 section {
   background: #E5F7FF;
   position: absolute;
-  width: 32rem;
+  width: 34rem;
   height: 60rem;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.8rem;
   left: 50%;
   top: 50%;
-  margin: -30rem 0 0 -16rem;
+  margin: -30rem 0 0 -17rem;
   border-radius: 2rem;
 }
 
 /* stlying for start section */
 .logo {
   margin-top: 1.5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 h1 {
   margin-bottom: 1.5rem;
   font-size: 250%;
-}
-
-#rule h1 {
-  margin-top: -1rem;
 }
 
 p {
@@ -80,6 +76,7 @@ p {
 
 #name-entry {
   margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 
 #username {
@@ -96,8 +93,8 @@ p {
 #question-mark {
   font-size: 1.5rem;
   position: absolute;
-  top: 46rem;
-  right:2.8rem;
+  top: 44.7rem;
+  right: 3.65rem;
 }
 
 #input-help {
@@ -111,7 +108,7 @@ p {
 /* styling for rule section */
 #close-rule-button {
   font-size: 350%;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 #green {
@@ -127,7 +124,7 @@ p {
 /* styling for rule and start buttons */
 .button {
   font-family: var(--font-family);
-  width: 10.5rem;
+  width: 11.5rem;
   height: 4rem;
   margin: 1rem;
   padding: 0.5rem;
@@ -161,9 +158,9 @@ p {
 
 /* styling for game section */
 #logo-small {
-  width: 19.35%;
-  height: 19.35%;
-  margin-top: 1.5rem;
+  width: 18.2%;
+  height: 18.2%;
+  margin-top: 0.8rem;
   margin-bottom: 1rem;
 }
 
@@ -181,6 +178,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 0.4rem;
 }
 
 .answer-button-container {
@@ -192,8 +190,8 @@ p {
   font-family: var(--font-family);
   height: 5rem;
   margin-bottom: 0.8rem;
-  padding-left: 1.3rem;
-  padding-right: 1.3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   font-size: 1.6rem;
   border-radius: 1rem;
   background: var(--dark-blue);
@@ -213,28 +211,28 @@ p {
 }
 
 #explanation-text p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   height: 11rem;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0 0.1rem 0.8rem 0.1rem;
+  padding: 0 0.4rem;
   display: flex;
   align-items: center;
 }
 
 .control-button {
   font-family: var(--font-family);
-  width: 8rem;
+  width: 10rem;
   height: 4rem;
   margin: 1rem;
   padding-bottom: 0.2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   border-radius: 2rem;
   background: var(--dark-blue);
   color: #fff;
   position: absolute;
   bottom: 2.2rem;
-  right: 11rem;
+  right: 10.95rem;
   /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -287,17 +285,17 @@ p {
 
 .play-again-button {
   font-family: var(--font-family);
-  width: 12rem;
+  width: 15rem;
   height: 4rem;
   margin: 1rem;
   padding-bottom: 0.2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   border-radius: 2rem;
   background: var(--dark-blue);
   color: #fff;
   position: absolute;
   bottom: 2.2rem;
-  right: 9.03rem;
+  right: 8.7rem;
   /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -331,7 +329,7 @@ p {
 
   #question-mark {
     font-size: 1.8rem;
-    top: 36.5rem;
+    top: 37rem;
     right: 17.6rem;
   }
 
@@ -359,6 +357,7 @@ p {
   #logo-small {
     width: 8.9%;
     height: 8.9%;
+    margin-top: 1.5rem;
   }
 
   #question-number {
@@ -389,13 +388,13 @@ p {
   }
 
   #explanation-text p {
-    padding: 1rem 1.7rem 1rem 1.7rem;
+    padding: 1rem 2rem;
     font-size: 1.8rem;
   }
 
   .control-button {
     font-size: 2rem;
-    right: 29.5rem;
+    right: 28.55rem;
     width: 11rem;
     top: 41.1rem;
   }

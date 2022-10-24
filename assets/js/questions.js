@@ -67,9 +67,9 @@ const questions = [
         c: "The number of protons",
         d: "The number of protons plus the number of neutrons",
         answer: "C",
-        explanation: `<p>The atomic number of an atom is the same as the number of protons it has, e.g.  
-        hydrogen has one proton and is atomic number 1. A helium atom has two protons, so the element is atomic 
-        number 2.</p>`,
+        explanation: `<p>The atomic number of an atom is the same as the number of protons it has. 
+        For example, hydrogen has one proton and is atomic number 1. A helium atom has two protons, so the element 
+        is atomic number 2.</p>`,
     },
     {
         question: "Changing the number of neutrons of an atom changes its?",
