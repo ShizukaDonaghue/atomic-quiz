@@ -112,7 +112,7 @@ p {
 }
 
 #green {
-  color: #10D642;
+  color: #00AC11;
   font-size: 110%;
 }
 
@@ -246,10 +246,10 @@ p {
   margin-bottom: 1.5rem;
 }
 
-#result-area p {
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-  margin-bottom: 1.5rem;
+#result-comment p {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-bottom: 0.5rem;
   font-size: 1.8rem;
 }
 
@@ -273,13 +273,19 @@ p {
   }
 }
 
-#result-comment p {
-  margin-bottom: 0.5rem;
+#results p {
+  padding: 0 0.8rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 
-#trophy {
-  font-size: 1.8rem;
-  margin-top: 1.8rem;
+#highscore b {
+  font-size: 2.3rem;
+}
+
+#highscore {
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .play-again-button {

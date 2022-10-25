@@ -270,8 +270,8 @@ function result(){
     } else {
         resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
-        results.innerHTML = `<p id="trophy"><b><i class="fas fa-trophy"></i> Great job!</b></p> <p>You must have been the teacher's favourite!</p> 
-        <p>Be proud and let your geek flag fly high!</p>`;
+        results.innerHTML = `<p id="highscore"><b><i class="fas fa-trophy"></i> Great job!</b></p> <p>Were you the teacher's pet!?</p> 
+        <p>Be very proud and let your geek flag fly high!</p>`;
     }
 
     document.getElementById('play-again').addEventListener('click', resetGame);
