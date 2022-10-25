@@ -28,8 +28,15 @@ let shuffledQuestions = '';
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 
-// focus method for the username field so that the cursor is placed in the field
-document.getElementById('username').focus();
+/* 
+focus method for the username field so that the cursor is placed in the field if the screen size >= 768px 
+(disabled for mobile phones for a better user experience as the keyboard would automatically appear and hide
+the bottom half of the screen)
+*/
+const screenSize = window.matchMedia('(min-width: 768px)');
+if (screenSize.matches) {
+    document.getElementById('username').focus();
+} 
 
 /*
 event listeners to call displayInputHelp or closeInputHelp function to display or hide input help 
@@ -88,7 +95,9 @@ function closeRule() {
     nameInput.classList.remove('hide');
     questionHelp.classList.remove('hide');
     ruleButton.classList.remove('hide');
-    document.getElementById('username').focus();
+    if (screenSize.matches) {
+        document.getElementById('username').focus();
+    }
 }
 
 /*
