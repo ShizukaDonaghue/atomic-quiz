@@ -35,15 +35,14 @@ document.getElementById('username').focus();
 event listeners to call displayInputHelp or closeInputHelp function to display or hide input help 
 for the username field when hovered over the question mark in the form element
 */
-// questionMark.addEventListener('mouseover', displayInputHelp);
-// questionMark.addEventListener('mouseleave', closeInputHelp);
+questionMark.addEventListener('mouseover', displayInputHelp);
+questionMark.addEventListener('mouseleave', closeInputHelp);
 
-if (document.getElementById('input-help').style.display === 'none') {
+if (inputHelp.style.display === 'none') {
     questionMark.addEventListener('touchstart', displayInputHelp);
 } else {
     questionMark.addEventListener('touchstart', closeInputHelp);
 }
-
 
 /**
  * displays input help for the username field and hides start and rule buttons
