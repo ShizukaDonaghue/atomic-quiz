@@ -38,6 +38,9 @@ for the username field when hovered over the question mark in the form element
 questionMark.addEventListener('mouseover', displayInputHelp);
 questionMark.addEventListener('mouseleave', closeInputHelp);
 
+questionMark.addEventListener('touchstart', closeInputHelp);
+
+
 /**
  * displays input help for the username field and hides start and rule buttons
  */
