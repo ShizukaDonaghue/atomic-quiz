@@ -417,6 +417,10 @@ p {
     margin-bottom: 1.5rem;
   }
 
+  #highscore {
+    margin-top: 1.7rem;
+  }
+
   .play-again-button {
     top: 41.1rem;
     right: 26rem;
