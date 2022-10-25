@@ -38,7 +38,7 @@ for the username field when hovered over the question mark in the form element
 questionMark.addEventListener('mouseover', displayInputHelp);
 questionMark.addEventListener('mouseleave', closeInputHelp);
 
-if (inputHelp.display === 'none') {
+if (document.getElementById('input-help').style.display === 'none') {
     questionMark.addEventListener('touchstart', displayInputHelp);
 } else {
     questionMark.addEventListener('touchstart', closeInputHelp);
