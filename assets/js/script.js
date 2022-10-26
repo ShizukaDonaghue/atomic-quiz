@@ -141,25 +141,21 @@ function runGame(){
  * calculates and displays the question number, 
  * reactivates the answer buttons and cursor pointers, 
  * removes class indicating correct or incorrect answer from the answer buttons, 
+ * removes the next button so that it requires the user to select an answer before they can move forward,
  * call displayQuestion function
  */
 function nextQuestion(){
     explanationText.classList.add('hide');
     currentQuestionNumber.innerText = currentQuestionIndex + 1;
         
-    choice1.removeAttribute('disabled', 'disabled');
-    choice2.removeAttribute('disabled', 'disabled');
-    choice3.removeAttribute('disabled', 'disabled');
-    choice4.removeAttribute('disabled', 'disabled');
-    choice1.classList.add('cursor-pointer');
-    choice2.classList.add('cursor-pointer');
-    choice3.classList.add('cursor-pointer');
-    choice4.classList.add('cursor-pointer');
-
-    for (let i = 0; i <  answerButtons.length; i++) {
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].removeAttribute('disabled', 'disabled');
+        answerButtons[i].classList.add('cursor-pointer');
         answerButtons[i].classList.remove('correct');
         answerButtons[i].classList.remove('incorrect');
     }
+
+    nextButton.classList.add('hide');
 
     displayQuestion();
 }
@@ -175,11 +171,10 @@ function displayQuestion(){
         choice2.innerHTML = currentQuestionSet[currentQuestionIndex].b; 
         choice3.innerHTML = currentQuestionSet[currentQuestionIndex].c; 
         choice4.innerHTML = currentQuestionSet[currentQuestionIndex].d; 
+    }
         
-        choice1.onclick = checkAnswer;
-        choice2.onclick = checkAnswer;
-        choice3.onclick = checkAnswer;
-        choice4.onclick = checkAnswer;
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].addEventListener('click', checkAnswer);
     }
 }
 
@@ -194,14 +189,10 @@ function displayQuestion(){
  * if there are no more questions left in the array, displays the finish button
  */
 function checkAnswer(){
-    choice1.setAttribute('disabled', 'disabled');
-    choice2.setAttribute('disabled', 'disabled');
-    choice3.setAttribute('disabled', 'disabled');
-    choice4.setAttribute('disabled', 'disabled');
-    choice1.classList.remove('cursor-pointer');
-    choice2.classList.remove('cursor-pointer');
-    choice3.classList.remove('cursor-pointer');
-    choice4.classList.remove('cursor-pointer');
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].setAttribute('disabled', 'disabled');
+        answerButtons[i].classList.remove('cursor-pointer');
+    }
 
     let userAnswer = this.value;
     let correctAnswer = currentQuestionSet[currentQuestionIndex].answer;
