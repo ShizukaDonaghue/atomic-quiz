@@ -30,8 +30,8 @@ let correctAnswers = 0;
 
 /* 
 focus method for the username field so that the cursor is placed in the field if the screen size >= 768px 
-(disabled for mobile phones for a better user experience as the keyboard would automatically appear and hide
-the bottom half of the screen)
+(disabled for mobile phones to prevent the keyboard from appearing and hiding the bottom half of the screen 
+for a better user experience)
 */
 const screenSize = window.matchMedia('(min-width: 768px)');
 if (screenSize.matches) {
@@ -54,8 +54,9 @@ if (screenSize.matches) {
 // if (screenSize.matches) {
 //     questionMark.addEventListener('mouseover', displayInputHelp);
 //     questionMark.addEventListener('mouseleave', closeInputHelp);
-// } else {
+// } else if (inputHelp.style.display === 'none') {
 //     questionMark.addEventListener('click', displayInputHelp);
+// } else {
 //     questionMark.addEventListener('click', closeInputHelp);
 // }
 
@@ -77,7 +78,6 @@ function closeInputHelp(){
     ruleButton.classList.remove('hide'); 
 }
 
-// event listener to call displayRule function to display the rule section
 ruleButton.addEventListener('click', displayRule);
 
 /**
@@ -91,7 +91,6 @@ function displayRule() {
     ruleButton.classList.add('hide');
 }
 
-// event listener to call closeRule function to close the rule section
 document.getElementById('close-rule-button').addEventListener('click', closeRule);
 
 /**
@@ -111,7 +110,7 @@ function closeRule() {
 /*
 wait for the DOM to finish loading before running the game so that all functions for the game will work,
 add "submit" event listerner to the form element to call runGame function only when a username that 
-meets the criteria set in index.html (a min 3 and a max of 20 characters) 
+meets the criteria set in index.html (a min 3 and a max of 20 characters) is provided
 */
 document.addEventListener('DOMContentLoaded', function() {
     nameInputForm.addEventListener('submit', runGame); 
@@ -141,8 +140,7 @@ function runGame(){
  * hides answer explanation text from the previous question, 
  * calculates and displays the question number, 
  * reactivates the answer buttons and cursor pointers, 
- * removes class indicating correct or incorrect from the answer buttons, 
- * hides the next button so that it requires the user to select an answer before they can move forward, 
+ * removes class indicating correct or incorrect answer from the answer buttons, 
  * call displayQuestion function
  */
 function nextQuestion(){
@@ -163,14 +161,12 @@ function nextQuestion(){
         answerButtons[i].classList.remove('incorrect');
     }
 
-    nextButton.classList.add('hide');
-
     displayQuestion();
 }
 
 /**
  * loops through the questions array and display each question and possible answers, 
- * once the answer button is selected, call checkAnswer function
+ * once an answer button is selected, call checkAnswer function
  */
 function displayQuestion(){
     for (let i = 0; i < questions.length; i++) {
@@ -188,13 +184,13 @@ function displayQuestion(){
 }
 
 /**
- * disables the answer buttons once an answer has been selected so that the user can only select an answer once, 
+ * disables the answer buttons once an answer has been selected so that the user can only select one answer, 
  * disables the cursor pointer effect once the answer buttons are disabled,
  * checks the user answer and if it is correct, increments the correct answer score,
  * shows the answer explanation regardless of whether the answer is correct or not, 
  * adds class "correct" to the answer button if the answer is correct or "incorrect" if the answer is incorrect, 
- * if there are more questions left in the array, displays the next button so that the user can move forward to the 
- * next question and calls nextQuestion function, 
+ * if there are more questions left in the array, displays the next button so that the user can move forward to 
+ * the next question and calls nextQuestion function, 
  * if there are no more questions left in the array, displays the finish button
  */
 function checkAnswer(){
@@ -247,7 +243,6 @@ function incrementScore(){
     document.getElementById('correct-answers').innerText = ++previousScore;
 }
 
-// event listener for the finish button to call result function
 finishButton.addEventListener('click', result);
 
 /**
@@ -278,7 +273,7 @@ function result(){
     } else {
         resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
-        results.innerHTML = `<p id="highscore"><b><i class="fas fa-trophy"></i> Great job!</b></p> <p>Were you the teacher's pet!?</p> 
+        results.innerHTML = `<p id="highscore"><b><i class="fas fa-trophy"></i> Great job!</b></p> <p>You must have been the teacher's favourite!</p> 
         <p>Be very proud and let your geek flag fly high!</p>`;
     }
 
@@ -287,7 +282,7 @@ function result(){
 
 /**
  * resets the question index, the number of correct answers and scores, 
- * hides the result section and the finish button and displays the next button, 
+ * hides the result section and the finish button, 
  * call runGame function to start the game again
  */
 function resetGame() {
@@ -296,7 +291,6 @@ function resetGame() {
     document.getElementById('correct-answers').innerText = 0;
     resultSection.classList.add('hide');
     finishButton.classList.add('hide');
-    nextButton.classList.remove('hide');
 
     runGame();
 }
