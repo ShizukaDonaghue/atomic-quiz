@@ -62,7 +62,8 @@ function closeInputHelp(){
 questionMark.addEventListener('click', displayInputHelpHandler);
 
 /**
- * displays and closes input help for the username field when tapped on the question mark on mobile devices 
+ * displays and closes input help for the username field when tapped on the question mark on mobiles and tablets
+ * (also works with mouse clicks on desktop) 
  */
 function displayInputHelpHandler() {
     inputHelp.classList.toggle('hide');
@@ -291,5 +292,3 @@ function resetGame() {
 
     runGame();
 }
-
-
