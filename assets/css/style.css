@@ -163,6 +163,11 @@ p {
   margin-bottom: 1rem;
 }
 
+#logo-small:hover {
+  transform: scale(1.05);
+  transition: 100ms linear;
+}
+
 #question-number {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
