@@ -51,19 +51,20 @@ for the username field when hovered over the question mark in the form element
 //     questionMark.addEventListener('touchstart', closeInputHelp);
 // }
 
-// if (inputHelp.style.display === 'none') {
-//     questionMark.addEventListener('click', displayInputHelp);
-// } else {
-//     questionMark.addEventListener('click', closeInputHelp);
-// }
 
-function displayInputHelpHandler() {
-    if (inputHelp.style.display === '') {
-        questionMark.addEventListener('click', displayInputHelp);
-    } else {
-        questionMark.addEventListener('click', closeInputHelp);
-    }
+if (window.getComputedStyle(inputHelp).display === 'none') {
+    questionMark.addEventListener('click', displayInputHelp);
+} else {
+    questionMark.addEventListener('click', closeInputHelp);
 }
+
+// function displayInputHelpHandler() {
+//     if (inputHelp.style.display === 'none') {
+//         questionMark.addEventListener('click', displayInputHelp);
+//     } else {
+//         questionMark.addEventListener('click', closeInputHelp);
+//     }
+// }
 
 // if (screenSize.matches) {
 //     questionMark.addEventListener('mouseover', displayInputHelp);
