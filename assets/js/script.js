@@ -109,21 +109,35 @@ function closeRule() {
 
 /*
 wait for the DOM to finish loading before running the game so that all functions for the game will work,
-add "submit" event listerner to the form element to call runGame function only when a username that 
-meets the criteria set in index.html (a min 3 and a max of 20 characters) is provided
+add "submit" event listerner to the form element to call handleSubmit function to check the username provided 
 */
 document.addEventListener('DOMContentLoaded', function() {
-    nameInputForm.addEventListener('submit', runGame); 
+    nameInputForm.addEventListener('submit', handleSubmit); 
 });
 
 /**
- * stores the username in "user" variable, 
+ * prevents default action to submit,
+ * stores the username in "user" variable,
+ * checks if the username provided is >= 3 and <= 20 characters and not an empty string,
+ * if the username meets the criteria, call runGame function, 
+ * if not, alert the user to let them know the requirements for the name input field
+ */
+function handleSubmit(event) {
+    event.preventDefault();
+    user = document.getElementById('username').value;
+    if (user.length >= 3 && user.length <= 20 && user !== '') {
+        runGame();
+    } else {
+        alert('Please enter your name. The name field accepts a minimum of 3 and a maximum of 20 characters including spaces.');
+    }
+}
+
+/**
  * hides the start section and displayes the game section, 
  * shuffles the array of questions and stores it in "currentQuestionSet" variables, 
  * calls "nextQuestion" function
  */
 function runGame(){
-    user = document.getElementById('username').value;
     document.getElementById('start-section').classList.add('hide');
     gameSection.classList.remove('hide');
   
