@@ -38,32 +38,11 @@ if (screenSize.matches) {
     document.getElementById('username').focus();
 } 
 
-/*
-event listeners to call displayInputHelp or closeInputHelp function to display or hide input help 
-for the username field when hovered over the question mark in the form element
-*/
-
-// if (screenSize.matches) {
-//     questionMark.addEventListener('mouseover', displayInputHelp);
-//     questionMark.addEventListener('mouseleave', closeInputHelp);
-// } else {
-//     questionMark.addEventListener('click', displayInputHelpHandler);
-// }
-
 questionMark.addEventListener('mouseover', displayInputHelp);
 questionMark.addEventListener('mouseleave', closeInputHelp);
-questionMark.addEventListener('click', displayInputHelpHandler);
-
-
-function displayInputHelpHandler() {
-    inputHelp.classList.toggle('hide');
-    startButton.classList.toggle('hide');
-    ruleButton.classList.toggle('hide');
-}
-
 
 /**
- * displays input help for the username field and hides start and rule buttons
+ * displays input help for the username field and hides start and rule buttons when the mouse is over the question mark
  */
 function displayInputHelp(){
     inputHelp.classList.remove('hide');
@@ -72,12 +51,23 @@ function displayInputHelp(){
 }
 
 /**
- * closes input help for the username field and unhide start and rule buttons
+ * closes input help for the username field and unhides start and rule buttons when the mouse leaves the question mark
  */
 function closeInputHelp(){
     inputHelp.classList.add('hide');
     startButton.classList.remove('hide');
     ruleButton.classList.remove('hide'); 
+}
+
+questionMark.addEventListener('click', displayInputHelpHandler);
+
+/**
+ * displays and closes input help for the username field when tapped on the question mark on mobile devices 
+ */
+function displayInputHelpHandler() {
+    inputHelp.classList.toggle('hide');
+    startButton.classList.toggle('hide');
+    ruleButton.classList.toggle('hide');
 }
 
 ruleButton.addEventListener('click', displayRule);
