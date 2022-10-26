@@ -42,14 +42,22 @@ if (screenSize.matches) {
 event listeners to call displayInputHelp or closeInputHelp function to display or hide input help 
 for the username field when hovered over the question mark in the form element
 */
-questionMark.addEventListener('mouseover', displayInputHelp);
-questionMark.addEventListener('mouseleave', closeInputHelp);
-
-if (inputHelp.style.display === 'none') {
+if (screenSize.matches) {
+    questionMark.addEventListener('mouseover', displayInputHelp);
+    questionMark.addEventListener('mouseleave', closeInputHelp);
+} else if (inputHelp.style.display === 'none') {
     questionMark.addEventListener('touchstart', displayInputHelp);
 } else {
     questionMark.addEventListener('touchstart', closeInputHelp);
 }
+
+// if (screenSize.matches) {
+//     questionMark.addEventListener('mouseover', displayInputHelp);
+//     questionMark.addEventListener('mouseleave', closeInputHelp);
+// } else {
+//     questionMark.addEventListener('click', displayInputHelp);
+//     questionMark.addEventListener('click', closeInputHelp);
+// }
 
 /**
  * displays input help for the username field and hides start and rule buttons
