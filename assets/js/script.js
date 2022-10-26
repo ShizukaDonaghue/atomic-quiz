@@ -58,7 +58,12 @@ for the username field when hovered over the question mark in the form element
 //     questionMark.addEventListener('click', closeInputHelp);
 // }
 
-questionMark.addEventListener('click', displayInputHelpHandler);
+if (screenSize.matches) {
+    questionMark.addEventListener('mouseover', displayInputHelp);
+    questionMark.addEventListener('mouseleave', closeInputHelp);
+} else {
+    questionMark.addEventListener('click', displayInputHelpHandler);
+}
 
 function displayInputHelpHandler() {
     inputHelp.classList.toggle('hide');
@@ -67,32 +72,23 @@ function displayInputHelpHandler() {
 }
 
 
-// if (screenSize.matches) {
-//     questionMark.addEventListener('mouseover', displayInputHelp);
-//     questionMark.addEventListener('mouseleave', closeInputHelp);
-// } else if (inputHelp.style.display === 'none') {
-//     questionMark.addEventListener('click', displayInputHelp);
-// } else {
-//     questionMark.addEventListener('click', closeInputHelp);
-// }
-
 /**
  * displays input help for the username field and hides start and rule buttons
  */
-// function displayInputHelp(){
-//     inputHelp.classList.remove('hide');
-//     startButton.classList.add('hide');
-//     ruleButton.classList.add('hide');    
-// }
+function displayInputHelp(){
+    inputHelp.classList.remove('hide');
+    startButton.classList.add('hide');
+    ruleButton.classList.add('hide');    
+}
 
 /**
  * closes input help for the username field and unhide start and rule buttons
  */
-// function closeInputHelp(){
-//     inputHelp.classList.add('hide');
-//     startButton.classList.remove('hide');
-//     ruleButton.classList.remove('hide'); 
-// }
+function closeInputHelp(){
+    inputHelp.classList.add('hide');
+    startButton.classList.remove('hide');
+    ruleButton.classList.remove('hide'); 
+}
 
 ruleButton.addEventListener('click', displayRule);
 
