@@ -42,7 +42,7 @@ questionMark.addEventListener('mouseover', displayInputHelp);
 questionMark.addEventListener('mouseleave', closeInputHelp);
 
 /**
- * displays input help for the username field and hides start and rule buttons when the mouse is over the question mark
+ * displays input help for the username field and hides start and rule buttons with mouseover event for desktops
  */
 function displayInputHelp(){
     inputHelp.classList.remove('hide');
@@ -51,7 +51,7 @@ function displayInputHelp(){
 }
 
 /**
- * closes input help for the username field and unhides start and rule buttons when the mouse leaves the question mark
+ * closes input help for the username field and unhides start and rule buttons with mouseleave event for desktops
  */
 function closeInputHelp(){
     inputHelp.classList.add('hide');
@@ -62,8 +62,8 @@ function closeInputHelp(){
 questionMark.addEventListener('click', displayInputHelpHandler);
 
 /**
- * displays and closes input help for the username field when tapped on the question mark on mobiles and tablets
- * (also works with mouse clicks on desktop) 
+ * toggles input help for the username field, and start and rule buttons with click event for mobile phones and tablets
+ * (also works with click event on desktop) 
  */
 function displayInputHelpHandler() {
     inputHelp.classList.toggle('hide');
