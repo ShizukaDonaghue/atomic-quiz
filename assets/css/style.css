@@ -103,13 +103,13 @@ p {
   position: absolute;
   right: 0.1rem;
   top: 50rem;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
 }
 
 /* styling for rule section */
 #close-rule-button {
   font-size: 350%;
-  margin-top: 3.5rem;
+  margin-top: 3.6rem;
 }
 
 #green {
@@ -147,13 +147,13 @@ p {
 
 #rule-button {
   position: absolute;
-  top: 50.5rem;
+  top: 50.6rem;
   left: 3.65rem;
 }
 
 #start-button {
   position: absolute;
-  top: 50.5rem;
+  top: 50.6rem;
   right: 3.7rem;
 }
 
@@ -351,6 +351,7 @@ p {
   }
   
   #input-help {
+    padding: 1rem 1.5rem;
     top: 46rem;
     right: 0rem;
   }
