@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- link to cdnjs Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <!-- link for favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
@@ -33,7 +33,7 @@
             <div id="name-input">
                 <form id="name-input-form" action="javascript:void(0)">
                     <label for="username"></label>
-                    <input type="text" id="username" name="username" placeholder="Name"/>
+                    <input type="text" id="username" name="username" placeholder="Name">
                     <div id="question-help">
                         <span id="question-mark"><i class="fa-solid fa-circle-question"></i></span>
                         <p id="input-help" class="hide">
@@ -60,10 +60,12 @@
                 </p>
                 <p>You will receive <b>100</b> points for each <b>correct</b> answer.</p>
                 <p>Enjoy and let your geek flag fly high!</p>
-                <div aria-label="close rule button" id="close-rule-button" class="cursor-pointer">
-                    <i class="fa-solid fa-circle-xmark"></i>
+                <div>
+                    <button aria-label="close rule button" id="close-rule-button" class="cursor-pointer">
+                    <i class="fa-solid fa-circle-xmark"></i></button>
                 </div>
-        </div>
+            </div>
+        </div>        
     </section>
     
     <!-- game section -->
@@ -72,7 +74,7 @@
             <a href="index.html" aria-label="Link to the start page (opens in the same tab)">
                 <img id="logo-small" src="assets/images/logo-small.jpg" alt="small logo">
             </a>
-            <div id="question-number">Question <span id="current-question-number">1</span> of 8</div>
+            <div id="question-number"><h4>Question <span id="current-question-number">1</span> of 8</h4></div>
             <div id="question-text">Question</div>
             <div id="answer-buttons" class="answer-button-container">
                 <button aria-label="answer 1" id="choice1" class="cursor-pointer answer-button" value="A">Answer 1</button>
@@ -105,7 +107,7 @@
             </a>
             <h1>Results</h1>
             <div id="result-comment"></div>
-            <div id="final-score"></i></div>
+            <div id="final-score"></div>
             <div id="results"></div>
             <button aria-label="play again button" id="play-again" class="cursor-pointer play-again-button">Play Again!</button>
         </div>

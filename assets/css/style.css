@@ -109,7 +109,9 @@ p {
 /* styling for rule section */
 #close-rule-button {
   font-size: 350%;
-  margin-top: 3.6rem;
+  color: var(--dark-blue);
+  background: #E5F7FF;
+  margin-top: 2rem;
 }
 
 #green {
@@ -173,7 +175,6 @@ p {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  font-weight: 600;
 }
 
 #question-text {
