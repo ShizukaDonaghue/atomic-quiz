@@ -87,7 +87,7 @@ function displayRule() {
 document.getElementById('close-rule-button').addEventListener('click', closeRule);
 
 /**
- * closes rule for the game and unhide other elements in the start section
+ * closes rule for the game and unhides other elements in the start section
  */
 function closeRule() {
     rule.classList.add('hide');
@@ -102,7 +102,7 @@ function closeRule() {
 
 /*
 wait for the DOM to finish loading before running the game so that all functions for the game will work,
-add "submit" event listerner to the form element to call handleSubmit function to check the username provided 
+add "submit" event listener to the form element to call handleSubmit function to check the username provided 
 */
 document.addEventListener('DOMContentLoaded', function() {
     nameInputForm.addEventListener('submit', handleSubmit); 
@@ -111,22 +111,22 @@ document.addEventListener('DOMContentLoaded', function() {
 /**
  * prevents default action to submit,
  * stores the username in "user" variable,
- * checks if the username provided is >= 3 and <= 20 characters and not an empty string,
+ * checks if the username provided is >= 3 and <= 10 characters and not an empty string,
  * if the username meets the criteria, call runGame function, 
  * if not, alert the user to let them know the requirements for the name input field
  */
 function handleSubmit(event) {
     event.preventDefault();
     user = document.getElementById('username').value;
-    if (user.length >= 3 && user.length <= 20 && user !== '') {
+    if (user.length >= 3 && user.length <= 10 && user !== '') {
         runGame();
     } else {
-        alert('Please enter your name. The name field accepts a minimum of 3 and a maximum of 20 characters including spaces.');
+        alert('Please enter your name. The name field accepts a minimum of 3 and a maximum of 10 characters including spaces.');
     }
 }
 
 /**
- * hides the start section and displayes the game section, 
+ * hides the start section and displays the game section, 
  * shuffles the array of questions and stores it in "currentQuestionSet" variables, 
  * calls "nextQuestion" function
  */
@@ -149,7 +149,7 @@ function runGame(){
  * reactivates the answer buttons and cursor pointers, 
  * removes class indicating correct or incorrect answer from the answer buttons, 
  * removes the next button so that it requires the user to select an answer before they can move forward,
- * call displayQuestion function
+ * calls displayQuestion function
  */
 function nextQuestion(){
     explanationText.classList.add('hide');
@@ -168,7 +168,7 @@ function nextQuestion(){
 }
 
 /**
- * loops through the questions array and display each question and possible answers, 
+ * loops through the questions array and displays each question and possible answers, 
  * once an answer button is selected, call checkAnswer function
  */
 function displayQuestion(){
@@ -233,7 +233,7 @@ function checkAnswer(){
 }
 
 /**
- * obtain the previous score for correct answers and increments it if the answer selected is correct and 
+ * obtains the previous score for correct answers and increments it if the answer selected is correct and 
  * stores the new score
  */
 function incrementScore(){
@@ -254,25 +254,33 @@ function result(){
     resultSection.classList.remove('hide');
 
     if (correctAnswers <= 1) {
-        resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> question correctly and your <b>total score</b> is:</p>`;
+        resultComment.innerHTML = 
+            `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> question correctly and your <b>total score</b> is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
-        results.innerHTML = `<p>Oh dear... Looks like you slept through your chemistry class...!?</p>
-        <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>`;
+        results.innerHTML = 
+            `<p>Oh dear... Looks like you slept through your chemistry class...!?</p>
+            <p>Let's try the game again to improve your knowledge and see if you can do better!!</p>`;
     } else if (correctAnswers <= 2) {
-        resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`;
+        resultComment.innerHTML = 
+            `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
-        results.innerHTML = `<p>Oh dear... Looks like you slept through your chemistry class...!?</p>
-        <p>Let's try the game again to improve your knowldege and see if you can do better!!</p>`;
+        results.innerHTML = 
+            `<p>Oh dear... Looks like you slept through your chemistry class...!?</p>
+            <p>Let's try the game again to improve your knowledge and see if you can do better!!</p>`;
     } else if (correctAnswers <= 5) {
-        resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`; 
+        resultComment.innerHTML = 
+            `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`; 
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100; 
-        results.innerHTML = `<p>Not bad. Looks like you were paying some attention through your chemistry class!</p>
-        <p>Let's try the game again to improve your knowldege and unleash your inner geek!</p>`;
+        results.innerHTML = 
+            `<p>Not bad. Looks like you were paying some attention through your chemistry class!</p>
+            <p>Let's try the game again to improve your knowledge and unleash your inner geek!</p>`;
     } else {
-        resultComment.innerHTML = `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`;
+        resultComment.innerHTML = 
+            `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`;
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100;
-        results.innerHTML = `<p id="highscore"><b><i class="fas fa-trophy"></i> Great job!</b></p> <p>You must have been the teacher's favourite!</p> 
-        <p>Be very proud and let your geek flag fly high!</p>`;
+        results.innerHTML = 
+            `<p id="highscore"><b><i class="fas fa-trophy"></i> Great job!</b></p> <p>You must have been the teacher's favourite!</p> 
+            <p>Be very proud and let your geek flag fly high!</p>`;
     }
 
     document.getElementById('play-again').addEventListener('click', resetGame);
@@ -281,7 +289,7 @@ function result(){
 /**
  * resets the question index, the number of correct answers and scores, 
  * hides the result section and the finish button, 
- * call runGame function to start the game again
+ * calls runGame function to start the game again
  */
 function resetGame() {
     currentQuestionIndex = 0;
