@@ -1,15 +1,25 @@
 # Amazing Atoms
 
-Welcome to Amazing Atoms! Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms. Let's have some fun and learn about atoms!
-
+Welcome to Amazing Atoms! Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms. There are four possible answers for each question and once the user selects an answer, the correct answer is shown and explained for each question, so they can learn about atoms as they play! 
 
 ## Live Website
+[Amazing Atoms](https://shizukadonaghue.github.io/atomic-quiz/)
 
 ## Repository
+<https://github.com/ShizukaDonaghue/atomic-quiz>
 
 ## UX & Desgin
+### Overview
+Amazing Atoms has been designed to help users test and improve their knowledge about atoms, regardless of their level of knowledge. The overall objective of the game is for users to have some fun while they learn about atoms.  
 
 ### User Stories
+As a user,
+* I would like to test my knowledge about atoms
+* I would like to improve my knowledge about atoms
+* I would like a clean and uncluttered interface that is easy to navigate
+
+
+
 
 ### Wire Frames
 
