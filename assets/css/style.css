@@ -562,3 +562,136 @@ p {
   }
 }
 
+/* media query for screen sizes >= 1200px to increase the sizes of elements */
+@media screen and (min-width: 1200px) {
+  section {
+    width: 100rem;
+    height: 60rem;
+    margin: -30rem 0 0 -50rem;
+    padding: 3rem 3rem;
+  }
+
+  .logo {
+    width: 20%;
+    height: 20%;
+    margin-top: 3rem;
+  }
+
+  p {
+    font-size: 2.2rem;
+  }
+
+  #username {
+    width: 32rem;
+     font-size: 2.2rem;
+  }
+
+  #question-mark {
+    font-size: 2.2rem;
+    top: 43rem;
+    right: 31rem;
+  }
+
+  #input-help {
+    top: 48.5rem;
+    left: 1rem;
+    font-size: 2.2rem;
+  }
+
+  #rule-button {
+    top: 48rem;
+    left: 30rem;
+    width: 17rem;
+    font-size: 2.5rem;
+    height: 5rem;
+    border-radius: 6rem;
+  }
+
+  #start-button {
+    top: 48rem;
+    right: 30rem;
+    width: 17rem;
+    font-size: 2.5rem;
+    height: 5rem;
+    border-radius: 6rem;
+  }
+
+  #rule h1 {
+    margin-top: 0.8rem;
+    font-size: 2.7rem;
+  }
+
+  #close-rule-button {
+    margin-top: 1.8rem;
+    font-size: 450%;
+  }
+
+  #logo-small {
+    width: 6.5%;
+    height: 6.5%;
+    margin-top: 1.5rem;
+  }
+
+  #question-number h4 {
+    font-size: 2.3rem;
+    margin: 1.5rem 0;
+  }
+
+  #question-text {
+    font-size: 2.2rem;
+  }
+
+  .answer-button {
+    width: 44rem;
+    height: 6.5rem;
+    margin: 1.5rem 1.5rem 0 1.5rem; 
+    padding: 0.5rem 2.2rem; 
+    font-size: 2.2rem;
+  }
+
+  #explanation-text p {
+    padding: 1rem 4rem;
+    font-size: 2.2rem;
+    height: 13rem;
+  }
+  
+  .control-button {
+    font-size: 2.5rem;
+    width: 14rem;
+    right: 42rem;
+    top: 49.5rem;
+    height: 5rem;
+    border-radius: 6rem;
+  }
+
+  #result-area h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  #results p {
+    font-size: 2.2rem;
+  }
+
+  #result-comment p {
+    font-size: 2.2rem;
+  }
+
+  #highscore b {
+    font-size: 2.5rem;
+  }
+
+  #final-score {
+    margin-bottom: 2rem;
+    font-size: 2.7rem;
+  }
+
+  .play-again-button {
+    top: 48.7rem;
+    right: 38.5rem;
+    font-size: 2.5rem;
+    width: 21rem;
+    height: 5rem;
+    border-radius: 6rem;
+  }
+}
