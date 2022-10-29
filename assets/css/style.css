@@ -111,7 +111,9 @@ p {
   font-size: 350%;
   color: var(--dark-blue);
   background: #E5F7FF;
-  margin-top: 1.8rem;
+  position: absolute;
+  top: 52rem;
+  right: 15.2rem;
 }
 
 #close-rule-button:hover {
@@ -386,7 +388,8 @@ p {
   }
 
   #close-rule-button {
-    margin-top: 0.55rem;
+    top: 48.5rem;
+    right: 13.3rem;
   }
 
   #question-text {
@@ -488,7 +491,8 @@ p {
   }
 
   #close-rule-button {
-    margin-top: 0.5rem;
+    top: 43rem;
+    right: 33.3rem;
   }
 
   #logo-small {
@@ -622,8 +626,9 @@ p {
   }
 
   #close-rule-button {
-    margin-top: 1.8rem;
     font-size: 450%;
+    top: 49.2rem;
+    right: 47.7rem;
   }
 
   #logo-small {
