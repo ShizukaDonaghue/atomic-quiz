@@ -588,7 +588,7 @@ p {
 
   #question-mark {
     font-size: 2.2rem;
-    top: 43rem;
+    top: 42.8rem;
     right: 31rem;
   }
 
@@ -694,4 +694,10 @@ p {
     height: 5rem;
     border-radius: 6rem;
   }
+}
+
+/* styling for 404 page */
+#error-image {
+  width: 70%;
+
 }
