@@ -26,6 +26,7 @@ Welcome to Amazing Atoms! Amazing Atoms is an interactive quiz game where users 
 #### Feasures Left to Implement
 
 ### Technologies Used
+* Background for 404 error message was remove with [remove.bg](https://www.remove.bg/). 
 
 ### Testing
 
@@ -56,6 +57,7 @@ Welcome to Amazing Atoms! Amazing Atoms is an interactive quiz game where users 
 * Background image was sourced from [pixabay.com](https://pixabay.com).
 * Logo was designed by the developer with [Wix](https://www.wix.com/).
 * Favicon was created from the logo with [RealFaviconGenerator](https://realfavicongenerator.net/).
+* 404 error image was sourced from [freepik](https://www.freepik.com/).
 
 #### Codes
 * Code to shuffle an array of questions in script.js was from [JavaScript.info](https://javascript.info/task/shuffle).
