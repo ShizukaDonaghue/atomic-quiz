@@ -15,15 +15,29 @@
     <title>Oops! Page not Found</title>
 </head>
 <body>
-    <!-- start section -->
-    <section>
-        <a href="index.html" aria-label="Link to the start page (opens in the same tab)">
-            <img class="logo" src="assets/images/logo.jpg" alt="logo">
-        </a>
+    <div id="error-page">
+        <div>
+            <a href="index.html" aria-label="Link to the start page (opens in the same tab)">
+                <img class="logo" src="assets/images/logo.jpg" alt="logo">
+            </a>
+        </div>
 
-        <img id="error-image" src="assets/images/error-page.jpg" alt="404 error image with a broken robot">
-    </section>
+        <div id="error-page-div">
+            <div>
+                <img id="error-image" src="assets/images/page-not-found.png" alt="404 error image with a broken robot">
+            </div>
 
-
+            <div id="error-message-container">
+                <p>Oops! We don't seem to be able to find the page you are looking for...</p>
+                <p id="no-worry">Don't worry!</p>
+                <p>We will get you back home!</p>
+            </div>
+        </div>
+     
+        <!-- back to home button -->
+        <form action="index.html">
+            <button type="submit" id="home-button">Home</button>
+        </form>    
+    </div>
 </body>
 </html>

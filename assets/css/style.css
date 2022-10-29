@@ -106,30 +106,6 @@ p {
   padding: 1rem 3rem;
 }
 
-/* styling for rule section */
-#close-rule-button {
-  font-size: 350%;
-  color: var(--dark-blue);
-  background: #E5F7FF;
-  position: absolute;
-  top: 52rem;
-  right: 15.2rem;
-}
-
-#close-rule-button:hover {
-  color: #1A98CE;
-}
-
-#green {
-  color: #00AC11;
-  font-size: 110%;
-}
-
-#red {
-  color: #E92A2A;
-  font-size: 110%;
-}
-
 /* styling for rule and start buttons */
 .button {
   font-family: var(--font-family);
@@ -163,6 +139,30 @@ p {
   position: absolute;
   top: 50.6rem;
   right: 3.7rem;
+}
+
+/* styling for rule section */
+#close-rule-button {
+  font-size: 350%;
+  color: var(--dark-blue);
+  background: #E5F7FF;
+  position: absolute;
+  top: 52rem;
+  right: 15.2rem;
+}
+
+#close-rule-button:hover {
+  color: #1A98CE;
+}
+
+#green {
+  color: #00AC11;
+  font-size: 110%;
+}
+
+#red {
+  color: #E92A2A;
+  font-size: 110%;
 }
 
 /* styling for game section */
@@ -330,17 +330,62 @@ p {
   color: var(--dark-blue);
 }
 
+/* styling for 404 error page */
+#error-page {
+  background: #E5F7FF;
+  position: absolute;
+  width: 34rem;
+  height: 60rem;
+  padding: 2rem 1.8rem;
+  left: 50%;
+  top: 50%;
+  margin: -30rem 0 0 -17rem;
+  border-radius: 2rem;
+}
+
+#error-image {
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  width: 60%;
+}
+
+#no-worry {
+  margin-bottom: 0;
+}
+
+#home-button {
+  font-family: var(--font-family);
+  width: 10rem;
+  height: 4rem;
+  margin: 1rem;
+  padding-bottom: 0.2rem;
+  font-size: 1.8rem;
+  border-radius: 2rem;
+  background: var(--dark-blue);
+  color: #fff;
+  position: absolute;
+  bottom: 3rem;
+  right: 10.95rem;
+  /* box-shadow code from https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#home-button:hover {
+  background: var(--green-blue);
+  color: var(--dark-blue);
+}
+
 /* media query for screen sizes <= 320px to reduce the sizes of contents to fit smaller screen sizes*/
 @media screen and (max-width: 320px) {
+  /* basic styling for all sections */
   section {
     width: 30rem;
     height: 54rem;
-    left: 50%;
-    top: 50%;
     margin: -27rem 0 0 -15rem;
     padding: 1rem 1rem;
   }
 
+  /* styling for start section */
   .logo {
     margin-top: 0.65rem;
     margin-bottom: 1.8rem;
@@ -368,15 +413,6 @@ p {
     right: 0rem;
   }
 
-  #rule h1 {
-    margin-top: 0.5rem;
-    margin-bottom: 1.7rem;
-  }
-
-  #rule p {
-    margin: 0 0.5rem 1.5rem 0.5rem;
-  }
-
   #rule-button {
     top: 47.2rem;
     left: 1.6rem;
@@ -387,11 +423,22 @@ p {
     right: 1.6rem;
   }
 
+  /* styling for rule section */
+  #rule h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 1.7rem;
+  }
+
+  #rule p {
+    margin: 0 0.5rem 1.5rem 0.5rem;
+  }
+
   #close-rule-button {
     top: 48.5rem;
     right: 13.3rem;
   }
 
+  /* styling for game section */
   #question-text {
     margin: 1rem 0;
     padding: 0rem;
@@ -411,6 +458,7 @@ p {
     right: 9rem;
   }
 
+  /* styling for result section */
   #result-area {
     margin-top: -0.3rem;
   }
@@ -432,19 +480,42 @@ p {
     bottom: 0.8rem;
     right: 6.5rem;
   }
+
+  /* styling for 404 error page */
+  #error-page {
+    width: 30rem;
+    height: 54rem;
+    margin: -27rem 0 0 -15rem;
+    padding: 1rem 1rem;
+  }
+  
+  #error-image {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    width: 58%;
+  }
+  
+  #error-page p {
+    padding: 0 1rem;
+  }
+  
+  #home-button {
+    bottom: 1rem;
+    right: 9rem;
+  }
 }
 
 /* media query for screen sizes >= 768px to change the layout from portrait to landscape*/
 @media screen and (min-width: 768px) {
+  /* basic styling for all sections */
   section {
     width: 70rem;
     height: 50rem;
-    left: 50%;
-    top: 50%;
     margin: -25rem 0 0 -35rem;
     padding: 2rem 3rem;
   }
 
+  /* styling for start section */
   .logo {
     margin-top: 1rem;
     margin-bottom: 3.5rem;
@@ -482,6 +553,7 @@ p {
     width: 15rem;
   }
 
+  /* styling for rule section */
   #rule h1 {
     margin-top: 0;
   }
@@ -495,6 +567,7 @@ p {
     right: 33.3rem;
   }
 
+  /* styling for game section */
   #logo-small {
     width: 8.9%;
     height: 8.9%;
@@ -536,6 +609,7 @@ p {
     top: 42rem;
   }
 
+  /* styling for result section */
   #result-area {
     margin-top: 0;
   }
@@ -564,10 +638,44 @@ p {
     font-size: 2rem;
     width: 17rem;
   }
+
+  /* styling for 404 error page */
+  #error-page {
+    width: 70rem;
+    height: 50rem;
+    margin: -25rem 0 0 -35rem;
+    padding: 2rem 3rem;
+  }
+  
+  #error-page-div {
+    display: flex;
+  }
+
+  #error-image {
+    margin: -2rem 0 0 0;
+    width: 80%;
+  }
+  
+  #error-message-container {
+    padding-top: 5rem;
+    text-align: left;
+  }
+
+  #no-worry {
+    padding-top: 1rem;
+  }
+
+  #home-button {
+    font-size: 2rem;
+    width: 12rem;
+    right: 28rem;
+    top: 40.5rem;
+  }
 }
 
 /* media query for screen sizes >= 1200px to increase the sizes of elements */
 @media screen and (min-width: 1200px) {
+  /* basic styling for all sections */
   section {
     width: 100rem;
     height: 60rem;
@@ -575,6 +683,7 @@ p {
     padding: 3rem 3rem;
   }
 
+  /* styling for start section */
   .logo {
     width: 20%;
     height: 20%;
@@ -620,6 +729,7 @@ p {
     border-radius: 6rem;
   }
 
+  /* styling for rule section */
   #rule h1 {
     margin-top: 0.8rem;
     font-size: 2.7rem;
@@ -631,6 +741,7 @@ p {
     right: 47.7rem;
   }
 
+  /* styling for game section */
   #logo-small {
     width: 6.5%;
     height: 6.5%;
@@ -669,6 +780,7 @@ p {
     border-radius: 6rem;
   }
 
+  /* styling for result section */
   #result-area h1 {
     font-size: 3rem;
     margin-bottom: 2rem;
@@ -699,10 +811,34 @@ p {
     height: 5rem;
     border-radius: 6rem;
   }
+
+  /* styling for 404 error page */
+  #error-page {
+    width: 100rem;
+    height: 60rem;
+    margin: -30rem 0 0 -50rem;
+    padding: 3rem 3rem;
+  }
+  
+  #error-image {
+    width: 80%;
+  }
+  
+  #error-message-container {
+    padding: 7rem 3.5rem 0 2rem;
+  }
+
+  #error-message-container p {
+    font-size: 2.2rem;
+  }
+
+  #home-button {
+    font-size: 2.5rem;
+    width: 14rem;
+    right: 42rem;
+    top: 48.5rem;
+    height: 5rem;
+    border-radius: 6rem;
+  }
 }
 
-/* styling for 404 page */
-#error-image {
-  width: 70%;
-
-}
