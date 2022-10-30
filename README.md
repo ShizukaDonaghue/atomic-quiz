@@ -36,7 +36,36 @@ As a user,
 #### Feasures Left to Implement
 
 ### Technologies Used
-* Background for 404 error message was remove with [remove.bg](https://www.remove.bg/). 
+#### Languages
+* [HTML](https://html.spec.whatwg.org/) was used to create the contents and structure for the website.
+* [CSS](https://www.w3.org/Style/CSS/Overview.en.html) was used to add styling to the website.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used to create interactive contents for the website. 
+
+#### Tools used for Developing the Website
+* [Gitpod](https://www.gitpod.io/) was used to create, edit and preview the codes during development.
+* [Git](https://git-scm.com/) was used for version control and tracked changes in the codes.
+* [GitHub](https://github.com/) was used to store the codes and deploy the website.
+* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) were used extensively while adjusting the objects in the website for different screen sizes.
+* [balsamiq](https://balsamiq.com/) was used to generate wireframes for the website.
+* The logo was designed by the developer with [Wix](https://www.wix.com/).
+* The favicon was created from the logo with [RealFaviconGenerator](https://realfavicongenerator.net/).
+* The font used in the website is imported from [Google Fonts](https://fonts.google.com/).
+* The website uses icons from [Font Awesome](https://fontawesome.com/).
+* The website uses [cdnjs.com](https://cdnjs.com/) for Font Awesome icons so that the website loads quickly.
+* The colour scheme ideas and actual colour palette were generated with [Coolors.co](https://coolors.co/).
+* [remove.bg](https://www.remove.bg/) was used to remove the background from the 404 error image and the favicon.
+* [Commpressor.io](https://compressor.io/) was used to compress the images for the website so that the website loads quickly.
+
+#### Tools used for Validating the Website
+* [W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes.
+* [W3C CSS Validator](https://validator.w3.org/) was used to validate CSS codes.
+* [JSHint](https://jshint.com/) was used to validate JavaScript codes.
+* [a11y Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/) was used to check the colour contrast for accessibility.
+
+#### Other Online Resources used 
+* [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) was used to generate the mockup image showing the website on various screen sizes.
+* [Grammarly](https://app.grammarly.com/) was used to fix grammatical errors across the website.
+
 
 ### Testing
 
@@ -64,13 +93,12 @@ As a user,
 * Quiz questions and answers were sourced from [ThoughtCo.](https://www.thoughtco.com/what-do-you-know-about-atoms-609620).
 
 #### Media
-* Background image was sourced from [pixabay.com](https://pixabay.com).
-* Logo was designed by the developer with [Wix](https://www.wix.com/).
-* Favicon was created from the logo with [RealFaviconGenerator](https://realfavicongenerator.net/).
-* 404 error image was sourced from [freepik](https://www.freepik.com/).
+* The background image for the website was sourced from [pixabay.com](https://pixabay.com).
+* The 404 error image was sourced from [freepik](https://www.freepik.com/).
+
 
 #### Codes
-* Code to shuffle an array of questions in script.js was from [JavaScript.info](https://javascript.info/task/shuffle).
-* Code for box-shadow in style.css was from [CSS Scan](https://getcssscan.com/css-box-shadow-examples).
+* The code to randomise a Javascript array in script.js was from [JavaScript.info](https://javascript.info/task/shuffle).
+* The code for box-shadow in style.css was from [CSS Scan](https://getcssscan.com/css-box-shadow-examples).
 
 ### Acknowledgements
