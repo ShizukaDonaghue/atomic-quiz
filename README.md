@@ -29,8 +29,36 @@ The website consists of two HTML pages. The main page contains all the contents 
 The contents for the game are on a single HTML page and JavaScript scrits in script.js are used to hide and unhide sections of the main page based on the intractions with the user. For example, the landing page is the start section of the main page and when the user clicks on the start button to play the game, the start section is hidden and the game section is displayed. Once the game is initiated, a series of randomised questions is displayed which are stored in questions.js file. 
 
 ### Wire Frames
-Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise the structure of the website. 
+Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise the structure of the website. The structure of the finished website is slighly different from the wireframes due to development that occurred during the building process, however, the main structure remained the same.
 
+<details>
+  <summary>Mobile</summary>
+
+  <img src="docs/wireframes/wireframe-mobile-sections.png" width="90%">
+
+</details>
+
+<details>
+  <summary>Tablet</summary>
+
+  <img src="docs/wireframes/wireframe-tablet-start-section.png" width="40%">
+  <img src="docs/wireframes/wireframe-tablet-rule-section.png" width="40%">
+  <img src="docs/wireframes/wireframe-tablet-game-section.png" width="40%">
+  <img src="docs/wireframes/wireframe-tablet-result-section.png" width="40%">
+  <img src="docs/wireframes/wireframe-tablet-404-error.png" width="40%">
+
+</details>
+
+<details>
+  <summary>Desktop</summary>
+  
+  <img src="docs/wireframes/wireframe-desktop-start-section.png" width="49%">
+  <img src="docs/wireframes/wireframe-desktop-rule-section.png" width="49%">
+  <img src="docs/wireframes/wireframe-desktop-game-section.png" width="49%">
+  <img src="docs/wireframes/wireframe-desktop-result-section.png" width="49%">
+  <img src="docs/wireframes/wireframe-desktop-404-error.png" width="49%">
+
+  
 
 
 ### Colour Scheme
@@ -55,6 +83,8 @@ Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise t
 * [GitHub](https://github.com/) was used to store the codes and deploy the website.
 * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) were used extensively while adjusting the objects in the website for different screen sizes.
 * [balsamiq](https://balsamiq.com/) was used to generate wireframes for the website.
+
+#### Tools used for Styling the Website
 * The logo was designed by the developer with [Wix](https://www.wix.com/).
 * The favicon was created from the logo with [RealFaviconGenerator](https://realfavicongenerator.net/).
 * The font used in the website is imported from [Google Fonts](https://fonts.google.com/).
@@ -62,7 +92,6 @@ Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise t
 * The website uses [cdnjs.com](https://cdnjs.com/) for Font Awesome icons so that the website loads quickly.
 * The colour scheme ideas and actual colour palette were generated with [Coolors.co](https://coolors.co/).
 * [remove.bg](https://www.remove.bg/) was used to remove the background from the 404 error image and the favicon.
-* [Commpressor.io](https://compressor.io/) was used to compress the images for the website so that the website loads quickly.
 
 #### Tools used for Validating the Website
 * [W3C HTML Validator](https://validator.w3.org/) was used to validate HTML codes.
@@ -71,6 +100,7 @@ Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise t
 * [a11y Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/) was used to check the colour contrast for accessibility.
 
 #### Other Online Resources used 
+* [Commpressor.io](https://compressor.io/) was used to compress the images for the website so that the website loads quickly.
 * [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) was used to generate the mockup image showing the website on various screen sizes.
 * [Grammarly](https://app.grammarly.com/) was used to fix grammatical errors across the website.
 
