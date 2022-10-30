@@ -2,6 +2,8 @@
 
 Welcome to Amazing Atoms! Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms. There are four possible answers for each question and once the user selects an answer, the correct answer is shown and explained for each question, so they can learn about atoms as they play! 
 
+<img src="docs/mockup-screen-image.png">
+
 ## Live Website
 [Amazing Atoms](https://shizukadonaghue.github.io/atomic-quiz/)
 
@@ -14,16 +16,22 @@ Amazing Atoms has been designed to help users test and improve their knowledge a
 
 ### User Stories
 As a user,
-* I would like to test my knowledge about atoms
-* I would like to improve my knowledge about atoms
-* I would like a clean and uncluttered interface that is easy to navigate
-
-
-
-
-### Wire Frames
+* I would like to test and improve my knowledge about atoms
+* I would like a clean and uncluttered website that is intuitive and easy to navigate
+* I would like to be able to play the game on any devices
+* I would like to understand how to play the game
+* I would like clear visual feedback when I submit my answer so that I know whether my answer is correct
+* I would like to know how well I did in the game when finished
 
 ### Website Structure
+The website consists of two HTML pages. The main page contains all the contents related to the game and the second page is only used in case of 404 error. 
+
+The contents for the game are on a single HTML page and JavaScript scrits in script.js are used to hide and unhide sections of the main page based on the intractions with the user. For example, the landing page is the start section of the main page and when the user clicks on the start button to play the game, the start section is hidden and the game section is displayed. Once the game is initiated, a series of randomised questions is displayed which are stored in questions.js file. 
+
+### Wire Frames
+Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise the structure of the website. 
+
+
 
 ### Colour Scheme
 
