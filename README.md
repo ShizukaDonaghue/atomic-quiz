@@ -22,6 +22,7 @@ As a user,
 * I would like to understand how to play the game
 * I would like clear visual feedback when I submit my answer so that I know whether my answer is correct
 * I would like to know how well I did in the game when finished
+* I would like to be able to reset or restart the game at any point
 
 ### Website Structure
 The website consists of two HTML pages. The main page contains all the contents related to the game and the second page is only used in case of 404 error. 
@@ -61,15 +62,16 @@ Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise t
 </details>
   
 ### Colour Scheme
-The colour scheme for the website has taken inspiration from the background image of atoms. The light blue E5F7FF is used as the background colour for all the contents and the dark navy 0B2C58 is used for texts so that it contrasts well with the background colour. The dark navy is also used for the buttons and the ligher blue 71C2E4 is used for their hover effects. 
+The colour scheme for the website has taken inspiration from the background image of atoms. The light blue E5F7FF is used as the background colour for all the contents and the dark navy 0B2C58 is used for texts so that it contrasts well with the background colour. The dark navy is also used for the buttons with texts in white FFFFFF and the ligher blue 71C2E4 is used for hover effects on the control buttons. 
 
 Red E92A2A and green 2AE459 are used for the answer buttons to indicate whether the answer selected by the user is correct. 
 
 This colour scheme is consistent throughout the website and intended to provide a clean and scientific feel with the background image of atoms.
 
-<img src="docs/colour-palette.png" width="70%">
+<img src="docs/colour-palette.png" width="80%">
 
 ### Typography
+The font used throughout the website is Ubuntu which is imported from [Google Fonts](https://fonts.google.com/). It is easy to read and suits the image of the website.
 
 ### Features
 
