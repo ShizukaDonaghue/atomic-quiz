@@ -57,8 +57,17 @@ Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise t
   <img src="docs/wireframes/wireframe-desktop-game-section.png" width="80%">
   <img src="docs/wireframes/wireframe-desktop-result-section.png" width="80%">
   <img src="docs/wireframes/wireframe-desktop-404-error.png" width="80%">
+
+</details>
   
 ### Colour Scheme
+The colour scheme for the website has taken inspiration from the background image of atoms. The light blue E5F7FF is used as the background colour for all the contents and the dark navy 0B2C58 is used for texts so that it contrasts well with the background colour. The dark navy is also used for the buttons and the ligher blue 71C2E4 is used for their hover effects. 
+
+Red E92A2A and green 2AE459 are used for the answer buttons to indicate whether the answer selected by the user is correct. 
+
+This colour scheme is consistent throughout the website and intended to provide a clean and scientific feel with the background image of atoms.
+
+<img src="docs/colour-palette.png" width="70%">
 
 ### Typography
 
