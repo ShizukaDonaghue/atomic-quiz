@@ -85,7 +85,7 @@ The logo for the website features an image of an atom and the name of the websit
 #### Favicon
 The favicon was created from the logo to help the user locate the website easier when they have multiple tabs open in their browswer. 
 
-<img src="assets/images/favicon.png" width="6.5%">
+<img src="assets/images/favicon.png" width="4%">
 
 #### Start Section (Landing Page)
 The start section of the main page is the landing page for the website. It includes an introduction to the game and a name entry field. The question mark next to the name input field displays the requirements for the name entry field, which are validated with JavaScripts in scripts.js so that the game is only initiated once the user provides a name that satisfies the requirements. If the name provided does not satisfy the requirement, an alert is displayed to let the user know the requirements. The name provided here is used in the result page to provide a more personal feel when the game is finished. 
@@ -108,7 +108,7 @@ When the answer is revealed, the answer is also explained below the answer butto
 
 The "Next" button is only displayed once the user selects an answer, so that the user must select an answer before they can progress to the next question. 
 
-If the user decides to quit or restart the game, they can do so by clicking on the logo at the top, which takes them back to the start section. 
+If the user decides to quit or restart the game, they can easily navigate back to the start section by clicking on the logo. 
 
 <img src="docs/game-section-image.png" width="80%">
 
