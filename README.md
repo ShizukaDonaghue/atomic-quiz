@@ -46,7 +46,7 @@ Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise t
   <img src="docs/wireframes/wireframe-tablet-rule-section.png" width="49%">
   <img src="docs/wireframes/wireframe-tablet-game-section.png" width="49%">
   <img src="docs/wireframes/wireframe-tablet-result-section.png" width="49%">
-  <img src="docs/wireframes/wireframe-tablet-404-error.png" width="49%">
+  <img src="docs/wireframes/wireframe-tablet-error.png" width="49%">
 
 </details>
 
@@ -57,7 +57,7 @@ Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise t
   <img src="docs/wireframes/wireframe-desktop-rule-section.png" width="80%">
   <img src="docs/wireframes/wireframe-desktop-game-section.png" width="80%">
   <img src="docs/wireframes/wireframe-desktop-result-section.png" width="80%">
-  <img src="docs/wireframes/wireframe-desktop-404-error.png" width="80%">
+  <img src="docs/wireframes/wireframe-desktop-error.png" width="80%">
 
 </details>
   
