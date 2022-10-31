@@ -85,7 +85,7 @@ The logo for the website features an image of an atom and the name of the websit
 #### Favicon
 The favicon was created from the logo to help the user locate the website easier when they have multiple tabs open in their browswer. 
 
-<img src="assets/images/favicon.png" width="4%">
+<img src="assets/images/favicon.png" width="3.5%">
 
 #### Start Section (Landing Page)
 The start section of the main page is the landing page for the website. It includes an introduction to the game and a name entry field. The question mark next to the name input field displays the requirements for the name entry field, which are validated with JavaScripts in scripts.js so that the game is only initiated once the user provides a name that satisfies the requirements. If the name provided does not satisfy the requirement, an alert is displayed to let the user know the requirements. The name provided here is used in the result page to provide a more personal feel when the game is finished. 
@@ -127,8 +127,7 @@ In case of 404 error, this 404 error page is displayed. It features the logo and
 <img src="docs/error-page-image.png" width="80%">
 
 ### Feasures Left to Implement
-
-
+The website currently contains a set of 8 questions. It will benefit by having additonal sets of questions for different difficulty levels that the user can choose from. The current set of questions will be categorised as "Easy" and as the user improve their knowledge, they can progress to "Medium" or "Hard" set of questions to further improve their knowledge on atoms. 
 
 ## Technologies Used
 ### Languages
