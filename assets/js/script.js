@@ -62,7 +62,7 @@ function closeInputHelp(){
 questionMark.addEventListener('click', displayInputHelpHandler);
 
 /**
- * toggles input help for the username field, and start and rule buttons with click event for mobile phones and tablets
+ * toggles input help for the username field as well as start and rule buttons with click event for mobile phones and tablets
  * (also works with click event on desktop) 
  */
 function displayInputHelpHandler() {
@@ -87,7 +87,8 @@ function displayRule() {
 document.getElementById('close-rule-button').addEventListener('click', closeRule);
 
 /**
- * closes rule for the game and unhides other elements in the start section
+ * closes rule for the game and unhides other elements in the start section, 
+ * focus method for the username field if the screen size >= 768px
  */
 function closeRule() {
     rule.classList.add('hide');
@@ -111,17 +112,21 @@ document.addEventListener('DOMContentLoaded', function() {
 /**
  * prevents default action to submit,
  * stores the username in "user" variable,
- * checks if the username provided is >= 3 and <= 10 characters and not an empty string,
+ * checks if the username provided is >= 3 and <= 10 letters without any spaces,
  * if the username meets the criteria, call runGame function, 
  * if not, alert the user to let them know the requirements for the name input field
  */
 function handleSubmit(event) {
     event.preventDefault();
     user = document.getElementById('username').value;
-    if (user.length >= 3 && user.length <= 10 && user !== '') {
+    
+    // pattern for all letters from https://www.w3resource.com/javascript/form/all-letters-field.php
+    const pattern = /^[A-Za-z]+$/;
+
+    if ((user.length >= 3 && user.length <= 10) && pattern.test(user)) {
         runGame();
     } else {
-        alert('Please enter your name. The name field accepts a minimum of 3 and a maximum of 10 characters including spaces.');
+        alert('Please enter your name. The name field accepts a minimum of 3 and a maximum of 10 letters without any spaces.');
     }
 }
 
@@ -134,7 +139,7 @@ function runGame(){
     document.getElementById('start-section').classList.add('hide');
     gameSection.classList.remove('hide');
   
-    // Shuffling an array code from https://javascript.info/task/shuffle
+    // code for Shuffling an array from https://javascript.info/task/shuffle
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
 
     currentQuestionSet = shuffledQuestions;
