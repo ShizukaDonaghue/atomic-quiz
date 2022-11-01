@@ -320,29 +320,44 @@ The following have been tested to verify that all the features function as expec
 The website was also tested physically on iPhone 12, iPhone XR, iPad 8, HP Elitebook 840, and Dell XPS for the above. No issues were found.
 
 ### User Stories Testing
-* I would like to test and improve my knowledge about atoms.
+User Stories were tested and addressed as follows:
+* *I would like to test and improve my knowledge about atoms.*
     * Amazing Atoms is an interactive quiz game where the user can test their knowledge about atoms.
     * For each of the question, visual feedback is provided for the user so that they know how well they are doing in the game.
     * As well as showing the correct answer, Amazing Atoms also explaines each answer, so it helps the user to learn more about atoms.
-* I would like a clean and uncluttered website that is intuitive and easy to navigate.
+* *I would like a clean and uncluttered website that is intuitive and easy to navigate.*
     * The website is intentionally desined to avoid distraction from background images, sound effects or animation during the game. 
     * Each section contains the logo which the user can use to easily navigate back to the start section.
     * Buttons have hover effects, which enable the user to see what they are about to select.
-* I would like to be able to play the game on any devices.
+* *I would like to be able to play the game on any devices.*
     * The website is fully responsive to different screen sizes and the user can play the game in any devices.
-* I would like to understand how to play the game.
+* *I would like to understand how to play the game.*
     * The rules are clearly explained in the rule section. The rule section also explains how the score is calculated.
-* I would like clear visual feedback when I submit my answer so that I know whether my answer is correct.
+* *I would like clear visual feedback when I submit my answer so that I know whether my answer is correct.*
     * When the user selects an answer, the colour of the answer buttons changes depending on whether their answer is correct to give immediate feedback - it turns green if it is correct, and if not, it turns red.
-* I would like to know how well I did in the game when finished.
+* *I would like to know how well I did in the game when finished.*
     * When the game is finished, the results are shown to the user, which include the number of correct answers and the final score. 
     * Depending on the score, different messages are shown to the user to let them know how well they did in the game.
-* I would like to be able to quit or restart the game at any point.
+* *I would like to be able to quit or restart the game at any point.*
     * Each section contains the logo which the user can use to quit or restart the game. The link from the logo takes the user back to the start section.
 
 ### Resolved Bugs
+#### Name Input Field
+Initially, the name input field was validated to check if the username consisted of a minimum of 3 and a maximum of 10 characters that is not an empty string. However, during the testing, it was found that white spaces on their own were accepted as characters. 
+
+Therefore, the code to validate the username has been updated in script.js to check if the username contains a minimum of 3 and a maximum of 10 letters so that white spaces are no longer accepted. 
+
+#### Positioning of The "X" Button
+When the website was deployed and physically tested on iPhones, it was found that the "X" buttom for the rule section was at the bottom-edge of the screen. This issue was not seen in Chrome Dev Tools during the building process. Unlike other buttons, this "X" was positioned using margin-top propery with rem units. In order to correct this, the position property was changed to absolute and set the actual positioning. 
+
+The "X" button before the fix:  
+<img src="docs/x-button-before-fix.png" width="35%">
+
+The "X" button after the fix:  
+<img src="docs/x-button-after-fix.png" width="35%">
 
 ### Unresolved Bugs
+
 
 ## Deployment
 ### Deploying a GitHub Repository to GitHub Pages
