@@ -16,13 +16,13 @@ Amazing Atoms has been designed to help users test and improve their knowledge a
 
 ### User Stories
 As a user,
-* I would like to test and improve my knowledge about atoms
-* I would like a clean and uncluttered website that is intuitive and easy to navigate
-* I would like to be able to play the game on any devices
-* I would like to understand how to play the game
-* I would like clear visual feedback when I submit my answer so that I know whether my answer is correct
-* I would like to know how well I did in the game when finished
-* I would like to be able to quit or restart the game at any point
+* I would like to test and improve my knowledge about atoms.
+* I would like a clean and uncluttered website that is intuitive and easy to navigate.
+* I would like to be able to play the game on any devices.
+* I would like to understand how to play the game.
+* I would like clear visual feedback when I submit my answer so that I know whether my answer is correct.
+* I would like to know how well I did in the game when finished.
+* I would like to be able to quit or restart the game at any point.
 
 ### Website Structure
 The website consists of two HTML pages. The main page contains all the contents related to the game and the second page is used in case of 404 error. 
@@ -71,7 +71,7 @@ This colour scheme is consistent throughout the website and intended to provide 
 <img src="docs/colour-palette.png" width="80%">
 
 ### Typography
-The font used throughout the website is Ubuntu which is imported from [Google Fonts](https://fonts.google.com/). It is easy to read and suits the image of the website.
+The font used throughout the website is Ubuntu which is imported from [Google Fonts](https://fonts.google.com/). It has a comic feel to give a little sense of fun, which suits the image of the website.
 
 ## Features
 ### Existing Features
@@ -145,11 +145,11 @@ In case of 404 error, this 404 error page is displayed. It features the logo and
 * [balsamiq](https://balsamiq.com/) was used to generate wireframes for the website.
 
 ### Tools used for Styling the Website
-* The logo was designed by the developer with [Wix](https://www.wix.com/).
+* The logos were designed by the developer with [Wix](https://www.wix.com/).
 * The favicon was created from the logo with [RealFaviconGenerator](https://realfavicongenerator.net/).
 * The font used in the website is imported from [Google Fonts](https://fonts.google.com/).
 * The website uses icons from [Font Awesome](https://fontawesome.com/).
-* The website uses [cdnjs.com](https://cdnjs.com/) for Font Awesome icons so that the website loads quickly.
+* The website uses [cdnjs.com](https://cdnjs.com/) for Font Awesome icons for a faster loading time.
 * The colour scheme ideas and actual colour palette were generated with [Coolors.co](https://coolors.co/).
 * [remove.bg](https://www.remove.bg/) was used to remove the background from the 404 error image and the favicon.
 
@@ -239,88 +239,106 @@ The following have been tested to verify that all the features function as expec
 
 #### Start Section 
 * Name Inpunt Field
-    * The name input field only accepts a username that consists of a minimum of 3 and a maximum of 10 letters without any spaces
-    * If the username entered does not meet the requirements, the alert is displayed to let the user know the requirements
-    * Focus method is applied to place the cursor in the field if the screen size is >= 768px and is not applied otherwise
+    * The name input field only accepts a username that consists of a minimum of 3 and a maximum of 10 letters without any spaces.
+    * If the username entered does not meet the requirements, the alert is displayed to let the user know the requirements.
+    * Focus method is applied to place the cursor in the field if the screen size is >= 768px and is not applied otherwise.
 * Question Mark for Input Help
-    * The input help is displayed with mouseover event and hidden with mouseleave event in desktop
-    * The input help is displayed and hidden with click events in desktop and mobile devices
+    * The input help is displayed with mouseover event and hidden with mouseleave event in desktop.
+    * The input help is displayed and hidden with click events in desktop and mobile devices.
 * Start Button
-    * The colour of the button changes and scales up upon hovering
-    * When clicked with a username that satisfies the name input field requirements, it starts the game and displays the game section and all other sections are hidden
-    * When clicked with a username that does not satisfies the requirements, it does not start the game
+    * The colour of the button changes and scales up upon hovering.
+    * When clicked with a username that satisfies the name input field requirements, it starts the game and displays the game section and all other sections are hidden.
+    * When clicked with a username that does not satisfies the requirements, it does not start the game.
 * Rule Button
-    * The colour of the button changes and scales up upon hovering
-    * When clicked, the rule section is displayed and all other sections are hidden
+    * The colour of the button changes and scales up upon hovering.
+    * When clicked, the rule section is displayed and all other sections are hidden.
 
 #### Rule Section
 * Logo
-    * The logo is linked to the start section
+    * The logo is linked to the start section.
 * The "X" icon
-    * The "X" is linked to the start section
-    * The colour of the button changes upon hovering
+    * The "X" is linked to the start section.
+    * The colour of the button changes upon hovering.
 
 #### Game Section
 * Logo 
-    * The logo scales up upon hovering to indicate that is a link
-    * The log is linked to the start section so that the user can quit or restart the game
+    * The logo scales up upon hovering to indicate that is a link.
+    * The logo is linked to the start section so that the user can quit or restart the game.
 * Question Number
-    * Question number increments by one for each question
+    * Question number increments by one for each question.
 * Questions
-    * Questions are shuffled for each game
-    * Question text is displayed for each question and the correct set of possible answers are displayed for the question
+    * Questions are shuffled for each game.
+    * Question text is displayed for each question and the correct set of possible answers are displayed for the question.
 * Answers Buttons
-    * When the user selects an answer, the correct answer button turns green
-    * If the user's answer is incorrecct, the answer button turns red
-    * Once the user selects an answer, all the answer buttons are disabled so that only the first answer is considered
-    * Once the user selects an answer, cursor: pointer property is removed to be more intuitive
-    * Text contents fit within the buttons and do not overflow outside the buttons 
+    * When the user selects an answer, the correct answer button turns green.
+    * If the user's answer is incorrecct, the answer button turns red.
+    * Once the user selects an answer, all the answer buttons are disabled so that only the first answer is considered.
+    * Once the user selects an answer, cursor: pointer property is removed to be more intuitive.
+    * Text contents fit within the buttons and do not overflow outside the buttons.
 * Answer Explanation Text
-    * Once the user selects an answer, the answer explanation text is displayed
-    * Text contents fit within the space and do not overflow outside the space provided
+    * Once the user selects an answer, the answer explanation text is displayed.
+    * Text contents fit within the space and do not overflow outside the space provided.
 * Next Button
-    * The colour of the button changes upon hovering
-    * The button is only displayed once the user selects an answer to prevent the user from skipping questions
-    * When clicked, it reactivates the answer buttons and cursor: pointer property for the next question
-    * When clicked, it removes the colours (red or green) from the answer buttons for the next question
-    * When clikced, it hides the next button and answer explanation text for the next question 
-    * If it is the last question, the next button is not displayed and instead the finish button is displayed
+    * The colour of the button changes upon hovering.
+    * The button is only displayed once the user selects an answer to prevent the user from skipping questions.
+    * When clicked, it reactivates the answer buttons and cursor: pointer property for the next question.
+    * When clicked, it removes the colours (red or green) from the answer buttons for the next question.
+    * When clikced, it hides the next button and answer explanation text for the next question.
+    * If it is the last question, the next button is not displayed and instead the finish button is displayed.
 * Finish Button
-    * The colour of the button changes upon hovering
-    * The finish button is displayed once the user selects an answer for the last question
-    * When clicked, it displays the results section and hides all other section
+    * The colour of the button changes upon hovering.
+    * The finish button is displayed once the user selects an answer for the last question.
+    * When clicked, it displays the results section and hides all other section.
 
 #### Results Section
 * Logo 
-    * The log is linked to the start section so that the user can restart the game with a new username
+    * The logo is linked to the start section so that the user can restart the game with a new username.
 * Username
-    * The username provided at the start of the game is displayed when the game is finished
+    * The username provided at the start of the game is displayed when the game is finished.
 * The Number of Correct Answers
-    * The number of correct answers is calculated corretly and displayed
+    * The number of correct answers is calculated and displayed correctly.
 * Final Score
-    * The final score is calculated correctly and displayed
-    * The final score scales up and down with the animation feature
+    * The final score is calculated and displayed correctly.
+    * The final score scales up and down with the animation feature.
 * Final Results
-    * Depending on the final score, displays different messages - check all messages for final score <= 1, <= 2, <= 5 and <= 6
+    * Depending on the final score, it displays different messages - verify all messages for final score <= 1, <= 2, <= 5 and <= 6.
 * Play Again Button
-    * The colour of the button changes and scales up upon hovering
-    * When clikced, reset the number of questions, correct answers and scores
-    * When clicked, shuffles the questions and prepares for a new game
-    * When clicked, it displays the new first question in the game section and hides all other sections
+    * The colour of the button changes and scales up upon hovering.
+    * When clikced, reset the number of questions, correct answers and scores.
+    * When clicked, shuffles the questions and prepares for a new game.
+    * When clicked, it displays the new first question in the game section and hides all other sections.
 
 #### 404 error page
 * Logo 
-    * The log is linked to the start section
+    * The logo is linked to the start section.
 * Home Button
-    * The colour of the button changes upon hovering
-    * The log is linked to the start section
+    * The colour of the button changes upon hovering.
+    * The logo is linked to the start section.
+
 
 ### Physical Testing
-The website was also physically tested on iPhone 12, iPhone XR, iPad 8, HP Elitebook 840, and Dell XPS for the above. No issues were found.
+The website was also tested physically on iPhone 12, iPhone XR, iPad 8, HP Elitebook 840, and Dell XPS for the above. No issues were found.
 
-
-
-### User Stories
+### User Stories Testing
+* I would like to test and improve my knowledge about atoms.
+    * Amazing Atoms is an interactive quiz game where the user can test their knowledge about atoms.
+    * For each of the question, visual feedback is provided for the user so that they know how well they are doing in the game.
+    * As well as showing the correct answer, Amazing Atoms also explaines each answer, so it helps the user to learn more about atoms.
+* I would like a clean and uncluttered website that is intuitive and easy to navigate.
+    * The website is intentionally desined to avoid distraction from background images, sound effects or animation during the game. 
+    * Each section contains the logo which the user can use to easily navigate back to the start section.
+    * Buttons have hover effects, which enable the user to see what they are about to select.
+* I would like to be able to play the game on any devices.
+    * The website is fully responsive to different screen sizes and the user can play the game in any devices.
+* I would like to understand how to play the game.
+    * The rules are clearly explained in the rule section. The rule section also explains how the score is calculated.
+* I would like clear visual feedback when I submit my answer so that I know whether my answer is correct.
+    * When the user selects an answer, the colour of the answer buttons changes depending on whether their answer is correct to give immediate feedback - it turns green if it is correct, and if not, it turns red.
+* I would like to know how well I did in the game when finished.
+    * When the game is finished, the results are shown to the user, which include the number of correct answers and the final score. 
+    * Depending on the score, different messages are shown to the user to let them know how well they did in the game.
+* I would like to be able to quit or restart the game at any point.
+    * Each section contains the logo which the user can use to quit or restart the game. The link from the logo takes the user back to the start section.
 
 ### Resolved Bugs
 
