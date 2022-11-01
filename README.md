@@ -417,7 +417,10 @@ To make a copy or "fork" the original repository to view or make changes without
 
 ### Codes
 * The code to randomise a Javascript array in script.js was from [JavaScript.info](https://javascript.info/task/shuffle).
-* The pattern to check for all letters in script.js was from [w3resource](https://www.w3resource.com/javascript/form/all-letters-field.php).
+* The pattern to check if the username contains letters only in script.js was from [w3resource](https://www.w3resource.com/javascript/form/all-letters-field.php).
 * The code for box-shadow in style.css was from [CSS Scan](https://getcssscan.com/css-box-shadow-examples).
 
 ## Acknowledgements
+Amazing Atoms was created as a portfolio 2 project for the Full Stack Software Development course at [UCD Professional Academy](https://www.ucd.ie/professionalacademy/) and [Code Institute](https://codeinstitute.net/ie/). I would like to thank my mentor, [Harry Dhillon](https://github.com/Harry-Leepz), for his valuable feedback, guidance and encouragement given throughout the project.
+
+I would also like to thank [Simen Daehlin](https://github.com/Eventyret) at [Code Institute](https://codeinstitute.net/ie/) for his patience and time answering all the questions during the class and also in Slack.
