@@ -88,7 +88,7 @@ The favicon was created from the logo to help the user locate the website easier
 <img src="assets/images/favicon.png" width="3.5%">
 
 #### Start Section (Landing Page)
-The start section of the main page is the landing page for the website. It includes an introduction to the game and a name entry field. The question mark next to the name input field displays the requirements for the name entry field, which are validated with JavaScript codes in scripts.js so that the game is only initiated once the user provides a name that satisfies the requirements. If the name provided does not satisfy the requirement, an alert is displayed to let the user know the requirements. The name provided here is stored and used in the result page to provide a more personal feel when the game is finished. 
+The start section of the main page is the landing page for the website. It includes an introduction to the game and a name input field. The question mark next to the name input field displays the requirements for the name input field, which are validated with JavaScript codes in scripts.js so that the game is only initiated once the user provides a name that satisfies the requirements. If the name provided does not satisfy the requirement, an alert is displayed to let the user know the requirements. The name provided here is stored and used in the result page to provide a more personal feel when the game is finished. 
 
 From this page, the user can either view the rules or start the game.
 
@@ -114,6 +114,8 @@ If the user decides to quit or restart the game, they can easily navigate back t
 
 #### Result Section
 When the user finishes the game, the result page is displayed and lets the user know how well they have done in the game. The name entered at the start of the game is used here to personalise the message. Depending on the score, different messages are displayed to encourage the user to play the game again to improve their knowledge. 
+
+The final score includes animation to scale up and down to add some drama to the section.
 
 The "Play Again!" button resets the game and shuffles the questions, and takes the user back to a new first question. 
 
@@ -194,14 +196,109 @@ Validation results for 404.html:
 
 ### Lighthouse
 
+### Responsiveness
+Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and no issues were found. This included the following devices:
+* iPhone 5/SE, 6/7/8, 6/7/8 Plus, SE, XR, 12 Pro, and X
+* iPad Air and iPad Mini
+* Samsung Galaxy S8+, S9+, S20 Ultra, A51/71
+* Microsoft Surface Pro 7 and Duo
+* Nest Hub and Hub Max
 
-### Manual Testing
+### Manual Testing 
+Manual testing was undertaken on the following browers:
+* Google Chrome
+* Microsoft Edge
+* Apple Safari
+* Mozilla Firefox
+* Opera
+
+The following have been tested to verify that all the features function as expected.   
+
+#### Start Section 
+* Name Inpunt Field
+    * The name input field only accepts a username that consists of a minimum of 3 and a maximum of 10 letters without any spaces
+    * If the username entered does not meet the requirements, the alert is displayed to let the user know the requirements
+    * Focus method is applied to place the cursor in the field if the screen size is >= 768px and is not applied otherwise
+* Question Mark for Input Help
+    * The input help is displayed with mouseover event and hidden with mouseleave event in desktop
+    * The input help is displayed and hidden with click events in desktop and mobile devices
+* Start Button
+    * The colour of the button changes and scales up upon hovering
+    * When clicked with a username that satisfies the name input field requirements, it starts the game and displays the game section and all other sections are hidden
+    * When clicked with a username that does not satisfies the requirements, it does not start the game
+* Rule Button
+    * The colour of the button changes and scales up upon hovering
+    * When clicked, the rule section is displayed and all other sections are hidden
+
+#### Rule Section
+* Logo
+    * The logo is linked to the start section
+* The "X" icon
+    * The "X" is linked to the start section
+    * The colour of the button changes upon hovering
+
+#### Game Section
+* Logo 
+    * The logo scales up upon hovering to indicate that is a link
+    * The log is linked to the start section so that the user can quit or restart the game
+* Question Number
+    * Question number increments by one for each question
+* Questions
+    * Questions are shuffled for each game
+    * Question text is displayed for each question and the correct set of possible answers are displayed for the question
+* Answers Buttons
+    * When the user selects an answer, the correct answer button turns green
+    * If the user's answer is incorrecct, the answer button turns red
+    * Once the user selects an answer, all the answer buttons are disabled so that only the first answer is considered
+    * Once the user selects an answer, cursor: pointer property is removed to be more intuitive
+    * Text contents fit within the buttons and do not overflow outside the buttons 
+* Answer Explanation Text
+    * Once the user selects an answer, the answer explanation text is displayed
+    * Text contents fit within the space and do not overflow outside the space provided
+* Next Button
+    * The colour of the button changes upon hovering
+    * The button is only displayed once the user selects an answer to prevent the user from skipping questions
+    * When clicked, it reactivates the answer buttons and cursor: pointer property for the next question
+    * When clicked, it removes the colours (red or green) from the answer buttons for the next question
+    * When clikced, it hides the next button and answer explanation text for the next question 
+    * If it is the last question, the next button is not displayed and instead the finish button is displayed
+* Finish Button
+    * The colour of the button changes upon hovering
+    * The finish button is displayed once the user selects an answer for the last question
+    * When clicked, it displays the results section and hides all other section
+
+#### Results Section
+* Logo 
+    * The log is linked to the start section so that the user can restart the game with a new username
+* Username
+    * The username provided at the start of the game is displayed when the game is finished
+* The Number of Correct Answers
+    * The number of correct answers is calculated corretly and displayed
+* Final Score
+    * The final score is calculated correctly and displayed
+    * The final score scales up and down with the animation feature
+* Final Results
+    * Depending on the final score, displays different messages - check all messages for final score <= 1, <= 2, <= 5 and <= 6
+* Play Again Button
+    * The colour of the button changes and scales up upon hovering
+    * When clikced, reset the number of questions, correct answers and scores
+    * When clicked, shuffles the questions and prepares for a new game
+    * When clicked, it displays the new first question in the game section and hides all other sections
+
+#### 404 error page
+* Logo 
+    * The log is linked to the start section
+* Home Button
+    * The colour of the button changes upon hovering
+    * The log is linked to the start section
+
+### Physical Testing
+The website was also physically tested on iPhone 12, iPhone XR, iPad 8, HP Elitebook 840, and Dell XPS for the above. No issues were found.
 
 ### Browser Compatibility
 
 
 
-### Responsiveness
 
 ### User Stories
 
