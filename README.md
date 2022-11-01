@@ -348,16 +348,19 @@ Initially, the name input field was validated to check if the username consisted
 Therefore, the code to validate the username has been updated in script.js to check if the username contains a minimum of 3 and a maximum of 10 letters so that white spaces are no longer accepted. 
 
 #### Positioning of The "X" Button
-When the website was deployed and physically tested on iPhones, it was found that the "X" buttom for the rule section was at the bottom-edge of the screen. This issue was not seen in Chrome Dev Tools during the building process. Unlike other buttons, this "X" was positioned using margin-top propery with rem units. In order to correct this, the position property was changed to absolute and set the actual positioning. 
+When the website was deployed and physically tested on iPhones, it was found that the "X" buttom for the rule section was at the bottom-edge of the screen. This issue was not seen in Chrome Dev Tools during the building process. Unlike other buttons, this "X" was positioned using margin-top propery with rem units. In order to correct this, the position property was changed to absolute and set the actual positions with top and right properties. 
 
-The "X" button before the fix:  
-<img src="docs/x-button-before-fix.png" width="35%">
+<details>
+  <summary>The "X" Button Before Fix</summary>
+  
+  <img src="docs/x-button-before-fix.png" width="35%">
+</details>
 
-The "X" button after the fix:  
-<img src="docs/x-button-after-fix.png" width="35%">
+<details>
+  <summary>The "X" Button After Fix</summary>
 
-### Unresolved Bugs
-
+  <img src="docs/x-button-after-fix.png" width="35%">
+</details>
 
 ## Deployment
 ### Deploying a GitHub Repository to GitHub Pages
