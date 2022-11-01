@@ -53,11 +53,11 @@ Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise t
 <details>
   <summary>Desktop</summary>
   
-  <img src="docs/wireframes/wireframe-desktop-start-section.png" width="70%">
-  <img src="docs/wireframes/wireframe-desktop-rule-section.png" width="70%">
-  <img src="docs/wireframes/wireframe-desktop-game-section.png" width="70%">
-  <img src="docs/wireframes/wireframe-desktop-result-section.png" width="70%">
-  <img src="docs/wireframes/wireframe-desktop-error.png" width="70%">
+  <img src="docs/wireframes/wireframe-desktop-start-section.png" width="80%">
+  <img src="docs/wireframes/wireframe-desktop-rule-section.png" width="80%">
+  <img src="docs/wireframes/wireframe-desktop-game-section.png" width="80%">
+  <img src="docs/wireframes/wireframe-desktop-result-section.png" width="80%">
+  <img src="docs/wireframes/wireframe-desktop-error.png" width="80%">
 
 </details>
   
@@ -68,7 +68,7 @@ Red E92A2A and green 2AE459 are used for the answer buttons to indicate whether 
 
 This colour scheme is consistent throughout the website and intended to provide a clean and scientific feel with the background image of atoms.
 
-<img src="docs/colour-palette.png" width="70%">
+<img src="docs/colour-palette.png" width="80%">
 
 ### Typography
 The font used throughout the website is Ubuntu which is imported from [Google Fonts](https://fonts.google.com/). It is easy to read and suits the image of the website.
@@ -92,12 +92,12 @@ The start section of the main page is the landing page for the website. It inclu
 
 From this page, the user can either view the rules or start the game.
 
-<img src="docs/start-section-image.png" width="70%">
+<img src="docs/start-section-image.png" width="80%">
 
 #### Rule Section
 This section explains the rules of the game and how the score is calculated. The user can go back to the start section by either clicking on the "X" button at the bottom or the logo at the top.
 
-<img src="docs/rule-section-image.png" width="70%">
+<img src="docs/rule-section-image.png" width="80%">
 
 #### Game Section
 There are 8 questions in total and they are shuffled for each game. The current number of question is displayed at the top to let the user know their progress in the game.
@@ -110,7 +110,7 @@ The "Next" button is only displayed once the user selects an answer, so the user
 
 If the user decides to quit or restart the game, they can easily navigate back to the start section by clicking on the logo. 
 
-<img src="docs/game-section-image.png" width="70%">
+<img src="docs/game-section-image.png" width="80%">
 
 #### Result Section
 When the user finishes the game, the result page is displayed and lets the user know how well they have done in the game. The name entered at the start of the game is used here to personalise the message. Depending on the score, different messages are displayed to encourage the user to play the game again to improve their knowledge. 
@@ -121,12 +121,12 @@ The "Play Again!" button resets the game and shuffles the questions, and takes t
 
 If the user decides to restart the game, they can do so by clicking on the logo which takes them back to the start section where they can enter a new name and start a new game.
 
-<img src="docs/result-section-image.png" width="70%">
+<img src="docs/result-section-image.png" width="80%">
 
 #### 404 Error Page
 In case of 404 error, this 404 error page is displayed. It features the logo and the "Home" button. The user can click on either of these to easily navigate back to the start section. 
 
-<img src="docs/error-page-image.png" width="70%">
+<img src="docs/error-page-image.png" width="80%">
 
 ### Features Left to Implement
  The website currently contains a set of 8 questions. It will benefit by having additional sets of questions for different difficulty levels that the user can choose from. The current set of questions will be categorised as "Easy" and as the user improve their knowledge, they can progress to a "Medium" or "Hard" set of questions to further improve their knowledge of atoms. This will be a nice feature to be added in the future.
@@ -169,13 +169,13 @@ In case of 404 error, this 404 error page is displayed. It features the logo and
 The website has been fully validated to ensure there were no syntax errors. The official [W3C HTML Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [JSHint](https://jshint.com/) were used for the validation and no errors were found.
 
 Validation results for index.html:  
-<img src="docs/html-validator-index-html.png" width="70%">
+<img src="docs/html-validator-index-html.png" width="80%">
 
 Validation results for 404.html:  
-<img src="docs/html-validator-error-page-html.png" width="70%">
+<img src="docs/html-validator-error-page-html.png" width="80%">
 
 Validation results for style.css:  
-<img src="docs/css-validator.png" width="70%">
+<img src="docs/css-validator.png" width="80%">
 
 Validation results for script.js:  
 <img src="docs/jshint-script-js.png" width="60%">  
@@ -189,10 +189,10 @@ The results show an unused variable "questions." This is because this variable i
 The website has been validated for colour contrast accessibility using [a11y Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/) and no issues were found.
 
 Validation results for index.html:  
-<img src="docs/a11y-contrast-validator-index-html.png" width="70%">  
+<img src="docs/a11y-contrast-validator-index-html.png" width="80%">  
 
 Validation results for 404.html:  
-<img src="docs/a11y-contrast-validator-error-page-html.png" width="70%">  
+<img src="docs/a11y-contrast-validator-error-page-html.png" width="80%">  
 
 ### Lighthouse
 
