@@ -168,31 +168,54 @@ In case of 404 error, this 404 error page is displayed. It features the logo and
 ### Code Validation
 The website has been fully validated to ensure there were no syntax errors. The official [W3C HTML Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [JSHint](https://jshint.com/) were used for the validation and no errors were found.
 
-Validation results for index.html:  
-<img src="docs/html-validator-index-html.png" width="80%">
+<details>
+  <summary>Validation Results for index.html</summary>
 
-Validation results for 404.html:  
-<img src="docs/html-validator-error-page-html.png" width="80%">
+  <img src="docs/html-validator-index-html.png" width="80%">
+</details>
 
-Validation results for style.css:  
-<img src="docs/css-validator.png" width="80%">
+<details>
+  <summary>Validation Results for 404.html</summary>  
+  <img src="docs/html-validator-error-page-html.png" width="80%">
 
-Validation results for script.js:  
-<img src="docs/jshint-script-js.png" width="60%">  
-The results show an undefined variable "questions." This is because this variable is declared in questions.js file.
+</details>
 
-Validation results for questions.js:  
-<img src="docs/jshint-questions-js.png" width="60%">  
-The results show an unused variable "questions." This is because this variable is used in script.js file. 
+<details>
+  <summary>Validation Results for style.css</summary>
+  
+  <img src="docs/css-validator.png" width="80%">
+</details>
+
+<details>
+  <summary>Validation Results for script.js</summary>
+
+  <img src="docs/jshint-script-js.png" width="60%">  
+
+  The results show an undefined variable "questions." This is because this variable is declared in questions.js file.
+</details>
+
+<details>
+  <summary>Validation Results for questions.js</summary>
+
+  <img src="docs/jshint-questions-js.png" width="60%">  
+
+  The results show an unused variable "questions." This is because this variable is used in script.js file.
+</details> 
 
 ### Accessibility
 The website has been validated for colour contrast accessibility using [a11y Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/) and no issues were found.
 
-Validation results for index.html:  
-<img src="docs/a11y-contrast-validator-index-html.png" width="80%">  
+<details>
+  <summary>Validation Results for index.html</summary>
 
-Validation results for 404.html:  
-<img src="docs/a11y-contrast-validator-error-page-html.png" width="80%">  
+  <img src="docs/a11y-contrast-validator-index-html.png" width="80%">  
+</details>
+
+<details>
+  <summary>Validation Results for 404.html</summary>
+
+  <img src="docs/a11y-contrast-validator-error-page-html.png" width="80%">  
+</details>
 
 ### Lighthouse
 
