@@ -25,7 +25,7 @@ As a user,
 * I would like to be able to quit or restart the game at any point.
 
 ### Website Structure
-The website consists of two HTML pages. The main page contains all the contents related to the game and the second page is used in case of 404 error. 
+The website consists of two HTML pages. The main page contains all the contents related to the game and the second page is used in case of a 404 error. 
 
 With the contents of the game being on a single HTML page, JavaScript codes in script.js are used to hide and unhide sections of the main page based on the interactions with the user. For example, the landing page is the start section of the main page and when the user clicks on the start button to play the game, the start section is hidden and the game section is displayed. Once the game is initiated, a series of randomised questions is displayed which are stored in questions.js file. 
 
@@ -76,7 +76,7 @@ The font used throughout the website is Ubuntu which is imported from [Google Fo
 ## Features
 ### Existing Features
 #### Logo
-The logo for the website features an image of an atom and the name of the website. There are two versions of the logo and the main logo is used all sections, except for the game section where the smaller one is used to allow more space for the game contents. The logos are linked to the start section of the main page so that the user can easily navigate back to the start section, or restart the game while playing the game.
+The logo for the website features an image of an atom and the name of the website. There are two versions of the logo and the main logo is used in all sections, except for the game section where the smaller one is used to allow more space for the game contents. The logos are linked to the start section of the main page so that the user can easily navigate back to the start section, or restart the game while playing the game.
 
 <img src="assets/images/logo.jpg" width="20%">
 
@@ -88,7 +88,7 @@ The favicon was created from the logo to help the user locate the website easier
 <img src="assets/images/favicon.png" width="3.5%">
 
 #### Start Section (Landing Page)
-The start section of the main page is the landing page for the website. It includes an introduction to the game and a name input field. The question mark next to the name input field displays the requirements for the name input field, which are validated with JavaScript codes in scripts.js so that the game is only initiated once the user provides a name that satisfies the requirements. If the name provided does not satisfy the requirement, an alert is displayed to let the user know the requirements. The name provided here is stored and used in the result page to provide a more personal feel when the game is finished. 
+The start section of the main page is the landing page for the website. It includes an introduction to the game and a name input field. The question mark next to the name input field displays the requirements for the name input field, which are validated with JavaScript codes in scripts.js so that the game is only initiated once the user provides a name that satisfies the requirements. If the name provided does not satisfy the requirement, an alert is displayed to let the user know the requirements. The name provided here is stored and used later in the result page to provide a more personal feel when the game is finished. 
 
 From this page, the user can either view the rules or start the game.
 
@@ -124,7 +124,7 @@ If the user decides to restart the game, they can do so by clicking on the logo 
 <img src="docs/result-section-image.png" width="80%">
 
 #### 404 Error Page
-In case of 404 error, this 404 error page is displayed. It features the logo and the "Home" button. The user can click on either of these to easily navigate back to the start section. 
+In case of a 404 error, this 404 error page is displayed. It features the logo and the "Home" button. The user can click on either of these to easily navigate back to the start section. 
 
 <img src="docs/error-page-image.png" width="80%">
 
@@ -228,7 +228,7 @@ Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/
 * Nest Hub and Hub Max
 
 ### Manual Testing 
-Manual testing was undertaken on the following browers:
+Manual testing was undertaken on the following browsers:
 * Google Chrome
 * Microsoft Edge
 * Apple Safari
@@ -238,17 +238,17 @@ Manual testing was undertaken on the following browers:
 The following have been tested to verify that all the features function as expected.   
 
 #### Start Section 
-* Name Inpunt Field
+* Name Input Field
     * The name input field only accepts a username that consists of a minimum of 3 and a maximum of 10 letters without any spaces.
     * If the username entered does not meet the requirements, the alert is displayed to let the user know the requirements.
     * Focus method is applied to place the cursor in the field if the screen size is >= 768px and is not applied otherwise.
 * Question Mark for Input Help
-    * The input help is displayed with mouseover event and hidden with mouseleave event in desktop.
-    * The input help is displayed and hidden with click events in desktop and mobile devices.
+    * The input help is displayed with mouseover event and hidden with mouseleave event in desktops.
+    * The input help is displayed and hidden with click events in desktops and mobile devices.
 * Start Button
     * The colour of the button changes and scales up upon hovering.
     * When clicked with a username that satisfies the name input field requirements, it starts the game and displays the game section and all other sections are hidden.
-    * When clicked with a username that does not satisfies the requirements, it does not start the game.
+    * When clicked with a username that does not satisfy the requirements, it does not start the game.
 * Rule Button
     * The colour of the button changes and scales up upon hovering.
     * When clicked, the rule section is displayed and all other sections are hidden.
@@ -268,10 +268,10 @@ The following have been tested to verify that all the features function as expec
     * Question number increments by one for each question.
 * Questions
     * Questions are shuffled for each game.
-    * Question text is displayed for each question and the correct set of possible answers are displayed for the question.
+    * Question text is displayed for each question and the correct set of possible answers is displayed for the question.
 * Answers Buttons
     * When the user selects an answer, the correct answer button turns green.
-    * If the user's answer is incorrecct, the answer button turns red.
+    * If the user's answer is incorrect, the answer button turns red.
     * Once the user selects an answer, all the answer buttons are disabled so that only the first answer is considered.
     * Once the user selects an answer, cursor: pointer property is removed to be more intuitive.
     * Text contents fit within the buttons and do not overflow outside the buttons.
@@ -283,12 +283,12 @@ The following have been tested to verify that all the features function as expec
     * The button is only displayed once the user selects an answer to prevent the user from skipping questions.
     * When clicked, it reactivates the answer buttons and cursor: pointer property for the next question.
     * When clicked, it removes the colours (red or green) from the answer buttons for the next question.
-    * When clikced, it hides the next button and answer explanation text for the next question.
+    * When clicked, it hides the next button and answer explanation text for the next question.
     * If it is the last question, the next button is not displayed and instead the finish button is displayed.
 * Finish Button
     * The colour of the button changes upon hovering.
     * The finish button is displayed once the user selects an answer for the last question.
-    * When clicked, it displays the results section and hides all other section.
+    * When clicked, it displays the results section and hides all other sections.
 
 #### Results Section
 * Logo 
@@ -304,7 +304,7 @@ The following have been tested to verify that all the features function as expec
     * Depending on the final score, it displays different messages - verify all messages for final score <= 1, <= 2, <= 5 and <= 6.
 * Play Again Button
     * The colour of the button changes and scales up upon hovering.
-    * When clikced, reset the number of questions, correct answers and scores.
+    * When clicked, reset the number of questions, correct answers and scores.
     * When clicked, shuffles the questions and prepares for a new game.
     * When clicked, it displays the new first question in the game section and hides all other sections.
 
@@ -323,10 +323,10 @@ The website was also tested physically on iPhone 12, iPhone XR, iPad 8, HP Elite
 User Stories were tested and addressed as follows:
 * *I would like to test and improve my knowledge about atoms.*
     * Amazing Atoms is an interactive quiz game where the user can test their knowledge about atoms.
-    * For each of the question, visual feedback is provided for the user so that they know how well they are doing in the game.
-    * As well as showing the correct answer, Amazing Atoms also explaines each answer, so it helps the user to learn more about atoms.
+    * For each of the questions, visual feedback is provided for the user so that they know how well they are doing in the game.
+    * As well as showing the correct answer, Amazing Atoms also explains each answer, so it helps the user to learn more about atoms.
 * *I would like a clean and uncluttered website that is intuitive and easy to navigate.*
-    * The website is intentionally desined to avoid distraction from background images, sound effects or animation during the game. 
+    * The website is intentionally designed to avoid distraction from background images, sound effects or animation during the game. 
     * Each section contains the logo which the user can use to easily navigate back to the start section.
     * Buttons have hover effects, which enable the user to see what they are about to select.
 * *I would like to be able to play the game on any devices.*
@@ -339,7 +339,7 @@ User Stories were tested and addressed as follows:
     * When the game is finished, the results are shown to the user, which include the number of correct answers and the final score. 
     * Depending on the score, different messages are shown to the user to let them know how well they did in the game.
 * *I would like to be able to quit or restart the game at any point.*
-    * Each section contains the logo which the user can use to quit or restart the game. The link from the logo takes the user back to the start section.
+    * Each section contains the logo that the user can use to quit or restart the game. The link from the logo takes the user back to the start section.
 
 ### Resolved Bugs
 #### Name Input Field
@@ -348,7 +348,7 @@ Initially, the name input field was validated to check if the username consisted
 Therefore, the code to validate the username has been updated in script.js to check if the username contains a minimum of 3 and a maximum of 10 letters so that white spaces are no longer accepted. 
 
 #### Positioning of The "X" Button
-When the website was deployed and physically tested on iPhones, it was found that the "X" buttom for the rule section was at the bottom-edge of the screen. This issue was not seen in Chrome Dev Tools during the building process. Unlike other buttons, this "X" was positioned using margin-top propery with rem units. In order to correct this, the position property was changed to absolute and set the actual positions with top and right properties. 
+When the website was deployed and physically tested on iPhones, it was found that the "X" button for the rule section was at the bottom edge of the screen. This issue was not seen in Chrome Dev Tools during the building process. Unlike other buttons, this "X" was positioned using margin-top property with rem units. In order to correct this, the position property was changed to absolute and set the actual positions with top and right properties. 
 
 <details>
   <summary>The "X" Button Before Fix</summary>
