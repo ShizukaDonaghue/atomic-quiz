@@ -277,7 +277,7 @@ function result(){
             `<p><b>${user}</b>, you answered <b>${correctAnswers}</b> questions correctly and your <b>total score</b> is:</p>`; 
         finalScore.innerHTML = document.getElementById('final-score').innerText = correctAnswers * 100; 
         results.innerHTML = 
-            `<p>Not bad. Looks like you were paying some attention through your chemistry class!</p>
+            `<p>Not bad. Looks like you were paying some attention during your chemistry class!</p>
             <p>Let's try the game again to improve your knowledge and unleash your inner geek!</p>`;
     } else {
         resultComment.innerHTML = 
