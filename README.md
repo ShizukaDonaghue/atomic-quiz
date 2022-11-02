@@ -1,6 +1,6 @@
 # Amazing Atoms
 
-Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms. There are four possible answers for each question and once the user selects an answer, the correct answer is shown and also explained for each question, so they can learn about atoms as they play! 
+Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms. There are four possible answers for each question and once the user selects an answer, the correct answer is shown and the answer is also explained for each question, so they can learn about atoms as they play! 
 
 <img src="docs/mockup-screen-image.png">
 
@@ -100,7 +100,7 @@ This section explains the rules of the game and how the score is calculated. The
 <img src="docs/rule-section-image.png" width="80%">
 
 #### Game Section
-There are 8 questions in total and they are shuffled for each game. The current number of question is displayed at the top to let the user know their progress in the game.
+There are 8 questions in total and they are shuffled for each game. The number of current question is displayed at the top to let the user know their progress in the game.
 
 There are 4 possible answers for each question and once the user selects an answer, the correct answer turns green and if the user's answer is incorrect, the selected answer turns red to provide visual feedback to the user as they play the game. Once an answer is selected, answer buttons are disabled, so only the first answer is considered for each question.
 
