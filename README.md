@@ -218,6 +218,19 @@ The website has been validated for colour contrast accessibility using [a11y Col
 </details>
 
 ### Lighthouse
+The website was tested with Lighthouse in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) for performance, accessibility, best practices, and SEO.
+
+Results for index.html for desktop:  
+<img src="docs/lighthouse-desktop-index-html.png" width="50%">
+
+Results for index.html for mobile:  
+<img src="docs/lighthouse-mobile-index-html.png" width="50%">
+
+Results for 404.html for desktop:  
+<img src="docs/lighthouse-desktop-error-html.png" width="50%">
+
+Results for 404.html for mobile:  
+<img src="docs/lighthouse-mobile-error-html.png" width="50%">
 
 ### Responsiveness
 Responsiveness was tested using [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and no issues were found. This included the following devices:
@@ -301,7 +314,8 @@ The following have been tested to verify that all the features function as expec
     * The final score is calculated and displayed correctly.
     * The final score scales up and down with the animation feature.
 * Final Results
-    * Depending on the final score, it displays different messages - verify all messages for final score <= 1, <= 2, <= 5 and <= 6.
+    * Depending on the final score, it displays different messages.
+    * All messages fit within the space and do not overflow outside the space provided - verify for final score <= 100, <= 200, <= 500 and <= 600.
 * Play Again Button
     * The colour of the button changes and scales up upon hovering.
     * When clicked, reset the number of questions, correct answers and scores.
@@ -343,12 +357,12 @@ User Stories were tested and addressed as follows:
 
 ### Resolved Bugs
 #### Name Input Field
-Initially, the name input field was validated to check if the username consisted of a minimum of 3 and a maximum of 10 characters that is not an empty string. However, during the testing, it was found that white spaces on their own were accepted as characters. 
+Initially, the name input field was validated to check if the username consisted of a minimum of 3 and a maximum of 10 characters that is not an empty string. However, during the testing, it was found that spaces on their own were accepted as characters. 
 
-Therefore, the code to validate the username has been updated in script.js to check if the username contains a minimum of 3 and a maximum of 10 letters so that white spaces are no longer accepted. 
+Therefore, the code to validate the username has been updated in script.js to check if the username contains a minimum of 3 and a maximum of 10 letters so that spaces are no longer accepted. 
 
 #### Positioning of The "X" Button
-When the website was deployed and physically tested on iPhones, it was found that the "X" button for the rule section was at the bottom edge of the screen. This issue was not seen in Chrome Dev Tools during the building process. Unlike other buttons, this "X" was positioned using margin-top property with rem units. In order to correct this, the position property was changed to absolute and set the actual positions with top and right properties. 
+When the website was deployed and physically tested on iPhones, it was found that the "X" button for the rule section was at the bottom edge of the screen. This issue was not seen in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) during the building process. Unlike other buttons, this "X" was positioned using margin-top property with rem units. This issue was resolved by changing the position property to absolute and setting the actual positions with top and right properties. 
 
 <details>
   <summary>The "X" Button Before Fix</summary>
