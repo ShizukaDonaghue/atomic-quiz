@@ -1,6 +1,6 @@
 # Amazing Atoms
 
-Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms. There are four possible answers for each question and once the user selects an answer, the correct answer is shown and the answer is also explained for each question, so they can learn about atoms as they play! 
+Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms! There are four possible answers for each question. In addition to revealing the correct answer, Amazing Atoms also explains the answer, so they can learn about atoms as they play! 
 
 <img src="docs/mockup-screen-image.png">
 
@@ -25,7 +25,7 @@ As a user,
 * I would like to be able to quit or restart the game at any point.
 
 ### Website Structure
-The website consists of two HTML pages. The main page contains all the contents related to the game and the second page is used in case of a 404 error. 
+The website consists of two HTML pages. The main page contains all the contents related to the game and the second page is for a 404 error. 
 
 With the contents of the game being on a single HTML page, JavaScript codes in script.js are used to hide and unhide sections of the main page based on the interactions with the user. For example, the landing page is the start section of the main page and when the user clicks on the start button to play the game, the start section is hidden and the game section is displayed. Once the game is initiated, a series of randomised questions is displayed from questions.js file. 
 
@@ -71,26 +71,26 @@ This colour scheme is consistent throughout the website and intended to provide 
 <img src="docs/colour-palette.png" width="80%">
 
 ### Typography
-The font used throughout the website is Ubuntu which is imported from [Google Fonts](https://fonts.google.com/). It has a comic feel to give a little sense of fun, which suits the image of the website.
+The font used throughout the website is Ubuntu which is imported from [Google Fonts](https://fonts.google.com/). It has a comic feel to give the website a little sense of fun.
 
 ## Features
 ### Existing Features
-#### Logo
-The logo for the website features an image of an atom and the name of the website. There are two versions of the logo and the main logo is used in all sections, except for the game section where the smaller one is used to allow more space for the game contents. The logos are linked to the start section of the main page so that the user can easily navigate back to the start section, or restart the game while playing the game.
+#### Logos
+There are two versions of the logo and the main one features an image of an atom and the name of the website. The second one is a smaller version without the name of the website. The main logo is used in all sections, except for the game section where the smaller one is used to allow more space for the game contents. The logos are linked to the start section of the main page so that the user can easily navigate back to the start section, or restart the game while playing the game.
 
 <img src="assets/images/logo.jpg" width="20%">
 
 <img src="assets/images/logo-small.jpg" width="6%">
 
 #### Favicon
-The favicon was created from the logos to help the user locate the website easier when they have multiple tabs open in their browser. 
+The favicon was created from the logo to help the user locate the website easier when they have multiple tabs open in their browser. 
 
 <img src="assets/images/favicon.png" width="3.5%">
 
 #### Start Section (Landing Page)
 The start section of the main page is the landing page for the website. It includes an introduction to the game and a name input field. The question mark next to the name input field displays the requirements for the name input field, which are validated with JavaScript codes in scripts.js so that the game is only initiated once the user provides a name that satisfies the requirements. If the name provided does not satisfy the requirement, an alert is displayed to let the user know the requirements. The name provided here is stored and used later in the result page to provide a more personal feel when the game is finished. 
 
-From this page, the user can either view the rules or start the game.
+From this section, the user can either view the rules or start the game.
 
 <img src="docs/start-section-image.png" width="80%">
 
@@ -104,7 +104,7 @@ There are 8 questions in total and they are shuffled for each game. The number o
 
 There are 4 possible answers for each question and once the user selects an answer, the correct answer turns green and if the user's answer is incorrect, the selected answer turns red to provide visual feedback to the user as they play the game. Once an answer is selected, answer buttons are disabled, so only the first answer is considered for each question.
 
-When the answer is revealed, the answer is also explained below the answer buttons, so that the user can learn more about atoms to improve their knowledge.
+When the answer is revealed, the explanation for the answer is displayed below the answer buttons, so that the user can learn more about atoms to improve their knowledge.
 
 The "Next" button is only displayed once the user selects an answer, so the user must select an answer before they can progress to the next question. 
 
@@ -129,7 +129,8 @@ In case of a 404 error, this 404 error page is displayed. It features the logo a
 <img src="docs/error-page-image.png" width="80%">
 
 ### Features Left to Implement
- The website currently contains a set of 8 questions. It will benefit by having additional sets of questions for different difficulty levels that the user can choose from. The current set of questions will be categorised as "Easy" and as the user improve their knowledge, they can progress to a "Medium" or "Hard" set of questions to further improve their knowledge of atoms. This will be a nice feature to be added in the future.
+ * The website currently contains a set of 8 questions. It would benefit from having additional sets of questions for different difficulty levels that the user can choose from. The current set of questions will be categorised as "Easy" and as the user improve their knowledge, they can progress to a "Medium" or "Hard" set of questions to further improve their knowledge of atoms. This will be a nice addition in the future.
+* The website would also benefit from having a high score ranking to encourage the user to play more. It will contain the names of the top 5 scorers and their scores. This will be another feature to be added in the future.  
 
 ## Technologies Used
 ### Languages
@@ -248,12 +249,12 @@ Manual testing was undertaken on the following browsers:
 * Mozilla Firefox
 * Opera
 
-The following have been tested to verify that all the features function as expected.   
+The following were tested to verify that all the features functioned as expected and no issues were found.
 
 #### Start Section 
 * Name Input Field
     * The name input field only accepts a username that consists of a minimum of 3 and a maximum of 10 letters without any spaces.
-    * If the username entered does not meet the requirements, the alert is displayed to let the user know the requirements.
+    * If the username entered does not satisfy the requirements, the alert is displayed to let the user know the requirements.
     * Focus method is applied to place the cursor in the field if the screen size is >= 768px and is not applied otherwise.
 * Question Mark for Input Help
     * The input help is displayed with mouseover event and hidden with mouseleave event in desktops.
@@ -286,7 +287,7 @@ The following have been tested to verify that all the features function as expec
     * When the user selects an answer, the correct answer button turns green.
     * If the user's answer is incorrect, the answer button turns red.
     * Once the user selects an answer, all the answer buttons are disabled so that only the first answer is considered.
-    * Once the user selects an answer, cursor: pointer property is removed to be more intuitive.
+    * Once the user selects an answer, cursor: pointer property is removed to be more intuitive as the buttons are disabled.
     * Text contents fit within the buttons and do not overflow outside the buttons.
 * Answer Explanation Text
     * Once the user selects an answer, the answer explanation text is displayed.
@@ -297,6 +298,7 @@ The following have been tested to verify that all the features function as expec
     * When clicked, it reactivates the answer buttons and cursor: pointer property for the next question.
     * When clicked, it removes the colours (red or green) from the answer buttons for the next question.
     * When clicked, it hides the next button and answer explanation text for the next question.
+    * When clicked, it displays the next question.
     * If it is the last question, the next button is not displayed and instead the finish button is displayed.
 * Finish Button
     * The colour of the button changes upon hovering.
@@ -338,7 +340,7 @@ User Stories were tested and addressed as follows:
 * *I would like to test and improve my knowledge about atoms.*
     * Amazing Atoms is an interactive quiz game where the user can test their knowledge about atoms.
     * For each of the questions, visual feedback is provided for the user so that they know how well they are doing in the game.
-    * As well as showing the correct answer, Amazing Atoms also explains each answer, so it helps the user to learn more about atoms.
+    * In addition to showing the correct answer, Amazing Atoms also explains each answer, so it helps the user learn more about atoms.
 * *I would like a clean and uncluttered website that is intuitive and easy to navigate.*
     * The website is intentionally designed to avoid distraction from background images, sound effects or animation during the game. 
     * Each section contains the logo which the user can use to easily navigate back to the start section.
@@ -357,12 +359,14 @@ User Stories were tested and addressed as follows:
 
 ### Resolved Bugs
 #### Name Input Field
-Initially, the name input field was validated to check if the username consisted of a minimum of 3 and a maximum of 10 characters that is not an empty string. However, during the testing, it was found that spaces on their own were accepted as characters. 
+Initially, the name input field was validated to check if the username consisted of a minimum of 3 and a maximum of 10 characters that is not an empty string. However, during the testing, it was found that spaces on their own were accepted as characters, allowing the username to be blank spaces. 
 
 Therefore, the code to validate the username has been updated in script.js to check if the username contains a minimum of 3 and a maximum of 10 letters so that spaces are no longer accepted. 
 
 #### Positioning of The "X" Button
-When the website was deployed and physically tested on iPhones, it was found that the "X" button for the rule section was at the bottom edge of the screen. This issue was not seen in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) during the building process. Unlike other buttons, this "X" was positioned using margin-top property with rem units. This issue was resolved by changing the position property to absolute and setting the actual positions with top and right properties. 
+When the website was deployed and physically tested on iPhones, it was found that the "X" button for the rule section was at the bottom edge of the screen. This issue was not seen in [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) during the building process. 
+
+Unlike other buttons, this "X" was positioned using margin-top property with rem units. This issue was resolved by changing the position property to absolute and setting the actual positions with top and right properties. 
 
 <details>
   <summary>The "X" Button Before Fix</summary>
