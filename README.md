@@ -1,6 +1,6 @@
 # Amazing Atoms
 
-Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms! There are four possible answers for each question. In addition to revealing the correct answer, Amazing Atoms also explains the answer, so they can learn about atoms as they play! 
+Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms! There are four possible answers for each question, and in addition to revealing the correct answer, Amazing Atoms also explains the answer, so they can learn about atoms as they play! 
 
 <img src="docs/mockup-screen-image.png">
 
