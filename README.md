@@ -1,6 +1,6 @@
 # Amazing Atoms
 
-Welcome to Amazing Atoms! Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms. There are four possible answers for each question and once the user selects an answer, the correct answer is shown and explained for each question, so they can learn about atoms as they play! 
+Amazing Atoms is an interactive quiz game where users can test and improve their knowledge about atoms. There are four possible answers for each question and once the user selects an answer, the correct answer is shown and also explained for each question, so they can learn about atoms as they play! 
 
 <img src="docs/mockup-screen-image.png">
 
@@ -27,7 +27,7 @@ As a user,
 ### Website Structure
 The website consists of two HTML pages. The main page contains all the contents related to the game and the second page is used in case of a 404 error. 
 
-With the contents of the game being on a single HTML page, JavaScript codes in script.js are used to hide and unhide sections of the main page based on the interactions with the user. For example, the landing page is the start section of the main page and when the user clicks on the start button to play the game, the start section is hidden and the game section is displayed. Once the game is initiated, a series of randomised questions is displayed which are stored in questions.js file. 
+With the contents of the game being on a single HTML page, JavaScript codes in script.js are used to hide and unhide sections of the main page based on the interactions with the user. For example, the landing page is the start section of the main page and when the user clicks on the start button to play the game, the start section is hidden and the game section is displayed. Once the game is initiated, a series of randomised questions is displayed from questions.js file. 
 
 ### Wire Frames
 Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise the structure of the website. The structure of the finished website is slightly different from the wireframes due to development that occurred during the building process, however, it largely remained the same.
@@ -62,9 +62,9 @@ Wireframes were generated using [balsamiq](https://balsamiq.com/) to visualise t
 </details>
   
 ### Colour Scheme
-The colour scheme for the website has taken inspiration from the background image of atoms. The light blue E5F7FF is used as the background colour for all the contents and the dark navy 0B2C58 is used for texts so that it contrasts well with the background colour. The dark navy is also used for the buttons with texts in white FFFFFF and the lighter blue 71C2E4 is used for hover effects on the control buttons. 
+The colour scheme for the website has taken inspiration from the background image of atoms. The light blue E5F7FF is used as the background colour for all the contents and the dark navy 0B2C58 is used for the texts so that it contrasts well with the background colour. The dark navy is also used for the buttons with texts in white FFFFFF and the lighter blue 71C2E4 is used for hover effects on the control buttons. 
 
-Red E92A2A and green 2AE459 are used for the answer buttons to indicate whether the answer selected by the user is correct. 
+Red E92A2A and green 2AE459 are used for the answer buttons to indicate whether the answer selected by the user is correct or incorrect. 
 
 This colour scheme is consistent throughout the website and intended to provide a clean and scientific feel with the background image of atoms.
 
@@ -83,7 +83,7 @@ The logo for the website features an image of an atom and the name of the websit
 <img src="assets/images/logo-small.jpg" width="6%">
 
 #### Favicon
-The favicon was created from the logo to help the user locate the website easier when they have multiple tabs open in their browser. 
+The favicon was created from the logos to help the user locate the website easier when they have multiple tabs open in their browser. 
 
 <img src="assets/images/favicon.png" width="3.5%">
 
